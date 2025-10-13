@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Artist - Groovezilla</title>
+</head>
+<body>
+    <div class="artist-page">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Album</span>
+                </a>
+            </div>
+            
+            <a href="discovery.html" class="nav-item active">
+                <div class="icon"></div>
+                <span>Discovery</span>
+            </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon"></div>
+                    <input type="text" placeholder="Search by artists, songs or albums">
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">Download Now</button>
+                    <div class="user-avatar"></div>
+                </div>
+            </div>
+
+            <!-- Artist Hero -->
+            <div class="artist-hero">
+                <div class="artist-hero-bg">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1400&h=500&fit=crop" alt="Artist Background">
+                    <div class="artist-hero-gradient"></div>
+                </div>
+                <div class="artist-hero-content">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=200&fit=crop&crop=faces" alt="Artist" class="artist-avatar-large">
+                    <div class="artist-info">
+                        <span class="verified-badge">✓ Verified Artist</span>
+                        <h1 class="artist-name">Luna Eclipse</h1>
+                        <div class="artist-stats">
+                            <span>2.4M Followers</span>
+                            <span>•</span>
+                            <span>142 Monthly Listeners</span>
+                        </div>
+                        <div class="artist-actions">
+                            <button class="follow-btn-large">Follow</button>
+                            <button class="play-btn-large">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                Play
+                            </button>
+                            <button class="more-btn">•••</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Tracks -->
+            <div class="popular-tracks-section">
+                <h2>Popular Tracks</h2>
+                <div class="popular-tracks">
+                    <div class="popular-track">
+                        <span class="track-rank">1</span>
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=60&h=60&fit=crop" alt="Track">
+                        <div class="track-info">
+                            <h4>Midnight Dreams</h4>
+                            <p>24M plays</p>
+                        </div>
+                        <span class="track-duration">4:32</span>
+                        <button class="play-icon play-btn" data-track-id="4">▶</button>
+                        <button class="like-btn" data-track-id="4">🤍</button>
+                    </div>
+                    <div class="popular-track">
+                        <span class="track-rank">2</span>
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=60&h=60&fit=crop" alt="Track">
+                        <div class="track-info">
+                            <h4>Summer Breeze</h4>
+                            <p>18M plays</p>
+                        </div>
+                        <span class="track-duration">3:45</span>
+                        <button class="play-icon play-btn" data-track-id="5">▶</button>
+                        <button class="like-btn" data-track-id="5">🤍</button>
+                    </div>
+                    <div class="popular-track">
+                        <span class="track-rank">3</span>
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=60&h=60&fit=crop" alt="Track">
+                        <div class="track-info">
+                            <h4>Electric Pulse</h4>
+                            <p>15M plays</p>
+                        </div>
+                        <span class="track-duration">5:12</span>
+                        <button class="play-icon play-btn" data-track-id="6">▶</button>
+                        <button class="like-btn" data-track-id="6">🤍</button>
+                    </div>
+                    <div class="popular-track">
+                        <span class="track-rank">4</span>
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=60&h=60&fit=crop" alt="Track">
+                        <div class="track-info">
+                            <h4>Acoustic Dreams</h4>
+                            <p>12M plays</p>
+                        </div>
+                        <span class="track-duration">4:18</span>
+                        <button class="play-icon play-btn" data-track-id="7">▶</button>
+                        <button class="like-btn" data-track-id="7">🤍</button>
+                    </div>
+                    <div class="popular-track">
+                        <span class="track-rank">5</span>
+                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=60&h=60&fit=crop" alt="Track">
+                        <div class="track-info">
+                            <h4>Urban Flow</h4>
+                            <p>10M plays</p>
+                        </div>
+                        <span class="track-duration">3:56</span>
+                        <button class="play-icon">▶</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discography -->
+            <div class="discography-section">
+                <h2>Discography</h2>
+                <div class="album-filter">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Albums</button>
+                    <button class="filter-btn">Singles</button>
+                    <button class="filter-btn">EPs</button>
+                </div>
+                <div class="discography-grid">
+                    <div class="discography-item">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=220&h=220&fit=crop" alt="Album">
+                        <h4>Midnight Dreams</h4>
+                        <p>2024 • Album</p>
+                    </div>
+                    <div class="discography-item">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=220&h=220&fit=crop" alt="Album">
+                        <h4>Summer Nights</h4>
+                        <p>2023 • Album</p>
+                    </div>
+                    <div class="discography-item">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=220&h=220&fit=crop" alt="Album">
+                        <h4>Electric Dreams</h4>
+                        <p>2022 • Album</p>
+                    </div>
+                    <div class="discography-item">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=220&h=220&fit=crop" alt="Album">
+                        <h4>Acoustic Sessions</h4>
+                        <p>2023 • EP</p>
+                    </div>
+                    <div class="discography-item">
+                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=220&h=220&fit=crop" alt="Album">
+                        <h4>Urban Tales</h4>
+                        <p>2021 • Album</p>
+                    </div>
+                    <div class="discography-item">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=220&h=220&fit=crop" alt="Album">
+                        <h4>Rock Anthem</h4>
+                        <p>2023 • Single</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Performances -->
+            <div class="live-section">
+                <h2>Live Performances</h2>
+                <div class="live-grid">
+                    <div class="live-card">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=250&fit=crop" alt="Live Performance">
+                        <div class="live-overlay">
+                            <span class="live-badge">LIVE</span>
+                            <h4>Central Park Concert</h4>
+                            <p>New York • 2024</p>
+                        </div>
+                    </div>
+                    <div class="live-card">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&h=250&fit=crop" alt="Live Performance">
+                        <div class="live-overlay">
+                            <span class="live-badge">LIVE</span>
+                            <h4>Coachella Festival</h4>
+                            <p>California • 2024</p>
+                        </div>
+                    </div>
+                    <div class="live-card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=250&fit=crop" alt="Live Performance">
+                        <div class="live-overlay">
+                            <span class="live-badge">LIVE</span>
+                            <h4>Acoustic Night</h4>
+                            <p>London • 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Artists -->
+            <div class="similar-artists-section">
+                <h2>Similar Artists</h2>
+                <div class="similar-artists-scroll">
+                    <div class="similar-artist-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=160&h=160&fit=crop&crop=faces" alt="Artist">
+                        <h4>Sarah Melody</h4>
+                        <p>892K followers</p>
+                        <button class="follow-small-btn">Follow</button>
+                    </div>
+                    <div class="similar-artist-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=160&h=160&fit=crop&crop=faces" alt="Artist">
+                        <h4>Miles Davis Jr</h4>
+                        <p>654K followers</p>
+                        <button class="follow-small-btn">Follow</button>
+                    </div>
+                    <div class="similar-artist-card">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=160&h=160&fit=crop&crop=faces" alt="Artist">
+                        <h4>DJ Cosmos</h4>
+                        <p>2.1M followers</p>
+                        <button class="follow-small-btn">Follow</button>
+                    </div>
+                    <div class="similar-artist-card">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=160&h=160&fit=crop&crop=faces" alt="Artist">
+                        <h4>The Rockers</h4>
+                        <p>3.2M followers</p>
+                        <button class="follow-small-btn">Follow</button>
+                    </div>
+                    <div class="similar-artist-card">
+                        <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=160&h=160&fit=crop&crop=faces" alt="Artist">
+                        <h4>Echo Wave</h4>
+                        <p>1.8M followers</p>
+                        <button class="follow-small-btn">Follow</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Artist -->
+            <div class="about-artist-section">
+                <h2>About</h2>
+                <div class="about-content">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=500&fit=crop" alt="Artist Photo" class="about-image">
+                    <div class="about-text">
+                        <p>Luna Eclipse is an internationally acclaimed artist known for their genre-defying sound that blends electronic, pop, and acoustic elements. With over 2.4 million followers and multiple chart-topping hits, Luna has become one of the most influential voices in contemporary music.</p>
+                        <p>Starting their career in 2018, Luna quickly rose to fame with their debut album "Midnight Dreams," which garnered critical acclaim and commercial success. Their unique vocal style and innovative production techniques have set them apart in the music industry.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3>24M+</h3>
+                                <p>Monthly Listeners</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>5</h3>
+                                <p>Albums Released</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>12</h3>
+                                <p>Awards Won</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+</body>
+</html>

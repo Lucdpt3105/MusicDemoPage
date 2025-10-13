@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Now Playing - Groovezilla</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Album</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Artist</span>
+                </a>
+                <a href="discovery.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Discovery</span>
+                </a>
+            </div>
+            
+            <div class="categories-section">
+                <span class="section-title">Categories</span>
+                <div class="category-list">
+                    <div class="category-item">Pop</div>
+                    <div class="category-item">Hip Hop</div>
+                    <div class="category-item">Rock</div>
+                    <div class="category-item">R&B</div>
+                    <div class="category-item">Electronic</div>
+                    <div class="category-item">Country</div>
+                    <div class="category-item">Jazz</div>
+                    <div class="category-item">Classical</div>
+                    <div class="category-item">Reggae</div>
+                    <div class="category-item">Blues</div>
+                    <div class="category-item">Metal</div>
+                    <div class="category-item">Folk</div>
+                </div>
+            </div>
+            
+            <div class="my-playlists">
+                <span class="section-title">My Playlists</span>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot red"></div>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot blue"></div>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot purple"></div>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot cyan"></div>
+                    <span>EDM</span>
+                </a>
+            </div>
+            
+            <div class="user-section">
+                <div class="nav-item">
+                    <div class="icon"></div>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon"></div>
+                    <input type="text" class="search-input" placeholder="Search by artists, songs or albums" id="search-input">
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">Download Now</button>
+                    <div class="user-avatar"></div>
+                </div>
+            </div>
+
+            <!-- Now Playing Header -->
+            <div class="content-section">
+                <div class="flex items-center justify-between mb-lg">
+                    <h1 class="section-heading">Now Playing</h1>
+                    <div class="flex items-center gap-md">
+                        <span style="color: var(--text-secondary); font-size: 14px;">12 songs in queue</span>
+                        <button class="btn btn-secondary">View Queue</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Player -->
+            <div class="content-section">
+                <div class="card" style="text-align: center; padding: var(--spacing-xxl);">
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <!-- Album Artwork -->
+                        <div style="position: relative; margin-bottom: var(--spacing-xl);">
+                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=500&fit=crop" alt="Album Art" style="width: 100%; max-width: 400px; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(0, 228, 203, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--primary-bg); opacity: 0; transition: opacity var(--transition-normal);" class="play-overlay">
+                                ▶️
+                            </div>
+                        </div>
+                        
+                        <!-- Track Info -->
+                        <h2 style="font-size: 32px; font-weight: 700; margin-bottom: var(--spacing-sm); color: var(--text-primary);">Midnight Dreams</h2>
+                        <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: var(--spacing-sm);">Luna Eclipse</p>
+                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: var(--spacing-xl);">Nocturnal Sessions • 2024</p>
+                        
+                        <!-- Progress Bar -->
+                        <div style="margin-bottom: var(--spacing-xl);">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+                                <span style="font-size: 12px; color: var(--text-muted); min-width: 40px;">2:34</span>
+                                <div style="flex: 1; height: 6px; background: var(--tertiary-bg); border-radius: 3px; cursor: pointer; position: relative;">
+                                    <div style="height: 100%; background: var(--primary-accent); border-radius: 3px; width: 45%; transition: width var(--transition-fast);"></div>
+                                    <div style="position: absolute; top: 50%; left: 45%; transform: translate(-50%, -50%); width: 16px; height: 16px; background: var(--primary-accent); border-radius: 50%; opacity: 0; transition: opacity var(--transition-fast);"></div>
+                                </div>
+                                <span style="font-size: 12px; color: var(--text-muted); min-width: 40px;">5:42</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Controls -->
+                        <div style="display: flex; align-items: center; justify-content: center; gap: var(--spacing-lg); margin-bottom: var(--spacing-xl);">
+                            <button class="btn btn-ghost" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-ghost" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z"/>
+                                </svg>
+                            </button>
+                            <button class="play-btn" style="width: 60px; height: 60px; font-size: 24px;" data-track-id="4">
+                                ▶️
+                            </button>
+                            <button class="btn btn-ghost" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 18h2V6h-2v12zM6 18l8.5-6L6 6v12z"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-ghost" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <!-- Volume Control -->
+                        <div style="display: flex; align-items: center; justify-content: center; gap: var(--spacing-md);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: var(--text-secondary);">
+                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                            </svg>
+                            <div style="width: 120px; height: 4px; background: var(--tertiary-bg); border-radius: 2px; cursor: pointer;">
+                                <div style="height: 100%; background: var(--primary-accent); border-radius: 2px; width: 70%;"></div>
+                            </div>
+                            <span style="font-size: 12px; color: var(--text-muted); min-width: 30px;">70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Up Next Queue -->
+            <div class="content-section">
+                <h2 class="section-heading">Up Next</h2>
+                <div class="track-list">
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=60&h=60&fit=crop" alt="Song" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Summer Breeze</h4>
+                                <p>The Sunshine Band</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:45</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="5">▶️</button>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=60&h=60&fit=crop" alt="Song" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Electric Pulse</h4>
+                                <p>DJ Nova</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:12</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="6">▶️</button>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=60&h=60&fit=crop" alt="Song" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Acoustic Dreams</h4>
+                                <p>James Rivers</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:56</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="7">▶️</button>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=60&h=60&fit=crop" alt="Song" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Urban Flow</h4>
+                                <p>MC Flow</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:28</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="8">▶️</button>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=60&h=60&fit=crop" alt="Song" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Rock Anthem</h4>
+                                <p>Thunder Strike</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">5:15</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="10">▶️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Artists -->
+            <div class="content-section">
+                <h2 class="section-heading">Related Artists</h2>
+                <div class="grid grid-4">
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Sarah Melody</h4>
+                        <p class="artist-followers">892K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Miles Davis Jr</h4>
+                        <p class="artist-followers">654K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Alex Thunder</h4>
+                        <p class="artist-followers">1.2M followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">DJ Cosmos</h4>
+                        <p class="artist-followers">2.1M followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+</body>
+</html>

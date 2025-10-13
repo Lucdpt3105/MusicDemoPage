@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Listening History - Groovezilla</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon icon-home"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon icon-playlist"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon icon-album"></div>
+                    <span>Album</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon icon-artist"></div>
+                    <span>Artist</span>
+                </a>
+                <a href="discovery.html" class="nav-item">
+                    <div class="icon icon-discovery"></div>
+                    <span>Discovery</span>
+                </a>
+                <a href="history.html" class="nav-item active">
+                    <div class="icon icon-history"></div>
+                    <span>History</span>
+                </a>
+                <a href="favorites.html" class="nav-item">
+                    <div class="icon icon-heart"></div>
+                    <span>Favorites</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+            
+            <div class="categories-section">
+                <span class="section-title">Categories</span>
+                <div class="category-list">
+                    <div class="category-item">Pop</div>
+                    <div class="category-item">Hip Hop</div>
+                    <div class="category-item">Rock</div>
+                    <div class="category-item">R&B</div>
+                    <div class="category-item">Electronic</div>
+                    <div class="category-item">Country</div>
+                    <div class="category-item">Jazz</div>
+                    <div class="category-item">Classical</div>
+                    <div class="category-item">Reggae</div>
+                    <div class="category-item">Blues</div>
+                    <div class="category-item">Metal</div>
+                    <div class="category-item">Folk</div>
+                </div>
+            </div>
+            
+            <div class="my-playlists">
+                <span class="section-title">My Playlists</span>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot red"></div>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot blue"></div>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot purple"></div>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot cyan"></div>
+                    <span>EDM</span>
+                </a>
+            </div>
+            
+            <div class="user-section">
+                <a href="settings.html" class="nav-item">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon icon-search"></div>
+                    <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ hoặc album..." id="search-input">
+                    <div class="search-results" id="search-results">
+                        <!-- Search results will be populated here -->
+                    </div>
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">
+                        <div class="icon icon-download"></div>
+                        <span>Download Now</span>
+                    </button>
+                    <div class="auth-buttons">
+                        <button class="btn btn-ghost" id="login-btn">
+                            <div class="icon icon-login"></div>
+                            <span>Login</span>
+                        </button>
+                        <button class="btn btn-primary" id="signup-btn">
+                            <div class="icon icon-user"></div>
+                            <span>Sign Up</span>
+                        </button>
+                    </div>
+                    <div class="user-avatar" id="user-avatar" style="display: none;">
+                        <div class="icon icon-user"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="section-heading">Listening History</h1>
+            <p class="section-subtitle">Your recently played tracks</p>
+
+            <!-- History Stats -->
+            <div class="content-section">
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3 class="card-title">Total Plays</h3>
+                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">127</p>
+                        <p class="card-description">Songs played this week</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Listening Time</h3>
+                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">8h 42m</p>
+                        <p class="card-description">Total listening time</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Top Genre</h3>
+                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">Pop</p>
+                        <p class="card-description">Most played genre</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent History -->
+            <div class="content-section">
+                <h2 class="section-heading">Recently Played</h2>
+                <div class="track-list" id="history-list">
+                    <!-- History items will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Top Artists This Week -->
+            <div class="content-section">
+                <h2 class="section-heading">Top Artists This Week</h2>
+                <div class="grid grid-4">
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Luna Eclipse</h4>
+                        <p class="artist-followers">15 plays</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">The Sunshine Band</h4>
+                        <p class="artist-followers">12 plays</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">DJ Nova</h4>
+                        <p class="artist-followers">10 plays</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">James Rivers</h4>
+                        <p class="artist-followers">8 plays</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Tracks This Week -->
+            <div class="content-section">
+                <h2 class="section-heading">Top Tracks This Week</h2>
+                <div class="track-list">
+                    <div class="track-item">
+                        <span class="track-number">1</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Midnight Dreams</h4>
+                                <p>Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">15 plays</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="4">
+                                <div class="icon icon-play"></div>
+                            </button>
+                            <button class="like-btn" data-track-id="4">
+                                <div class="icon icon-heart"></div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">2</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Summer Breeze</h4>
+                                <p>The Sunshine Band</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">12 plays</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="5">
+                                <div class="icon icon-play"></div>
+                            </button>
+                            <button class="like-btn" data-track-id="5">
+                                <div class="icon icon-heart"></div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">3</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Electric Pulse</h4>
+                                <p>DJ Nova</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">10 plays</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="6">
+                                <div class="icon icon-play"></div>
+                            </button>
+                            <button class="like-btn" data-track-id="6">
+                                <div class="icon icon-heart"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clear History -->
+            <div class="content-section">
+                <div class="card" style="text-align: center;">
+                    <h3 class="card-title">Clear Listening History</h3>
+                    <p class="card-description">Remove all tracks from your listening history</p>
+                    <button class="btn btn-secondary" onclick="clearHistory()">Clear History</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+    
+    <!-- History Page Script -->
+    <script>
+        function populateHistory() {
+            const historyList = document.getElementById('history-list');
+            if (!historyList || !window.groovePlayer) return;
+            
+            const history = window.groovePlayer.getListeningHistory();
+            
+            if (history.length === 0) {
+                historyList.innerHTML = `
+                    <div class="card" style="text-align: center; padding: var(--spacing-xxl);">
+                        <h3 class="card-title">No listening history</h3>
+                        <p class="card-description">Start playing some music to see your history here</p>
+                        <a href="index.html" class="btn btn-primary">Browse Music</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            historyList.innerHTML = history.slice(0, 20).map((entry, index) => `
+                <div class="track-item">
+                    <span class="track-number">${index + 1}</span>
+                    <div class="track-info">
+                        <img src="${entry.track.cover}" alt="Track" class="track-cover">
+                        <div class="track-details">
+                            <h4>${entry.track.title}</h4>
+                            <p>${entry.track.artist}</p>
+                        </div>
+                    </div>
+                    <span class="track-duration">${new Date(entry.timestamp).toLocaleDateString()}</span>
+                    <div class="track-actions">
+                        <button class="play-btn track-play-btn" data-track-id="${entry.track.id}">
+                            <div class="icon icon-play"></div>
+                        </button>
+                        <button class="like-btn" data-track-id="${entry.track.id}">
+                            <div class="icon icon-heart"></div>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function clearHistory() {
+            if (window.groovePlayer) {
+                window.groovePlayer.listeningHistory = [];
+                localStorage.setItem('groovezilla_history', JSON.stringify([]));
+                populateHistory();
+                window.groovePlayer.showNotification('Listening history cleared');
+            }
+        }
+        
+        // Populate history when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(populateHistory, 1000); // Wait for player to initialize
+        });
+    </script>
+</body>
+</html>

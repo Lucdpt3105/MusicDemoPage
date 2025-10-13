@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Album - Groovezilla</title>
+</head>
+<body>
+    <div class="album-page">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item active">
+                    <div class="icon"></div>
+                    <span>Album</span>
+                </a>
+            </div>
+            
+            <a href="discovery.html" class="nav-item">
+                <div class="icon"></div>
+                <span>Discovery</span>
+            </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon"></div>
+                    <input type="text" placeholder="Search by artists, songs or albums">
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">Download Now</button>
+                    <div class="user-avatar"></div>
+                </div>
+            </div>
+
+            <!-- Album Hero -->
+            <div class="album-hero">
+                <div class="album-hero-bg">
+                    <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1400&h=500&fit=crop" alt="Album Background">
+                </div>
+                <div class="album-hero-content">
+                    <div class="album-cover-large">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Album Cover">
+                    </div>
+                    <div class="album-details">
+                        <span class="album-type">Album</span>
+                        <h1 class="album-title">Midnight Dreams</h1>
+                        <div class="album-meta">
+                            <a href="artist.html" class="artist-link">Luna Eclipse</a>
+                            <span>•</span>
+                            <span>2024</span>
+                            <span>•</span>
+                            <span>12 songs, 48 min</span>
+                        </div>
+                        <div class="album-actions">
+                            <button class="play-all-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                Play All
+                            </button>
+                            <button class="save-btn">Save Album</button>
+                            <button class="share-btn">Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track List -->
+            <div class="tracklist-section">
+                <div class="tracklist-header">
+                    <span class="track-number">#</span>
+                    <span class="track-title-header">Title</span>
+                    <span class="track-duration-header">Duration</span>
+                </div>
+                
+                <div class="tracklist">
+                    <div class="track-item">
+                        <span class="track-number">1</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=50&h=50&fit=crop" alt="Track">
+                            <div class="track-details">
+                                <h4>Midnight Dreams</h4>
+                                <p>Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:32</span>
+                        <button class="track-play-btn" data-track-id="4">▶</button>
+                        <button class="like-btn" data-track-id="4">🤍</button>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">2</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=50&h=50&fit=crop" alt="Track">
+                            <div class="track-details">
+                                <h4>Summer Breeze</h4>
+                                <p>The Sunshine Band</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:45</span>
+                        <button class="track-play-btn" data-track-id="5">▶</button>
+                        <button class="like-btn" data-track-id="5">🤍</button>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">3</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=50&h=50&fit=crop" alt="Track">
+                            <div class="track-details">
+                                <h4>Electric Pulse</h4>
+                                <p>DJ Nova</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">5:12</span>
+                        <button class="track-play-btn" data-track-id="6">▶</button>
+                        <button class="like-btn" data-track-id="6">🤍</button>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">4</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=50&h=50&fit=crop" alt="Track">
+                            <div class="track-details">
+                                <h4>Acoustic Dreams</h4>
+                                <p>James Rivers</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:18</span>
+                        <button class="track-play-btn" data-track-id="7">▶</button>
+                        <button class="like-btn" data-track-id="7">🤍</button>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">5</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=50&h=50&fit=crop" alt="Track">
+                            <div class="track-details">
+                                <h4>Urban Flow</h4>
+                                <p>MC Flow</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:56</span>
+                        <button class="track-play-btn" data-track-id="8">▶</button>
+                        <button class="like-btn" data-track-id="8">🤍</button>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">6</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=50&h=50&fit=crop" alt="Track">
+                            <div class="track-details">
+                                <h4>Jazz Nights</h4>
+                                <p>Miles Davis Jr</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:42</span>
+                        <button class="track-play-btn" data-track-id="9">▶</button>
+                        <button class="like-btn" data-track-id="9">🤍</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Albums Section -->
+            <div class="more-albums-section">
+                <h2>More Albums by Luna Eclipse</h2>
+                <div class="more-albums-grid">
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=250&h=250&fit=crop" alt="Album">
+                        <div class="album-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="10">▶️</button>
+                        </div>
+                        <h3>Summer Nights</h3>
+                        <p>Luna Eclipse • 2023</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=250&h=250&fit=crop" alt="Album">
+                        <div class="album-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="11">▶️</button>
+                        </div>
+                        <h3>Electric Dreams</h3>
+                        <p>DJ Nova • 2022</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=250&h=250&fit=crop" alt="Album">
+                        <div class="album-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="12">▶️</button>
+                        </div>
+                        <h3>Acoustic Sessions</h3>
+                        <p>James Rivers • 2023</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=250&h=250&fit=crop" alt="Album">
+                        <div class="album-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="13">▶️</button>
+                        </div>
+                        <h3>Urban Tales</h3>
+                        <p>MC Flow • 2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Albums -->
+            <div class="similar-albums-section">
+                <h2>Similar Albums You Might Like</h2>
+                <div class="similar-albums-scroll">
+                    <div class="album-card-small">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=180&h=180&fit=crop" alt="Album">
+                        <h4>Rock Legends</h4>
+                        <p>Various Artists</p>
+                    </div>
+                    <div class="album-card-small">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=180&h=180&fit=crop" alt="Album">
+                        <h4>Pop Classics</h4>
+                        <p>Various Artists</p>
+                    </div>
+                    <div class="album-card-small">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=180&h=180&fit=crop" alt="Album">
+                        <h4>Jazz Moods</h4>
+                        <p>Various Artists</p>
+                    </div>
+                    <div class="album-card-small">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=180&h=180&fit=crop" alt="Album">
+                        <h4>Electronic Waves</h4>
+                        <p>Various Artists</p>
+                    </div>
+                    <div class="album-card-small">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=180&h=180&fit=crop" alt="Album">
+                        <h4>Electronic Waves</h4>
+                        <p>Various Artists</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+</body>
+</html>

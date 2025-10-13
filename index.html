@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Groovezilla - Music Streaming</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item active">
+                    <div class="icon icon-home"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon icon-playlist"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon icon-album"></div>
+                    <span>Album</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon icon-artist"></div>
+                    <span>Artist</span>
+                </a>
+                <a href="discovery.html" class="nav-item">
+                    <div class="icon icon-discovery"></div>
+                    <span>Discovery</span>
+                </a>
+                <a href="history.html" class="nav-item">
+                    <div class="icon icon-history"></div>
+                    <span>History</span>
+                </a>
+                <a href="favorites.html" class="nav-item">
+                    <div class="icon icon-heart"></div>
+                    <span>Favorites</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+            
+            <div class="categories-section">
+                <span class="section-title">Categories</span>
+                <div class="category-list">
+                    <div class="category-item active">Pop</div>
+                    <div class="category-item">Hip Hop</div>
+                    <div class="category-item">Rock</div>
+                    <div class="category-item">R&B</div>
+                    <div class="category-item">Electronic</div>
+                    <div class="category-item">Country</div>
+                    <div class="category-item">Jazz</div>
+                    <div class="category-item">Classical</div>
+                    <div class="category-item">Reggae</div>
+                    <div class="category-item">Blues</div>
+                    <div class="category-item">Metal</div>
+                    <div class="category-item">Folk</div>
+                </div>
+            </div>
+            
+            <div class="my-playlists">
+                <span class="section-title">My Playlists</span>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot red"></div>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot blue"></div>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot purple"></div>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot cyan"></div>
+                    <span>EDM</span>
+                </a>
+            </div>
+            
+            <div class="user-section">
+                <a href="settings.html" class="nav-item">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon icon-search"></div>
+                    <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ hoặc album..." id="search-input">
+                    <div class="search-results" id="search-results">
+                        <!-- Search results will be populated here -->
+                    </div>
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">
+                        <div class="icon icon-download"></div>
+                        <span>Download Now</span>
+                    </button>
+                    <div class="auth-buttons">
+                        <button class="btn btn-ghost" id="login-btn">
+                            <div class="icon icon-login"></div>
+                            <span>Login</span>
+                        </button>
+                        <button class="btn btn-primary" id="signup-btn">
+                            <div class="icon icon-user"></div>
+                            <span>Sign Up</span>
+                        </button>
+                    </div>
+                    <div class="user-avatar" id="user-avatar" style="display: none;">
+                        <div class="icon icon-user"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1 class="hero-title">Your Personalized Musical Journey</h1>
+                    <p class="hero-subtitle">Unlock the Realm of Sonic Bliss with Our Streaming App</p>
+                    <button class="hero-btn">Upgrade now</button>
+                </div>
+            </div>
+            
+            <!-- Featured Content -->
+            <div class="content-section">
+                <h2 class="section-heading">Featured Playlists</h2>
+                <div class="grid grid-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Playlist" class="card-image">
+                        <h3 class="card-title">Soundscapes from Beyond</h3>
+                        <p class="card-subtitle">421K followers</p>
+                        <p class="card-description">Where Every Note Finds a Home</p>
+                        <button class="play-btn play-btn" data-track-id="4">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Playlist" class="card-image">
+                        <h3 class="card-title">Cityscapes in Music</h3>
+                        <p class="card-subtitle">54K followers</p>
+                        <p class="card-description">Elevate Your Life with Our Premier Music Streaming Platform</p>
+                        <button class="play-btn play-btn" data-track-id="5">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300&h=300&fit=crop" alt="Playlist" class="card-image">
+                        <h3 class="card-title">Songs of the Night</h3>
+                        <p class="card-subtitle">142K followers</p>
+                        <p class="card-description">Perfect for late night listening</p>
+                        <button class="play-btn play-btn" data-track-id="6">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=300&h=300&fit=crop" alt="Playlist" class="card-image">
+                        <h3 class="card-title">Whispers of the Wilderness</h3>
+                        <p class="card-subtitle">321K followers</p>
+                        <p class="card-description">Nature-inspired melodies</p>
+                        <button class="play-btn play-btn" data-track-id="7">▶️</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Tracks -->
+            <div class="content-section">
+                <h2 class="section-heading">Top Tracks</h2>
+                <div class="track-list">
+                    <div class="track-item">
+                        <span class="track-number">1</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Midnight Dreams</h4>
+                                <p>Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:32</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="4">▶️</button>
+                            <button class="like-btn" data-track-id="4">🤍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">2</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Summer Breeze</h4>
+                                <p>The Sunshine Band</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:45</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="5">▶️</button>
+                            <button class="like-btn" data-track-id="5">🤍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">3</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Electric Pulse</h4>
+                                <p>DJ Nova</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">5:12</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="6">▶️</button>
+                            <button class="like-btn" data-track-id="6">🤍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">4</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Acoustic Dreams</h4>
+                                <p>James Rivers</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:18</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="7">▶️</button>
+                            <button class="like-btn" data-track-id="7">🤍</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Popular Artists -->
+            <div class="content-section">
+                <h2 class="section-heading">Popular Artists</h2>
+                <div class="grid grid-5">
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=200&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h3 class="artist-name">Luna Eclipse</h3>
+                        <p class="artist-followers">892K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=200&h=200&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h3 class="artist-name">The Sunshine Band</h3>
+                        <p class="artist-followers">654K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=200&h=200&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h3 class="artist-name">DJ Nova</h3>
+                        <p class="artist-followers">1.2M followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=200&h=200&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h3 class="artist-name">James Rivers</h3>
+                        <p class="artist-followers">543K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h3 class="artist-name">MC Flow</h3>
+                        <p class="artist-followers">2.1M followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Favorite Albums -->
+            <div class="content-section">
+                <h2 class="section-heading">Favorite Albums</h2>
+                <div class="grid grid-2">
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=100&h=100&fit=crop" alt="Album" class="album-cover">
+                        <div class="album-info">
+                            <h4>Soundscapes from Beyond</h4>
+                            <p>421K follower</p>
+                        </div>
+                        <button class="play-btn" data-track-id="13">▶️</button>
+                    </div>
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=100&h=100&fit=crop" alt="Album" class="album-cover">
+                        <div class="album-info">
+                            <h4>Cityscapes in Music</h4>
+                            <p>54K follower</p>
+                        </div>
+                        <button class="play-btn" data-track-id="14">▶️</button>
+                    </div>
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=100&h=100&fit=crop" alt="Album" class="album-cover">
+                        <div class="album-info">
+                            <h4>Songs of the Night</h4>
+                            <p>142K follower</p>
+                        </div>
+                        <button class="play-btn" data-track-id="15">▶️</button>
+                    </div>
+                    <div class="album-card">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=100&h=100&fit=crop" alt="Album" class="album-cover">
+                        <div class="album-info">
+                            <h4>Whispers of the Wilderness</h4>
+                            <p>321K follower</p>
+                        </div>
+                        <button class="play-btn" data-track-id="16">▶️</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Offline Listening -->
+            <div class="content-section">
+                <div class="card">
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100&h=100&fit=crop" alt="Offline" class="card-image" style="width: 80px; height: 80px; margin-right: var(--spacing-lg);">
+                        <div class="flex-1">
+                            <h3 class="card-title">Listening to music offline</h3>
+                            <p class="card-description">Experience listening to music offline with the best quality</p>
+                        </div>
+                        <button class="btn btn-primary">Try for free</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+</body>
+</html>

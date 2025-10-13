@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Discovery - Groovezilla</title>
+</head>
+<body>
+    <div class="discovery-page">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Album</span>
+                </a>
+            </div>
+            
+            <div class="discovery-section">
+                <span class="section-title">Discovery</span>
+                <a href="discovery.html" class="nav-item active">
+                    <div class="icon"></div>
+                    <span>Trending</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Popular</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Singer</span>
+                </a>
+            </div>
+            
+            <a href="#" class="nav-item settings">
+                <div class="icon"></div>
+                <span>Setting</span>
+            </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon"></div>
+                    <input type="text" placeholder="Search by artists, songs or albums">
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">Download Now</button>
+                    <div class="user-avatar"></div>
+                </div>
+            </div>
+
+            <h1 class="page-title">Discover New Music</h1>
+
+            <!-- Featured Hero Section -->
+            <div class="hero-section">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&h=400&fit=crop" alt="Featured Music" class="hero-image">
+                <div class="hero-overlay">
+                    <h2>Trending This Week</h2>
+                    <p>The hottest tracks everyone is listening to</p>
+                    <button class="play-btn" data-track-id="10">Play Now</button>
+                </div>
+            </div>
+
+            <!-- Trending Genres -->
+            <section class="trending-section">
+                <h2 class="section-heading">Trending Genres</h2>
+                <div class="genre-grid">
+                    <div class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Rock">
+                        <div class="genre-overlay">
+                            <h3>Rock</h3>
+                            <p>2,345 songs</p>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&h=300&fit=crop" alt="Jazz">
+                        <div class="genre-overlay">
+                            <h3>Jazz</h3>
+                            <p>1,892 songs</p>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop" alt="Electronic">
+                        <div class="genre-overlay">
+                            <h3>Electronic</h3>
+                            <p>3,421 songs</p>
+                        </div>
+                    </div>
+                    <div class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Pop">
+                        <div class="genre-overlay">
+                            <h3>Pop</h3>
+                            <p>5,678 songs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Releases -->
+            <section class="releases-section">
+                <h2 class="section-heading">New Releases</h2>
+                <div class="releases-grid">
+                    <div class="release-card">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=250&h=250&fit=crop" alt="Album 1">
+                        <div class="release-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="4">▶️</button>
+                        </div>
+                        <h4>Midnight Dreams</h4>
+                        <p>Luna Eclipse</p>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=250&h=250&fit=crop" alt="Album 2">
+                        <div class="release-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="5">▶️</button>
+                        </div>
+                        <h4>Summer Vibes</h4>
+                        <p>The Sunshine Band</p>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=250&h=250&fit=crop" alt="Album 3">
+                        <div class="release-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="6">▶️</button>
+                        </div>
+                        <h4>Electric Nights</h4>
+                        <p>DJ Nova</p>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=250&h=250&fit=crop" alt="Album 4">
+                        <div class="release-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="7">▶️</button>
+                        </div>
+                        <h4>Acoustic Sessions</h4>
+                        <p>James Rivers</p>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=250&h=250&fit=crop" alt="Album 5">
+                        <div class="release-overlay">
+                            <button class="play-overlay-btn play-btn" data-track-id="8">▶️</button>
+                        </div>
+                        <h4>Urban Beats</h4>
+                        <p>MC Flow</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Artists -->
+            <section class="featured-artists">
+                <h2 class="section-heading">Featured Artists</h2>
+                <div class="artists-grid">
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=200&fit=crop&crop=faces" alt="Artist 1">
+                        <h4>Alex Thunder</h4>
+                        <p>Rock • 1.2M followers</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=200&h=200&fit=crop&crop=faces" alt="Artist 2">
+                        <h4>Sarah Melody</h4>
+                        <p>Pop • 892K followers</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=200&h=200&fit=crop&crop=faces" alt="Artist 3">
+                        <h4>DJ Cosmos</h4>
+                        <p>Electronic • 2.1M followers</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=200&h=200&fit=crop&crop=faces" alt="Artist 4">
+                        <h4>Miles Davis Jr</h4>
+                        <p>Jazz • 654K followers</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=200&h=200&fit=crop&crop=faces" alt="Artist 5">
+                        <h4>Luna Star</h4>
+                        <p>R&B • 1.5M followers</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop&crop=faces" alt="Artist 6">
+                        <h4>The Rockers</h4>
+                        <p>Rock • 3.2M followers</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Curated Playlists -->
+            <section class="curated-playlists">
+                <h2 class="section-heading">Curated for You</h2>
+                <div class="playlist-scroll">
+                    <div class="playlist-item">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=180&h=180&fit=crop" alt="Playlist 1">
+                        <h4>Chill Vibes</h4>
+                        <p>Perfect for relaxing</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=180&h=180&fit=crop" alt="Playlist 2">
+                        <h4>Workout Energy</h4>
+                        <p>Get pumped up</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=180&h=180&fit=crop" alt="Playlist 3">
+                        <h4>Study Focus</h4>
+                        <p>Concentration music</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=180&h=180&fit=crop" alt="Playlist 4">
+                        <h4>Party Hits</h4>
+                        <p>Dance all night</p>
+                    </div>
+                    <div class="playlist-item">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=180&h=180&fit=crop" alt="Playlist 5">
+                        <h4>Road Trip</h4>
+                        <p>Highway classics</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+</body>
+</html>

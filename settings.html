@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Settings - Groovezilla</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon icon-home"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon icon-playlist"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon icon-album"></div>
+                    <span>Album</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon icon-artist"></div>
+                    <span>Artist</span>
+                </a>
+                <a href="discovery.html" class="nav-item">
+                    <div class="icon icon-discovery"></div>
+                    <span>Discovery</span>
+                </a>
+                <a href="history.html" class="nav-item">
+                    <div class="icon icon-history"></div>
+                    <span>History</span>
+                </a>
+                <a href="favorites.html" class="nav-item">
+                    <div class="icon icon-heart"></div>
+                    <span>Favorites</span>
+                </a>
+            </div>
+            
+            <div class="categories-section">
+                <span class="section-title">Categories</span>
+                <div class="category-list">
+                    <div class="category-item">Pop</div>
+                    <div class="category-item">Hip Hop</div>
+                    <div class="category-item">Rock</div>
+                    <div class="category-item">R&B</div>
+                    <div class="category-item">Electronic</div>
+                    <div class="category-item">Country</div>
+                    <div class="category-item">Jazz</div>
+                    <div class="category-item">Classical</div>
+                    <div class="category-item">Reggae</div>
+                    <div class="category-item">Blues</div>
+                    <div class="category-item">Metal</div>
+                    <div class="category-item">Folk</div>
+                </div>
+            </div>
+            
+            <div class="my-playlists">
+                <span class="section-title">My Playlists</span>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot red"></div>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot blue"></div>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot purple"></div>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot cyan"></div>
+                    <span>EDM</span>
+                </a>
+            </div>
+            
+            <div class="user-section">
+                <a href="settings.html" class="nav-item active">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon icon-search"></div>
+                    <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ hoặc album..." id="search-input">
+                    <div class="search-results" id="search-results">
+                        <!-- Search results will be populated here -->
+                    </div>
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">
+                        <div class="icon icon-download"></div>
+                        <span>Download Now</span>
+                    </button>
+                    <div class="auth-buttons">
+                        <button class="btn btn-ghost" id="login-btn">
+                            <div class="icon icon-login"></div>
+                            <span>Login</span>
+                        </button>
+                        <button class="btn btn-primary" id="signup-btn">
+                            <div class="icon icon-user"></div>
+                            <span>Sign Up</span>
+                        </button>
+                    </div>
+                    <div class="user-avatar" id="user-avatar" style="display: none;">
+                        <div class="icon icon-user"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="section-heading">Settings</h1>
+            <p class="section-subtitle">Customize your Groovezilla experience</p>
+
+            <!-- User Profile -->
+            <div class="content-section">
+                <h2 class="section-heading">Profile</h2>
+                <div class="card">
+                    <div class="flex items-center gap-lg">
+                        <div class="user-avatar" style="width: 80px; height: 80px; font-size: 32px;">
+                            <div class="icon icon-user"></div>
+                        </div>
+                        <div>
+                            <h3 class="card-title" id="user-name">Guest User</h3>
+                            <p class="card-subtitle" id="user-email">Not logged in</p>
+                            <p class="card-description">Member since <span id="join-date">-</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio Settings -->
+            <div class="content-section">
+                <h2 class="section-heading">Audio Settings</h2>
+                <div class="card">
+                    <div class="form-group">
+                        <label>Volume</label>
+                        <div class="flex items-center gap-md">
+                            <div class="icon icon-volume"></div>
+                            <input type="range" id="volume-slider" min="0" max="100" value="70" class="volume-slider">
+                            <span id="volume-display">70%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Audio Quality</label>
+                        <select id="audio-quality" class="form-select">
+                            <option value="high">High Quality (320 kbps)</option>
+                            <option value="medium" selected>Medium Quality (192 kbps)</option>
+                            <option value="low">Low Quality (128 kbps)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="flex items-center gap-sm">
+                            <input type="checkbox" id="crossfade" class="form-checkbox">
+                            <span>Crossfade between tracks</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="flex items-center gap-sm">
+                            <input type="checkbox" id="normalize" class="form-checkbox">
+                            <span>Normalize volume</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playback Settings -->
+            <div class="content-section">
+                <h2 class="section-heading">Playback Settings</h2>
+                <div class="card">
+                    <div class="form-group">
+                        <label>Default Repeat Mode</label>
+                        <select id="repeat-mode" class="form-select">
+                            <option value="none">No Repeat</option>
+                            <option value="one" selected>Repeat One</option>
+                            <option value="all">Repeat All</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="flex items-center gap-sm">
+                            <input type="checkbox" id="auto-play" class="form-checkbox" checked>
+                            <span>Auto-play next track</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="flex items-center gap-sm">
+                            <input type="checkbox" id="gapless" class="form-checkbox" checked>
+                            <span>Gapless playback</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Skip silence at beginning/end</label>
+                        <select id="skip-silence" class="form-select">
+                            <option value="none">Never</option>
+                            <option value="beginning">Beginning only</option>
+                            <option value="end">End only</option>
+                            <option value="both" selected>Both</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Settings -->
+            <div class="content-section">
+                <h2 class="section-heading">Privacy Settings</h2>
+                <div class="card">
+                    <div class="form-group">
+                        <label class="flex items-center gap-sm">
+                            <input type="checkbox" id="private-session" class="form-checkbox">
+                            <span>Private session (don't track listening history)</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="flex items-center gap-sm">
+                            <input type="checkbox" id="show-activity" class="form-checkbox" checked>
+                            <span>Show my activity to friends</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="flex items-center gap-sm">
+                            <input type="checkbox" id="explicit-content" class="form-checkbox" checked>
+                            <span>Allow explicit content</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Management -->
+            <div class="content-section">
+                <h2 class="section-heading">Data Management</h2>
+                <div class="card">
+                    <div class="form-group">
+                        <label>Clear Listening History</label>
+                        <p class="card-description">Remove all tracks from your listening history</p>
+                        <button class="btn btn-secondary" onclick="clearListeningHistory()">Clear History</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Export Data</label>
+                        <p class="card-description">Download your playlists, favorites, and listening history</p>
+                        <button class="btn btn-secondary" onclick="exportData()">Export Data</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Reset All Settings</label>
+                        <p class="card-description">Reset all settings to default values</p>
+                        <button class="btn btn-secondary" onclick="resetSettings()">Reset Settings</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="content-section">
+                <h2 class="section-heading">About</h2>
+                <div class="card">
+                    <div class="grid grid-2">
+                        <div>
+                            <h3 class="card-title">Groovezilla</h3>
+                            <p class="card-subtitle">Version 1.0.0</p>
+                            <p class="card-description">A modern music streaming web application</p>
+                        </div>
+                        <div>
+                            <h3 class="card-title">Features</h3>
+                            <ul style="color: var(--text-secondary); font-size: 14px;">
+                                <li>Dark theme with cyan accents</li>
+                                <li>Responsive design</li>
+                                <li>Mini player</li>
+                                <li>Playlist management</li>
+                                <li>Listening history</li>
+                                <li>Favorites system</li>
+                                <li>Artist following</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+    
+    <!-- Settings Page Script -->
+    <script>
+        function updateUserProfile() {
+            if (window.groovePlayer) {
+                const user = window.groovePlayer.getCurrentUser();
+                if (user) {
+                    document.getElementById('user-name').textContent = user.username;
+                    document.getElementById('user-email').textContent = user.email;
+                    document.getElementById('join-date').textContent = new Date(user.joinDate).toLocaleDateString();
+                }
+            }
+        }
+        
+        function initializeSettings() {
+            // Load saved settings
+            const settings = JSON.parse(localStorage.getItem('groovezilla_settings') || '{}');
+            
+            // Volume slider
+            const volumeSlider = document.getElementById('volume-slider');
+            const volumeDisplay = document.getElementById('volume-display');
+            if (volumeSlider && volumeDisplay) {
+                volumeSlider.value = settings.volume || 70;
+                volumeDisplay.textContent = volumeSlider.value + '%';
+                
+                volumeSlider.addEventListener('input', (e) => {
+                    volumeDisplay.textContent = e.target.value + '%';
+                    if (window.groovePlayer) {
+                        window.groovePlayer.volume = e.target.value / 100;
+                        window.groovePlayer.audio.volume = window.groovePlayer.volume;
+                    }
+                    saveSettings();
+                });
+            }
+            
+            // Audio quality
+            const audioQuality = document.getElementById('audio-quality');
+            if (audioQuality) {
+                audioQuality.value = settings.audioQuality || 'medium';
+                audioQuality.addEventListener('change', saveSettings);
+            }
+            
+            // Checkboxes
+            const checkboxes = ['crossfade', 'normalize', 'auto-play', 'gapless', 'private-session', 'show-activity', 'explicit-content'];
+            checkboxes.forEach(id => {
+                const checkbox = document.getElementById(id);
+                if (checkbox) {
+                    checkbox.checked = settings[id] || false;
+                    checkbox.addEventListener('change', saveSettings);
+                }
+            });
+            
+            // Selects
+            const selects = ['repeat-mode', 'skip-silence'];
+            selects.forEach(id => {
+                const select = document.getElementById(id);
+                if (select) {
+                    select.value = settings[id] || select.options[0].value;
+                    select.addEventListener('change', saveSettings);
+                }
+            });
+        }
+        
+        function saveSettings() {
+            const settings = {
+                volume: document.getElementById('volume-slider')?.value || 70,
+                audioQuality: document.getElementById('audio-quality')?.value || 'medium',
+                crossfade: document.getElementById('crossfade')?.checked || false,
+                normalize: document.getElementById('normalize')?.checked || false,
+                autoPlay: document.getElementById('auto-play')?.checked || true,
+                gapless: document.getElementById('gapless')?.checked || true,
+                repeatMode: document.getElementById('repeat-mode')?.value || 'one',
+                skipSilence: document.getElementById('skip-silence')?.value || 'both',
+                privateSession: document.getElementById('private-session')?.checked || false,
+                showActivity: document.getElementById('show-activity')?.checked || true,
+                explicitContent: document.getElementById('explicit-content')?.checked || true
+            };
+            
+            localStorage.setItem('groovezilla_settings', JSON.stringify(settings));
+        }
+        
+        function clearListeningHistory() {
+            if (confirm('Are you sure you want to clear your listening history?')) {
+                if (window.groovePlayer) {
+                    window.groovePlayer.listeningHistory = [];
+                    localStorage.setItem('groovezilla_history', JSON.stringify([]));
+                    window.groovePlayer.showNotification('Listening history cleared');
+                }
+            }
+        }
+        
+        function exportData() {
+            if (window.groovePlayer) {
+                const data = {
+                    user: window.groovePlayer.getCurrentUser(),
+                    likedTracks: window.groovePlayer.getLikedTracks(),
+                    listeningHistory: window.groovePlayer.getListeningHistory(),
+                    followedArtists: window.groovePlayer.getFollowedArtists(),
+                    playlists: window.groovePlayer.userPlaylists,
+                    settings: JSON.parse(localStorage.getItem('groovezilla_settings') || '{}'),
+                    exportDate: new Date().toISOString()
+                };
+                
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'groovezilla-data.json';
+                a.click();
+                URL.revokeObjectURL(url);
+                
+                window.groovePlayer.showNotification('Data exported successfully');
+            }
+        }
+        
+        function resetSettings() {
+            if (confirm('Are you sure you want to reset all settings to default?')) {
+                localStorage.removeItem('groovezilla_settings');
+                initializeSettings();
+                window.groovePlayer.showNotification('Settings reset to default');
+            }
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                updateUserProfile();
+                initializeSettings();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Test Player - Groovezilla</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Album</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Artist</span>
+                </a>
+                <a href="discovery.html" class="nav-item">
+                    <div class="icon"></div>
+                    <span>Discovery</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon"></div>
+                    <input type="text" class="search-input" placeholder="Search by artists, songs or albums" id="search-input">
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">Download Now</button>
+                    <div class="user-avatar"></div>
+                </div>
+            </div>
+
+            <h1 class="section-heading">Test Player</h1>
+            <p class="section-subtitle">Test all player functionality</p>
+
+            <!-- Test Controls -->
+            <div class="content-section">
+                <div class="card">
+                    <h3 class="card-title">Player Controls Test</h3>
+                    <div class="flex gap-md mb-lg">
+                        <button class="btn btn-primary" onclick="testPlayTrack(4)">Play Track 4</button>
+                        <button class="btn btn-secondary" onclick="testPlayTrack(5)">Play Track 5</button>
+                        <button class="btn btn-secondary" onclick="testPlayTrack(6)">Play Track 6</button>
+                        <button class="btn btn-secondary" onclick="testPlayTrack(7)">Play Track 7</button>
+                    </div>
+                    <div class="flex gap-md mb-lg">
+                        <button class="btn btn-ghost" onclick="testTogglePlayPause()">Toggle Play/Pause</button>
+                        <button class="btn btn-ghost" onclick="testNextTrack()">Next Track</button>
+                        <button class="btn btn-ghost" onclick="testPreviousTrack()">Previous Track</button>
+                        <button class="btn btn-ghost" onclick="testToggleLike()">Toggle Like</button>
+                    </div>
+                    <div class="flex gap-md mb-lg">
+                        <button class="btn btn-secondary" onclick="testSearch()">Test Search</button>
+                        <button class="btn btn-secondary" onclick="testRunTestCases()">Run Test Cases</button>
+                        <button class="btn btn-secondary" onclick="testShowMiniPlayer()">Show Mini Player</button>
+                        <button class="btn btn-secondary" onclick="testHideMiniPlayer()">Hide Mini Player</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Track List -->
+            <div class="content-section">
+                <h2 class="section-heading">Test Tracks</h2>
+                <div class="track-list">
+                    <div class="track-item">
+                        <span class="track-number">1</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Midnight Dreams</h4>
+                                <p>Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:32</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="4">▶️</button>
+                            <button class="like-btn" data-track-id="4">🤍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">2</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Summer Breeze</h4>
+                                <p>The Sunshine Band</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">3:45</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="5">▶️</button>
+                            <button class="like-btn" data-track-id="5">🤍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">3</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Electric Pulse</h4>
+                                <p>DJ Nova</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">5:12</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="6">▶️</button>
+                            <button class="like-btn" data-track-id="6">🤍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <span class="track-number">4</span>
+                        <div class="track-info">
+                            <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=50&h=50&fit=crop" alt="Track" class="track-cover">
+                            <div class="track-details">
+                                <h4>Acoustic Dreams</h4>
+                                <p>James Rivers</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">4:18</span>
+                        <div class="track-actions">
+                            <button class="play-btn track-play-btn" data-track-id="7">▶️</button>
+                            <button class="like-btn" data-track-id="7">🤍</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Cards -->
+            <div class="content-section">
+                <h2 class="section-heading">Test Cards</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Playlist" class="card-image">
+                        <h3 class="card-title">Test Playlist 1</h3>
+                        <p class="card-subtitle">Test subtitle</p>
+                        <p class="card-description">Test description for playlist</p>
+                        <button class="play-btn" data-track-id="8">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Playlist" class="card-image">
+                        <h3 class="card-title">Test Playlist 2</h3>
+                        <p class="card-subtitle">Test subtitle</p>
+                        <p class="card-description">Test description for playlist</p>
+                        <button class="play-btn" data-track-id="9">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300&h=300&fit=crop" alt="Playlist" class="card-image">
+                        <h3 class="card-title">Test Playlist 3</h3>
+                        <p class="card-subtitle">Test subtitle</p>
+                        <p class="card-description">Test description for playlist</p>
+                        <button class="play-btn" data-track-id="10">▶️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Artists -->
+            <div class="content-section">
+                <h2 class="section-heading">Test Artists</h2>
+                <div class="grid grid-4">
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Test Artist 1</h4>
+                        <p class="artist-followers">892K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Test Artist 2</h4>
+                        <p class="artist-followers">654K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Test Artist 3</h4>
+                        <p class="artist-followers">1.2M followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
+                        <h4 class="artist-name">Test Artist 4</h4>
+                        <p class="artist-followers">543K followers</p>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Debug Info -->
+            <div class="content-section">
+                <div class="card">
+                    <h3 class="card-title">Debug Information</h3>
+                    <div id="debug-info" style="font-family: monospace; font-size: 12px; color: var(--text-secondary);">
+                        <p>Player Status: <span id="player-status">Not initialized</span></p>
+                        <p>Current Track: <span id="current-track">None</span></p>
+                        <p>Is Playing: <span id="is-playing">False</span></p>
+                        <p>Liked Tracks: <span id="liked-count">0</span></p>
+                        <p>History Count: <span id="history-count">0</span></p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="updateDebugInfo()">Update Debug Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+    
+    <!-- Test Functions -->
+    <script>
+        function testPlayTrack(trackId) {
+            if (window.groovePlayer) {
+                window.groovePlayer.playTrack(trackId);
+                console.log(`Testing play track ${trackId}`);
+            } else {
+                console.error('GroovePlayer not initialized');
+            }
+        }
+
+        function testTogglePlayPause() {
+            if (window.groovePlayer) {
+                window.groovePlayer.togglePlayPause();
+                console.log('Testing toggle play/pause');
+            }
+        }
+
+        function testNextTrack() {
+            if (window.groovePlayer) {
+                window.groovePlayer.nextTrack();
+                console.log('Testing next track');
+            }
+        }
+
+        function testPreviousTrack() {
+            if (window.groovePlayer) {
+                window.groovePlayer.previousTrack();
+                console.log('Testing previous track');
+            }
+        }
+
+        function testToggleLike() {
+            if (window.groovePlayer) {
+                window.groovePlayer.toggleLike();
+                console.log('Testing toggle like');
+            }
+        }
+
+        function testSearch() {
+            if (window.groovePlayer) {
+                const results = window.groovePlayer.searchTracks('dream');
+                console.log('Search results:', results);
+            }
+        }
+
+        function testRunTestCases() {
+            if (window.groovePlayer) {
+                window.groovePlayer.runTestCases();
+            }
+        }
+
+        function testShowMiniPlayer() {
+            if (window.groovePlayer) {
+                window.groovePlayer.showMiniPlayer();
+                console.log('Testing show mini player');
+            }
+        }
+
+        function testHideMiniPlayer() {
+            if (window.groovePlayer) {
+                window.groovePlayer.hideMiniPlayer();
+                console.log('Testing hide mini player');
+            }
+        }
+
+        function updateDebugInfo() {
+            if (window.groovePlayer) {
+                document.getElementById('player-status').textContent = 'Initialized';
+                document.getElementById('current-track').textContent = window.groovePlayer.currentTrack ? window.groovePlayer.currentTrack.title : 'None';
+                document.getElementById('is-playing').textContent = window.groovePlayer.isPlaying ? 'True' : 'False';
+                document.getElementById('liked-count').textContent = window.groovePlayer.likedTracks.length;
+                document.getElementById('history-count').textContent = window.groovePlayer.listeningHistory.length;
+            }
+        }
+
+        // Update debug info every 2 seconds
+        setInterval(updateDebugInfo, 2000);
+    </script>
+</body>
+</html>

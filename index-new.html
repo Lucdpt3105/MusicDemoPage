@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Groovezilla - Your Music Streaming Platform</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="./images/logo.svg" alt="Groovezilla Logo" class="app-logo">
+                <h1 class="app-name">Groovezilla</h1>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">Menu</h3>
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-link">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Playlists</span>
+                </a>
+                <a href="album.html" class="nav-link">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+
+            <!-- Discovery Section -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">Discovery</h3>
+                <a href="discovery.html" class="nav-link">
+                    <i class="fas fa-fire"></i>
+                    <span>Trending</span>
+                </a>
+                <a href="discovery.html" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Popular</span>
+                </a>
+                <a href="artist.html" class="nav-link">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="discovery.html" class="nav-link">
+                    <i class="fas fa-guitar"></i>
+                    <span>Bands</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span>Radio</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-podcast"></i>
+                    <span>Podcasts</span>
+                </a>
+            </nav>
+
+            <!-- My Playlists -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">My Playlists</h3>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-heart" style="color: #ff6b6b;"></i>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-bolt" style="color: #4ecdc4;"></i>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-music" style="color: #a29bfe;"></i>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-headphones" style="color: #feca57;"></i>
+                    <span>EDM</span>
+                </a>
+            </nav>
+
+            <!-- Settings -->
+            <div class="sidebar-footer">
+                <a href="admin.html" class="nav-link">
+                    <i class="fas fa-crown"></i>
+                    <span>Admin</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for artists, songs or albums...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-download">
+                        <i class="fas fa-download"></i>
+                        Download Now
+                    </button>
+                    <div class="user-menu">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=faces" alt="User" class="user-avatar">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-card featured">
+                    <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&h=300&fit=crop" alt="Featured" class="hero-bg">
+                    <div class="hero-content">
+                        <span class="hero-badge"><i class="fas fa-crown"></i> Premium</span>
+                        <h2>Your Personalized Musical Journey</h2>
+                        <p>Unlock the Realm of Sonic Bliss with Our Streaming App</p>
+                        <button class="btn-hero">
+                            <i class="fas fa-rocket"></i>
+                            Upgrade Now
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-card secondary">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop" alt="Discover" class="hero-bg">
+                    <div class="hero-content">
+                        <h3>Where Every Note Finds a Home</h3>
+                        <p>Elevate Your Life with Music</p>
+                        <button class="btn-hero-secondary">
+                            <i class="fas fa-compass"></i>
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Genre Categories -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-th-large"></i> Browse by Category</h2>
+                    <a href="discovery.html" class="btn-see-all">See All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="genre-pills">
+                    <button class="genre-pill active">
+                        <i class="fas fa-music"></i>
+                        Pop
+                    </button>
+                    <button class="genre-pill">
+                        <i class="fas fa-guitar"></i>
+                        Rock
+                    </button>
+                    <button class="genre-pill">
+                        <i class="fas fa-drum"></i>
+                        Hip Hop
+                    </button>
+                    <button class="genre-pill">
+                        <i class="fas fa-guitar"></i>
+                        R&B
+                    </button>
+                    <button class="genre-pill">
+                        <i class="fas fa-headphones"></i>
+                        Electronic
+                    </button>
+                    <button class="genre-pill">
+                        <i class="fas fa-hat-cowboy"></i>
+                        Country
+                    </button>
+                    <button class="genre-pill">
+                        <i class="fas fa-saxophone"></i>
+                        Jazz
+                    </button>
+                    <button class="genre-pill">
+                        <i class="fas fa-music"></i>
+                        Classical
+                    </button>
+                </div>
+            </section>
+
+            <!-- Now Playing / Playlist -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-play-circle"></i> Now Playing</h2>
+                    <div class="tabs">
+                        <button class="tab active">Playlist</button>
+                        <button class="tab">Artists</button>
+                        <button class="tab">Albums</button>
+                        <button class="tab">Streams</button>
+                        <button class="tab">Favorites</button>
+                    </div>
+                </div>
+                
+                <div class="track-list">
+                    <div class="track-item">
+                        <div class="track-number">1</div>
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=60&h=60&fit=crop" alt="Track" class="track-img">
+                        <div class="track-info">
+                            <h4>Relax and Unwind</h4>
+                            <p>Lily Moonshadow</p>
+                        </div>
+                        <span class="track-time">20:24</span>
+                        <div class="track-actions">
+                            <button class="btn-icon" title="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-icon" title="More options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item playing">
+                        <div class="track-number">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=60&h=60&fit=crop" alt="Track" class="track-img">
+                        <div class="track-info">
+                            <h4>Relax and Unwind</h4>
+                            <p>Max Silverlake</p>
+                        </div>
+                        <span class="track-time">12:32</span>
+                        <div class="track-actions">
+                            <button class="btn-icon active" title="Remove from favorites">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="btn-icon" title="More options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <div class="track-number">3</div>
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=60&h=60&fit=crop" alt="Track" class="track-img">
+                        <div class="track-info">
+                            <h4>Relax and Unwind</h4>
+                            <p>Ruby Riversong</p>
+                        </div>
+                        <span class="track-time">15:15</span>
+                        <div class="track-actions">
+                            <button class="btn-icon" title="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-icon" title="More options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-item">
+                        <div class="track-number">4</div>
+                        <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=60&h=60&fit=crop" alt="Track" class="track-img">
+                        <div class="track-info">
+                            <h4>Relax and Unwind</h4>
+                            <p>Finn Oceanwood</p>
+                        </div>
+                        <span class="track-time">54:32</span>
+                        <div class="track-actions">
+                            <button class="btn-icon" title="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-icon" title="More options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Artists -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Popular Artists</h2>
+                    <a href="artist.html" class="btn-see-all">See All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="artists-row">
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                        <h4>Luna Eclipse</h4>
+                        <p>2.4M followers</p>
+                        <button class="btn-follow">
+                            <i class="fas fa-user-plus"></i>
+                            Follow
+                        </button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                        <h4>Sarah Melody</h4>
+                        <p>892K followers</p>
+                        <button class="btn-follow">
+                            <i class="fas fa-user-plus"></i>
+                            Follow
+                        </button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                        <h4>DJ Cosmos</h4>
+                        <p>2.1M followers</p>
+                        <button class="btn-follow">
+                            <i class="fas fa-user-plus"></i>
+                            Follow
+                        </button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                        <h4>Alex Thunder</h4>
+                        <p>1.2M followers</p>
+                        <button class="btn-follow">
+                            <i class="fas fa-user-plus"></i>
+                            Follow
+                        </button>
+                    </div>
+                    <div class="artist-card">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                        <h4>The Rockers</h4>
+                        <p>3.2M followers</p>
+                        <button class="btn-follow">
+                            <i class="fas fa-user-plus"></i>
+                            Follow
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Favorite Albums -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-heart"></i> Favorite Albums</h2>
+                    <a href="album.html" class="btn-see-all">See All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="albums-grid">
+                    <div class="album-item">
+                        <div class="album-cover">
+                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-overlay">
+                                <button class="btn-play-large">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Soundscapes from Beyond</h4>
+                        <p>Luna Eclipse</p>
+                        <span class="album-stats"><i class="fas fa-users"></i> 421K followers</span>
+                    </div>
+                    <div class="album-item">
+                        <div class="album-cover">
+                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-overlay">
+                                <button class="btn-play-large">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Cityscapes in Music</h4>
+                        <p>Various Artists</p>
+                        <span class="album-stats"><i class="fas fa-users"></i> 54K followers</span>
+                    </div>
+                    <div class="album-item">
+                        <div class="album-cover">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-overlay">
+                                <button class="btn-play-large">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Songs of the Night</h4>
+                        <p>Midnight Band</p>
+                        <span class="album-stats"><i class="fas fa-users"></i> 142K followers</span>
+                    </div>
+                    <div class="album-item">
+                        <div class="album-cover">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-overlay">
+                                <button class="btn-play-large">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Whispers of Wilderness</h4>
+                        <p>Nature Sounds</p>
+                        <span class="album-stats"><i class="fas fa-users"></i> 321K followers</span>
+                    </div>
+                    <div class="album-item">
+                        <div class="album-cover">
+                            <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-overlay">
+                                <button class="btn-play-large">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h4>Chronicles of Cybernetic Age</h4>
+                        <p>DJ Nova</p>
+                        <span class="album-stats"><i class="fas fa-users"></i> 153K followers</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offline Banner -->
+            <section class="offline-banner">
+                <div class="offline-content">
+                    <div class="offline-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="offline-text">
+                        <h3>Listening to music offline</h3>
+                        <p>Experience listening to music offline with the best quality</p>
+                    </div>
+                    <button class="btn-premium">
+                        <i class="fas fa-star"></i>
+                        Try for Free
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Mini Player (Fixed Bottom) -->
+    <div class="mini-player">
+        <div class="player-track-info">
+            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=60&h=60&fit=crop" alt="Now Playing">
+            <div class="player-track-details">
+                <h4>Relax and Unwind</h4>
+                <p>Max Silverlake</p>
+            </div>
+            <button class="btn-icon">
+                <i class="far fa-heart"></i>
+            </button>
+        </div>
+        
+        <div class="player-controls">
+            <div class="player-buttons">
+                <button class="btn-player-control">
+                    <i class="fas fa-random"></i>
+                </button>
+                <button class="btn-player-control">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="btn-player-control btn-play">
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button class="btn-player-control">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="btn-player-control">
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+            <div class="player-progress">
+                <span class="time-current">2:34</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 45%;"></div>
+                </div>
+                <span class="time-total">5:42</span>
+            </div>
+        </div>
+        
+        <div class="player-volume">
+            <button class="btn-icon">
+                <i class="fas fa-list"></i>
+            </button>
+            <button class="btn-icon">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="volume-bar">
+                <div class="volume-fill" style="width: 70%;"></div>
+            </div>
+            <button class="btn-icon" onclick="window.location.href='miniplayer.html'">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Simple tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Genre pill selection
+        document.querySelectorAll('.genre-pill').forEach(pill => {
+            pill.addEventListener('click', function() {
+                document.querySelectorAll('.genre-pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

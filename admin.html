@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Admin Dashboard - Groovezilla</title>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla Admin</span>
+            </div>
+            
+            <nav class="admin-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Quản lý nội dung</h3>
+                    <a href="#users" class="admin-nav-item active" data-section="users">
+                        <span class="nav-icon">👥</span>
+                        <span>Quản lý người dùng</span>
+                    </a>
+                    <a href="#songs" class="admin-nav-item" data-section="songs">
+                        <span class="nav-icon">🎵</span>
+                        <span>Quản lý bài hát</span>
+                    </a>
+                    <a href="#albums" class="admin-nav-item" data-section="albums">
+                        <span class="nav-icon">💿</span>
+                        <span>Quản lý album</span>
+                    </a>
+                    <a href="#artists" class="admin-nav-item" data-section="artists">
+                        <span class="nav-icon">🎤</span>
+                        <span>Quản lý nghệ sĩ</span>
+                    </a>
+                    <a href="#genres" class="admin-nav-item" data-section="genres">
+                        <span class="nav-icon">🎸</span>
+                        <span>Quản lý thể loại</span>
+                    </a>
+                    <a href="#playlists" class="admin-nav-item" data-section="playlists">
+                        <span class="nav-icon">📋</span>
+                        <span>Quản lý playlist</span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Quản lý hệ thống</h3>
+                    <a href="#backup" class="admin-nav-item" data-section="backup">
+                        <span class="nav-icon">💾</span>
+                        <span>Sao lưu dữ liệu</span>
+                    </a>
+                    <a href="#restore" class="admin-nav-item" data-section="restore">
+                        <span class="nav-icon">♻️</span>
+                        <span>Phục hồi dữ liệu</span>
+                    </a>
+                    <a href="#monitoring" class="admin-nav-item" data-section="monitoring">
+                        <span class="nav-icon">📊</span>
+                        <span>Giám sát hệ thống</span>
+                    </a>
+                    <a href="#logs" class="admin-nav-item" data-section="logs">
+                        <span class="nav-icon">📝</span>
+                        <span>Log đăng nhập</span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <a href="index.html" class="admin-nav-item">
+                        <span class="nav-icon">🏠</span>
+                        <span>Về trang chủ</span>
+                    </a>
+                    <a href="#" class="admin-nav-item logout">
+                        <span class="nav-icon">🚪</span>
+                        <span>Đăng xuất</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <h1 class="admin-page-title">Dashboard</h1>
+                    <p class="admin-breadcrumb">Admin / Dashboard</p>
+                </div>
+                <div class="admin-header-right">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Tìm kiếm...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="admin-notifications">
+                        <span class="notification-icon">🔔</span>
+                        <span class="notification-badge">5</span>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=faces" alt="Admin">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Statistics Cards -->
+            <section class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon users">👥</div>
+                    <div class="stat-info">
+                        <h3>Người dùng</h3>
+                        <p class="stat-number">12,543</p>
+                        <span class="stat-change positive">+12.5%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon songs">🎵</div>
+                    <div class="stat-info">
+                        <h3>Bài hát</h3>
+                        <p class="stat-number">45,892</p>
+                        <span class="stat-change positive">+8.3%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon albums">💿</div>
+                    <div class="stat-info">
+                        <h3>Albums</h3>
+                        <p class="stat-number">3,421</p>
+                        <span class="stat-change positive">+5.7%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon artists">🎤</div>
+                    <div class="stat-info">
+                        <h3>Nghệ sĩ</h3>
+                        <p class="stat-number">1,892</p>
+                        <span class="stat-change negative">-2.1%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Sections -->
+            <div class="admin-content">
+                
+                <!-- Quản lý người dùng -->
+                <section id="users-section" class="content-section active">
+                    <div class="section-header">
+                        <h2>Quản lý người dùng</h2>
+                        <button class="btn-primary" onclick="openModal('userModal', 'add')">
+                            <span>➕</span> Thêm người dùng
+                        </button>
+                    </div>
+                    
+                    <div class="filters">
+                        <input type="text" placeholder="Tìm kiếm người dùng..." class="filter-search">
+                        <select class="filter-select">
+                            <option>Tất cả quyền</option>
+                            <option>Admin</option>
+                            <option>User</option>
+                            <option>Premium</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>Trạng thái</option>
+                            <option>Hoạt động</option>
+                            <option>Bị khóa</option>
+                        </select>
+                    </div>
+
+                    <div class="data-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>ID</th>
+                                    <th>Tên người dùng</th>
+                                    <th>Email</th>
+                                    <th>Quyền</th>
+                                    <th>Trạng thái</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#001</td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=faces" alt="User">
+                                            <span>John Doe</span>
+                                        </div>
+                                    </td>
+                                    <td>john.doe@email.com</td>
+                                    <td><span class="badge badge-admin">Admin</span></td>
+                                    <td><span class="status-active">Hoạt động</span></td>
+                                    <td>2024-01-15</td>
+                                    <td class="actions">
+                                        <button class="btn-action view" title="Xem">👁️</button>
+                                        <button class="btn-action edit" title="Sửa">✏️</button>
+                                        <button class="btn-action delete" title="Xóa">🗑️</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#002</td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=faces" alt="User">
+                                            <span>Sarah Smith</span>
+                                        </div>
+                                    </td>
+                                    <td>sarah.smith@email.com</td>
+                                    <td><span class="badge badge-premium">Premium</span></td>
+                                    <td><span class="status-active">Hoạt động</span></td>
+                                    <td>2024-02-20</td>
+                                    <td class="actions">
+                                        <button class="btn-action view" title="Xem">👁️</button>
+                                        <button class="btn-action edit" title="Sửa">✏️</button>
+                                        <button class="btn-action delete" title="Xóa">🗑️</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#003</td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=40&h=40&fit=crop&crop=faces" alt="User">
+                                            <span>Mike Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td>mike.j@email.com</td>
+                                    <td><span class="badge badge-user">User</span></td>
+                                    <td><span class="status-inactive">Bị khóa</span></td>
+                                    <td>2024-03-10</td>
+                                    <td class="actions">
+                                        <button class="btn-action view" title="Xem">👁️</button>
+                                        <button class="btn-action edit" title="Sửa">✏️</button>
+                                        <button class="btn-action delete" title="Xóa">🗑️</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="page-btn">❮❮</button>
+                        <button class="page-btn">❮</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">...</button>
+                        <button class="page-btn">10</button>
+                        <button class="page-btn">❯</button>
+                        <button class="page-btn">❯❯</button>
+                    </div>
+                </section>
+
+                <!-- Quản lý bài hát -->
+                <section id="songs-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Quản lý bài hát</h2>
+                        <button class="btn-primary" onclick="openModal('songModal', 'add')">
+                            <span>➕</span> Thêm bài hát
+                        </button>
+                    </div>
+                    
+                    <div class="filters">
+                        <input type="text" placeholder="Tìm kiếm bài hát..." class="filter-search">
+                        <select class="filter-select">
+                            <option>Tất cả thể loại</option>
+                            <option>Pop</option>
+                            <option>Rock</option>
+                            <option>Jazz</option>
+                            <option>Electronic</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>Sắp xếp</option>
+                            <option>Mới nhất</option>
+                            <option>Phổ biến nhất</option>
+                            <option>A-Z</option>
+                        </select>
+                    </div>
+
+                    <div class="data-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>ID</th>
+                                    <th>Bài hát</th>
+                                    <th>Nghệ sĩ</th>
+                                    <th>Album</th>
+                                    <th>Thể loại</th>
+                                    <th>Thời lượng</th>
+                                    <th>Lượt nghe</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#S001</td>
+                                    <td>
+                                        <div class="song-info">
+                                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=50&h=50&fit=crop" alt="Song">
+                                            <span>Midnight Dreams</span>
+                                        </div>
+                                    </td>
+                                    <td>Luna Eclipse</td>
+                                    <td>Nocturnal Sessions</td>
+                                    <td><span class="badge badge-pop">Pop</span></td>
+                                    <td>4:32</td>
+                                    <td>2.4M</td>
+                                    <td class="actions">
+                                        <button class="btn-action play" title="Phát">▶️</button>
+                                        <button class="btn-action edit" title="Sửa">✏️</button>
+                                        <button class="btn-action delete" title="Xóa">🗑️</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#S002</td>
+                                    <td>
+                                        <div class="song-info">
+                                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=50&h=50&fit=crop" alt="Song">
+                                            <span>Summer Breeze</span>
+                                        </div>
+                                    </td>
+                                    <td>The Sunshine Band</td>
+                                    <td>Summer Hits 2024</td>
+                                    <td><span class="badge badge-rock">Rock</span></td>
+                                    <td>3:45</td>
+                                    <td>1.8M</td>
+                                    <td class="actions">
+                                        <button class="btn-action play" title="Phát">▶️</button>
+                                        <button class="btn-action edit" title="Sửa">✏️</button>
+                                        <button class="btn-action delete" title="Xóa">🗑️</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="page-btn">❮❮</button>
+                        <button class="page-btn">❮</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">❯</button>
+                        <button class="page-btn">❯❯</button>
+                    </div>
+                </section>
+
+                <!-- Quản lý Album -->
+                <section id="albums-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Quản lý Album</h2>
+                        <button class="btn-primary" onclick="openModal('albumModal', 'add')">
+                            <span>➕</span> Thêm album
+                        </button>
+                    </div>
+
+                    <div class="album-grid">
+                        <div class="album-card-admin">
+                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-card-content">
+                                <h3>Midnight Dreams</h3>
+                                <p>Luna Eclipse • 2024</p>
+                                <p class="album-stats">12 bài hát • 48 phút</p>
+                                <div class="album-actions">
+                                    <button class="btn-action view">👁️</button>
+                                    <button class="btn-action edit">✏️</button>
+                                    <button class="btn-action delete">🗑️</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="album-card-admin">
+                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-card-content">
+                                <h3>Summer Nights</h3>
+                                <p>The Sunshine Band • 2023</p>
+                                <p class="album-stats">10 bài hát • 42 phút</p>
+                                <div class="album-actions">
+                                    <button class="btn-action view">👁️</button>
+                                    <button class="btn-action edit">✏️</button>
+                                    <button class="btn-action delete">🗑️</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="album-card-admin">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=250&h=250&fit=crop" alt="Album">
+                            <div class="album-card-content">
+                                <h3>Electric Dreams</h3>
+                                <p>DJ Nova • 2024</p>
+                                <p class="album-stats">15 bài hát • 56 phút</p>
+                                <div class="album-actions">
+                                    <button class="btn-action view">👁️</button>
+                                    <button class="btn-action edit">✏️</button>
+                                    <button class="btn-action delete">🗑️</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quản lý Nghệ sĩ -->
+                <section id="artists-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Quản lý Nghệ sĩ</h2>
+                        <button class="btn-primary" onclick="openModal('artistModal', 'add')">
+                            <span>➕</span> Thêm nghệ sĩ
+                        </button>
+                    </div>
+
+                    <div class="artist-grid">
+                        <div class="artist-card-admin">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                            <h3>Luna Eclipse</h3>
+                            <p class="artist-genre">Pop, Electronic</p>
+                            <p class="artist-stats">2.4M followers • 45 songs</p>
+                            <div class="artist-actions">
+                                <button class="btn-action view">👁️</button>
+                                <button class="btn-action edit">✏️</button>
+                                <button class="btn-action delete">🗑️</button>
+                            </div>
+                        </div>
+                        <div class="artist-card-admin">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                            <h3>Sarah Melody</h3>
+                            <p class="artist-genre">Pop, R&B</p>
+                            <p class="artist-stats">892K followers • 32 songs</p>
+                            <div class="artist-actions">
+                                <button class="btn-action view">👁️</button>
+                                <button class="btn-action edit">✏️</button>
+                                <button class="btn-action delete">🗑️</button>
+                            </div>
+                        </div>
+                        <div class="artist-card-admin">
+                            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=150&h=150&fit=crop&crop=faces" alt="Artist">
+                            <h3>DJ Cosmos</h3>
+                            <p class="artist-genre">Electronic, House</p>
+                            <p class="artist-stats">2.1M followers • 67 songs</p>
+                            <div class="artist-actions">
+                                <button class="btn-action view">👁️</button>
+                                <button class="btn-action edit">✏️</button>
+                                <button class="btn-action delete">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quản lý Thể loại -->
+                <section id="genres-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Quản lý Thể loại</h2>
+                        <button class="btn-primary" onclick="openModal('genreModal', 'add')">
+                            <span>➕</span> Thêm thể loại
+                        </button>
+                    </div>
+
+                    <div class="genre-list">
+                        <div class="genre-item">
+                            <div class="genre-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🎵</div>
+                            <div class="genre-info">
+                                <h3>Pop Music</h3>
+                                <p>5,678 bài hát • 842 albums</p>
+                            </div>
+                            <div class="genre-actions">
+                                <button class="btn-action edit">✏️</button>
+                                <button class="btn-action delete">🗑️</button>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🎸</div>
+                            <div class="genre-info">
+                                <h3>Rock</h3>
+                                <p>3,421 bài hát • 512 albums</p>
+                            </div>
+                            <div class="genre-actions">
+                                <button class="btn-action edit">✏️</button>
+                                <button class="btn-action delete">🗑️</button>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🎹</div>
+                            <div class="genre-info">
+                                <h3>Electronic</h3>
+                                <p>4,892 bài hát • 623 albums</p>
+                            </div>
+                            <div class="genre-actions">
+                                <button class="btn-action edit">✏️</button>
+                                <button class="btn-action delete">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sao lưu dữ liệu -->
+                <section id="backup-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Sao lưu dữ liệu</h2>
+                        <button class="btn-primary" onclick="createBackup()">
+                            <span>💾</span> Tạo bản sao lưu mới
+                        </button>
+                    </div>
+
+                    <div class="backup-options">
+                        <div class="backup-card">
+                            <div class="backup-icon">📦</div>
+                            <h3>Sao lưu toàn bộ</h3>
+                            <p>Sao lưu tất cả dữ liệu hệ thống</p>
+                            <button class="btn-secondary">Bắt đầu</button>
+                        </div>
+                        <div class="backup-card">
+                            <div class="backup-icon">👥</div>
+                            <h3>Sao lưu người dùng</h3>
+                            <p>Chỉ sao lưu dữ liệu người dùng</p>
+                            <button class="btn-secondary">Bắt đầu</button>
+                        </div>
+                        <div class="backup-card">
+                            <div class="backup-icon">🎵</div>
+                            <h3>Sao lưu nội dung</h3>
+                            <p>Sao lưu bài hát, album, nghệ sĩ</p>
+                            <button class="btn-secondary">Bắt đầu</button>
+                        </div>
+                    </div>
+
+                    <div class="backup-history">
+                        <h3>Lịch sử sao lưu</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tên file</th>
+                                    <th>Loại</th>
+                                    <th>Kích thước</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>backup_full_20241010.zip</td>
+                                    <td><span class="badge badge-full">Toàn bộ</span></td>
+                                    <td>2.4 GB</td>
+                                    <td>2024-10-10 14:30</td>
+                                    <td>
+                                        <button class="btn-action download">⬇️</button>
+                                        <button class="btn-action delete">🗑️</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Giám sát hệ thống -->
+                <section id="monitoring-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Giám sát hệ thống</h2>
+                    </div>
+
+                    <div class="monitoring-grid">
+                        <div class="monitor-card">
+                            <h3>CPU Usage</h3>
+                            <div class="progress-circle" data-percentage="45">
+                                <span class="percentage">45%</span>
+                            </div>
+                            <p class="monitor-status normal">Bình thường</p>
+                        </div>
+                        <div class="monitor-card">
+                            <h3>Memory Usage</h3>
+                            <div class="progress-circle" data-percentage="67">
+                                <span class="percentage">67%</span>
+                            </div>
+                            <p class="monitor-status warning">Cảnh báo</p>
+                        </div>
+                        <div class="monitor-card">
+                            <h3>Disk Space</h3>
+                            <div class="progress-circle" data-percentage="82">
+                                <span class="percentage">82%</span>
+                            </div>
+                            <p class="monitor-status critical">Nghiêm trọng</p>
+                        </div>
+                        <div class="monitor-card">
+                            <h3>Network</h3>
+                            <div class="progress-circle" data-percentage="34">
+                                <span class="percentage">34%</span>
+                            </div>
+                            <p class="monitor-status normal">Bình thường</p>
+                        </div>
+                    </div>
+
+                    <div class="system-info">
+                        <h3>Thông tin hệ thống</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Server Uptime:</span>
+                                <span class="info-value">15 days 7 hours</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Database Size:</span>
+                                <span class="info-value">12.4 GB</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Active Users:</span>
+                                <span class="info-value">1,245</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Total Requests:</span>
+                                <span class="info-value">2.4M today</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal cho User -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Thêm người dùng mới</h2>
+                <button class="modal-close" onclick="closeModal('userModal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Tên người dùng</label>
+                        <input type="text" placeholder="Nhập tên người dùng">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Nhập email">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input type="password" placeholder="Nhập mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <label>Quyền</label>
+                        <select>
+                            <option>User</option>
+                            <option>Premium</option>
+                            <option>Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh đại diện</label>
+                        <input type="file" accept="image/*">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal('userModal')">Hủy</button>
+                <button class="btn-primary">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation
+        document.querySelectorAll('.admin-nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (!this.classList.contains('logout') && this.hasAttribute('data-section')) {
+                    e.preventDefault();
+                    
+                    document.querySelectorAll('.admin-nav-item').forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const section = this.getAttribute('data-section');
+                    document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+                    document.getElementById(section + '-section').classList.add('active');
+                    
+                    const title = this.textContent.trim();
+                    document.querySelector('.admin-page-title').textContent = title;
+                    document.querySelector('.admin-breadcrumb').textContent = 'Admin / ' + title;
+                }
+            });
+        });
+
+        // Modal functions
+        function openModal(modalId, mode) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Placeholder functions
+        function createBackup() {
+            alert('Đang tạo bản sao lưu...');
+        }
+    </script>
+</body>
+</html>

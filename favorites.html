@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Favorites - Groovezilla</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon icon-home"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item">
+                    <div class="icon icon-playlist"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon icon-album"></div>
+                    <span>Album</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon icon-artist"></div>
+                    <span>Artist</span>
+                </a>
+                <a href="discovery.html" class="nav-item">
+                    <div class="icon icon-discovery"></div>
+                    <span>Discovery</span>
+                </a>
+                <a href="history.html" class="nav-item">
+                    <div class="icon icon-history"></div>
+                    <span>History</span>
+                </a>
+                <a href="favorites.html" class="nav-item active">
+                    <div class="icon icon-heart"></div>
+                    <span>Favorites</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+            
+            <div class="categories-section">
+                <span class="section-title">Categories</span>
+                <div class="category-list">
+                    <div class="category-item">Pop</div>
+                    <div class="category-item">Hip Hop</div>
+                    <div class="category-item">Rock</div>
+                    <div class="category-item">R&B</div>
+                    <div class="category-item">Electronic</div>
+                    <div class="category-item">Country</div>
+                    <div class="category-item">Jazz</div>
+                    <div class="category-item">Classical</div>
+                    <div class="category-item">Reggae</div>
+                    <div class="category-item">Blues</div>
+                    <div class="category-item">Metal</div>
+                    <div class="category-item">Folk</div>
+                </div>
+            </div>
+            
+            <div class="my-playlists">
+                <span class="section-title">My Playlists</span>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot red"></div>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot blue"></div>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot purple"></div>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot cyan"></div>
+                    <span>EDM</span>
+                </a>
+            </div>
+            
+            <div class="user-section">
+                <a href="settings.html" class="nav-item">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon icon-search"></div>
+                    <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ hoặc album..." id="search-input">
+                    <div class="search-results" id="search-results">
+                        <!-- Search results will be populated here -->
+                    </div>
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">
+                        <div class="icon icon-download"></div>
+                        <span>Download Now</span>
+                    </button>
+                    <div class="auth-buttons">
+                        <button class="btn btn-ghost" id="login-btn">
+                            <div class="icon icon-login"></div>
+                            <span>Login</span>
+                        </button>
+                        <button class="btn btn-primary" id="signup-btn">
+                            <div class="icon icon-user"></div>
+                            <span>Sign Up</span>
+                        </button>
+                    </div>
+                    <div class="user-avatar" id="user-avatar" style="display: none;">
+                        <div class="icon icon-user"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="section-heading">Your Favorites</h1>
+            <p class="section-subtitle">Songs you've liked</p>
+
+            <!-- Favorites Stats -->
+            <div class="content-section">
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3 class="card-title">Liked Songs</h3>
+                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;" id="liked-count">0</p>
+                        <p class="card-description">Total liked tracks</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Top Genre</h3>
+                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">Pop</p>
+                        <p class="card-description">Most liked genre</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">This Week</h3>
+                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">12</p>
+                        <p class="card-description">New likes this week</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Play All Button -->
+            <div class="content-section">
+                <div class="flex items-center gap-md mb-lg">
+                    <button class="btn btn-primary" onclick="playAllFavorites()">
+                        <div class="icon icon-play"></div>
+                        <span>Play All Favorites</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="shuffleFavorites()">
+                        <div class="icon icon-shuffle"></div>
+                        <span>Shuffle Play</span>
+                    </button>
+                    <button class="btn btn-ghost" onclick="clearAllFavorites()">
+                        <div class="icon icon-heart"></div>
+                        <span>Clear All</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Favorites List -->
+            <div class="content-section">
+                <h2 class="section-heading">Liked Songs</h2>
+                <div class="track-list" id="favorites-list">
+                    <!-- Favorites will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Recently Added -->
+            <div class="content-section">
+                <h2 class="section-heading">Recently Added</h2>
+                <div class="grid grid-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=200&h=200&fit=crop" alt="Track" class="card-image">
+                        <h3 class="card-title">Midnight Dreams</h3>
+                        <p class="card-subtitle">Luna Eclipse</p>
+                        <p class="card-description">Added 2 hours ago</p>
+                        <div class="flex gap-sm">
+                            <button class="play-btn" data-track-id="4">
+                                <div class="icon icon-play"></div>
+                            </button>
+                            <button class="like-btn liked" data-track-id="4">
+                                <div class="icon icon-heart"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=200&h=200&fit=crop" alt="Track" class="card-image">
+                        <h3 class="card-title">Summer Breeze</h3>
+                        <p class="card-subtitle">The Sunshine Band</p>
+                        <p class="card-description">Added yesterday</p>
+                        <div class="flex gap-sm">
+                            <button class="play-btn" data-track-id="5">
+                                <div class="icon icon-play"></div>
+                            </button>
+                            <button class="like-btn liked" data-track-id="5">
+                                <div class="icon icon-heart"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=200&h=200&fit=crop" alt="Track" class="card-image">
+                        <h3 class="card-title">Electric Pulse</h3>
+                        <p class="card-subtitle">DJ Nova</p>
+                        <p class="card-description">Added 3 days ago</p>
+                        <div class="flex gap-sm">
+                            <button class="play-btn" data-track-id="6">
+                                <div class="icon icon-play"></div>
+                            </button>
+                            <button class="like-btn liked" data-track-id="6">
+                                <div class="icon icon-heart"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=200&h=200&fit=crop" alt="Track" class="card-image">
+                        <h3 class="card-title">Acoustic Dreams</h3>
+                        <p class="card-subtitle">James Rivers</p>
+                        <p class="card-description">Added 5 days ago</p>
+                        <div class="flex gap-sm">
+                            <button class="play-btn" data-track-id="7">
+                                <div class="icon icon-play"></div>
+                            </button>
+                            <button class="like-btn liked" data-track-id="7">
+                                <div class="icon icon-heart"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create Playlist from Favorites -->
+            <div class="content-section">
+                <div class="card" style="text-align: center;">
+                    <h3 class="card-title">Create Playlist from Favorites</h3>
+                    <p class="card-description">Turn your liked songs into a playlist</p>
+                    <button class="btn btn-primary" onclick="createPlaylistFromFavorites()">
+                        <div class="icon icon-plus"></div>
+                        <span>Create Playlist</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+    
+    <!-- Favorites Page Script -->
+    <script>
+        function populateFavorites() {
+            const favoritesList = document.getElementById('favorites-list');
+            const likedCount = document.getElementById('liked-count');
+            
+            if (!favoritesList || !window.groovePlayer) return;
+            
+            const likedTracks = window.groovePlayer.getLikedTracks();
+            
+            if (likedCount) {
+                likedCount.textContent = likedTracks.length;
+            }
+            
+            if (likedTracks.length === 0) {
+                favoritesList.innerHTML = `
+                    <div class="card" style="text-align: center; padding: var(--spacing-xxl);">
+                        <h3 class="card-title">No liked songs yet</h3>
+                        <p class="card-description">Start liking songs to see them here</p>
+                        <a href="index.html" class="btn btn-primary">Browse Music</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            favoritesList.innerHTML = likedTracks.map((track, index) => `
+                <div class="track-item">
+                    <span class="track-number">${index + 1}</span>
+                    <div class="track-info">
+                        <img src="${track.cover}" alt="Track" class="track-cover">
+                        <div class="track-details">
+                            <h4>${track.title}</h4>
+                            <p>${track.artist}</p>
+                        </div>
+                    </div>
+                    <span class="track-duration">${track.duration}</span>
+                    <div class="track-actions">
+                        <button class="play-btn track-play-btn" data-track-id="${track.id}">
+                            <div class="icon icon-play"></div>
+                        </button>
+                        <button class="like-btn liked" data-track-id="${track.id}">
+                            <div class="icon icon-heart"></div>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function playAllFavorites() {
+            if (window.groovePlayer) {
+                const likedTracks = window.groovePlayer.getLikedTracks();
+                if (likedTracks.length > 0) {
+                    window.groovePlayer.playTrack(likedTracks[0].id, likedTracks);
+                    window.groovePlayer.showNotification('Playing all favorites');
+                } else {
+                    window.groovePlayer.showNotification('No favorites to play');
+                }
+            }
+        }
+        
+        function shuffleFavorites() {
+            if (window.groovePlayer) {
+                const likedTracks = window.groovePlayer.getLikedTracks();
+                if (likedTracks.length > 0) {
+                    const shuffled = [...likedTracks].sort(() => Math.random() - 0.5);
+                    window.groovePlayer.playTrack(shuffled[0].id, shuffled);
+                    window.groovePlayer.showNotification('Shuffling favorites');
+                } else {
+                    window.groovePlayer.showNotification('No favorites to shuffle');
+                }
+            }
+        }
+        
+        function clearAllFavorites() {
+            if (window.groovePlayer && confirm('Are you sure you want to remove all liked songs?')) {
+                window.groovePlayer.likedTracks = [];
+                localStorage.setItem('groovezilla_likes', JSON.stringify([]));
+                populateFavorites();
+                window.groovePlayer.showNotification('All favorites cleared');
+            }
+        }
+        
+        function createPlaylistFromFavorites() {
+            if (window.groovePlayer) {
+                const likedTracks = window.groovePlayer.getLikedTracks();
+                if (likedTracks.length > 0) {
+                    const playlistName = prompt('Enter playlist name:', 'My Favorites');
+                    if (playlistName) {
+                        const playlistId = Date.now();
+                        window.groovePlayer.userPlaylists[playlistId] = {
+                            name: playlistName,
+                            tracks: likedTracks.map(t => t.id),
+                            description: 'Created from liked songs'
+                        };
+                        window.groovePlayer.saveUserPlaylists();
+                        window.groovePlayer.showNotification(`Playlist "${playlistName}" created!`);
+                    }
+                } else {
+                    window.groovePlayer.showNotification('No favorites to create playlist from');
+                }
+            }
+        }
+        
+        // Populate favorites when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(populateFavorites, 1000); // Wait for player to initialize
+        });
+    </script>
+</body>
+</html>

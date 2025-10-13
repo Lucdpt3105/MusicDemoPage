@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Playlists - Groovezilla</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <div class="logo"></div>
+                <span class="logo-text">Groovezilla</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <div class="icon icon-home"></div>
+                    <span>Home</span>
+                </a>
+                <a href="playlist.html" class="nav-item active">
+                    <div class="icon icon-playlist"></div>
+                    <span>Playlist</span>
+                </a>
+                <a href="album.html" class="nav-item">
+                    <div class="icon icon-album"></div>
+                    <span>Album</span>
+                </a>
+                <a href="artist.html" class="nav-item">
+                    <div class="icon icon-artist"></div>
+                    <span>Artist</span>
+                </a>
+                <a href="discovery.html" class="nav-item">
+                    <div class="icon icon-discovery"></div>
+                    <span>Discovery</span>
+                </a>
+                <a href="history.html" class="nav-item">
+                    <div class="icon icon-history"></div>
+                    <span>History</span>
+                </a>
+                <a href="favorites.html" class="nav-item">
+                    <div class="icon icon-heart"></div>
+                    <span>Favorites</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <div class="icon icon-settings"></div>
+                    <span>Settings</span>
+                </a>
+            </div>
+            
+            <div class="categories-section">
+                <span class="section-title">Categories</span>
+                <div class="category-list">
+                    <div class="category-item">Pop</div>
+                    <div class="category-item">Hip Hop</div>
+                    <div class="category-item">Rock</div>
+                    <div class="category-item">R&B</div>
+                    <div class="category-item">Electronic</div>
+                    <div class="category-item">Country</div>
+                    <div class="category-item">Jazz</div>
+                    <div class="category-item">Classical</div>
+                    <div class="category-item">Reggae</div>
+                    <div class="category-item">Blues</div>
+                    <div class="category-item">Metal</div>
+                    <div class="category-item">Folk</div>
+                </div>
+            </div>
+            
+            <div class="my-playlists">
+                <span class="section-title">My Playlists</span>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot red"></div>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot blue"></div>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot purple"></div>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="playlist-link">
+                    <div class="playlist-dot cyan"></div>
+                    <span>EDM</span>
+                </a>
+            </div>
+            
+            <div class="user-section">
+                <div class="nav-item">
+                    <div class="icon"></div>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <div class="search-icon icon-search"></div>
+                    <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ hoặc album..." id="search-input">
+                    <div class="search-results" id="search-results">
+                        <!-- Search results will be populated here -->
+                    </div>
+                </div>
+                <div class="user-section">
+                    <button class="download-btn">
+                        <div class="icon icon-download"></div>
+                        <span>Download Now</span>
+                    </button>
+                    <div class="user-avatar"></div>
+                </div>
+            </div>
+
+            <h1 class="section-heading">Your Playlists</h1>
+
+            <!-- Create New Playlist -->
+            <div class="content-section">
+                <div class="card" style="text-align: center; cursor: pointer;">
+                    <div style="font-size: 48px; color: var(--primary-accent); margin-bottom: var(--spacing-md);">+</div>
+                    <h3 class="card-title">Create New Playlist</h3>
+                    <p class="card-description">Start building your perfect music collection</p>
+                </div>
+            </div>
+
+            <!-- Featured Playlists -->
+            <div class="content-section">
+                <h2 class="section-heading">Featured Playlists</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=300&h=300&fit=crop" alt="Playlist Cover" class="card-image">
+                        <h3 class="card-title">Chill Vibes</h3>
+                        <p class="card-subtitle">Perfect for relaxing • 142 songs</p>
+                        <p class="card-description">Relaxing music for chill time</p>
+                        <button class="play-btn" data-track-id="11">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop" alt="Playlist Cover" class="card-image">
+                        <h3 class="card-title">Workout Energy</h3>
+                        <p class="card-subtitle">Get pumped up • 98 songs</p>
+                        <p class="card-description">High energy workout music</p>
+                        <button class="play-btn" data-track-id="12">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=300&h=300&fit=crop" alt="Playlist Cover" class="card-image">
+                        <h3 class="card-title">Study Focus</h3>
+                        <p class="card-subtitle">Concentration music • 256 songs</p>
+                        <p class="card-description">Music for concentration</p>
+                        <button class="play-btn" data-track-id="13">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=300&h=300&fit=crop" alt="Playlist Cover" class="card-image">
+                        <h3 class="card-title">Party Hits</h3>
+                        <p class="card-subtitle">Dance all night • 187 songs</p>
+                        <p class="card-description">Party and dance music</p>
+                        <button class="play-btn" data-track-id="14">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Playlist Cover" class="card-image">
+                        <h3 class="card-title">Road Trip</h3>
+                        <p class="card-subtitle">Highway classics • 124 songs</p>
+                        <p class="card-description">Perfect for long drives</p>
+                        <button class="play-btn" data-track-id="15">▶️</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Playlist Cover" class="card-image">
+                        <h3 class="card-title">Rock Legends</h3>
+                        <p class="card-subtitle">Classic rock anthems • 215 songs</p>
+                        <p class="card-description">Timeless rock classics</p>
+                        <button class="play-btn" data-track-id="16">▶️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mood Playlists -->
+            <div class="content-section">
+                <h2 class="section-heading">Playlists by Mood</h2>
+                <div class="grid grid-2">
+                    <div class="card" style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white;">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=350&h=200&fit=crop" alt="Happy Mood" class="card-image">
+                        <h3 class="card-title">Happy & Upbeat</h3>
+                        <p class="card-description">Feel good music</p>
+                    </div>
+                    <div class="card" style="background: linear-gradient(135deg, #4ecdc4, #44a08d); color: white;">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=350&h=200&fit=crop" alt="Calm Mood" class="card-image">
+                        <h3 class="card-title">Calm & Peaceful</h3>
+                        <p class="card-description">Relaxing tunes</p>
+                    </div>
+                    <div class="card" style="background: linear-gradient(135deg, #ff9a9e, #fecfef); color: white;">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=350&h=200&fit=crop" alt="Energetic Mood" class="card-image">
+                        <h3 class="card-title">Energetic & Powerful</h3>
+                        <p class="card-description">High energy beats</p>
+                    </div>
+                    <div class="card" style="background: linear-gradient(135deg, #a8edea, #fed6e3); color: white;">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=350&h=200&fit=crop" alt="Romantic Mood" class="card-image">
+                        <h3 class="card-title">Romantic & Dreamy</h3>
+                        <p class="card-description">Love songs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recently Played Playlists -->
+            <div class="content-section">
+                <h2 class="section-heading">Recently Played</h2>
+                <div class="track-list">
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=60&h=60&fit=crop" alt="Playlist" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Electronic Dreams</h4>
+                                <p>Last played 2 hours ago</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">45 songs</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="17">▶️</button>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=60&h=60&fit=crop" alt="Playlist" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Acoustic Vibes</h4>
+                                <p>Last played yesterday</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">32 songs</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="18">▶️</button>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=60&h=60&fit=crop" alt="Playlist" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Hip Hop Essentials</h4>
+                                <p>Last played 3 days ago</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">78 songs</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="19">▶️</button>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=60&h=60&fit=crop" alt="Playlist" class="track-cover">
+                        <div class="track-info">
+                            <div class="track-details">
+                                <h4>Jazz Classics</h4>
+                                <p>Last played 5 days ago</p>
+                            </div>
+                        </div>
+                        <span class="track-duration">156 songs</span>
+                        <div class="track-actions">
+                            <button class="play-btn" data-track-id="20">▶️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaborative Playlists -->
+            <div class="content-section">
+                <h2 class="section-heading">Collaborative Playlists</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=80&h=80&fit=crop" alt="Playlist 1" class="card-image" style="width: 80px; height: 80px;">
+                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=80&h=80&fit=crop" alt="Playlist 2" class="card-image" style="width: 80px; height: 80px;">
+                        </div>
+                        <h3 class="card-title">Friends Mix</h3>
+                        <p class="card-subtitle">Collaborative • 5 contributors • 89 songs</p>
+                        <div style="display: flex; gap: var(--spacing-xs); margin-top: var(--spacing-md);">
+                            <span style="width: 24px; height: 24px; background: var(--primary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--primary-bg);">A</span>
+                            <span style="width: 24px; height: 24px; background: var(--secondary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--primary-bg);">B</span>
+                            <span style="width: 24px; height: 24px; background: var(--text-muted); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--primary-bg);">C</span>
+                            <span style="width: 24px; height: 24px; background: var(--tertiary-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--text-secondary);">+2</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=80&h=80&fit=crop" alt="Playlist 3" class="card-image" style="width: 80px; height: 80px;">
+                            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=80&h=80&fit=crop" alt="Playlist 4" class="card-image" style="width: 80px; height: 80px;">
+                        </div>
+                        <h3 class="card-title">Office Jams</h3>
+                        <p class="card-subtitle">Collaborative • 8 contributors • 156 songs</p>
+                        <div style="display: flex; gap: var(--spacing-xs); margin-top: var(--spacing-md);">
+                            <span style="width: 24px; height: 24px; background: var(--primary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--primary-bg);">D</span>
+                            <span style="width: 24px; height: 24px; background: var(--secondary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--primary-bg);">E</span>
+                            <span style="width: 24px; height: 24px; background: var(--text-muted); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--primary-bg);">F</span>
+                            <span style="width: 24px; height: 24px; background: var(--tertiary-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--text-secondary);">+5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Public Playlists -->
+            <div class="content-section">
+                <h2 class="section-heading">Popular Public Playlists</h2>
+                <div class="grid grid-5">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=180&h=180&fit=crop" alt="Playlist" class="card-image">
+                        <h4 class="card-title">Today's Top Hits</h4>
+                        <p class="card-description">The biggest hits right now</p>
+                        <span style="color: var(--error); font-size: 12px;">❤️ 2.4M</span>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=180&h=180&fit=crop" alt="Playlist" class="card-image">
+                        <h4 class="card-title">RapCaviar</h4>
+                        <p class="card-description">New music from Lil Baby, Cardi B and more</p>
+                        <span style="color: var(--error); font-size: 12px;">❤️ 1.8M</span>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=180&h=180&fit=crop" alt="Playlist" class="card-image">
+                        <h4 class="card-title">Rock Classics</h4>
+                        <p class="card-description">Rock legends & epic songs</p>
+                        <span style="color: var(--error); font-size: 12px;">❤️ 3.2M</span>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=180&h=180&fit=crop" alt="Playlist" class="card-image">
+                        <h4 class="card-title">Jazz Vibes</h4>
+                        <p class="card-description">The original chill instrumental music</p>
+                        <span style="color: var(--error); font-size: 12px;">❤️ 892K</span>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=180&h=180&fit=crop" alt="Playlist" class="card-image">
+                        <h4 class="card-title">Electronic Rising</h4>
+                        <p class="card-description">The pulse of electronic music</p>
+                        <span style="color: var(--error); font-size: 12px;">❤️ 1.5M</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player Script -->
+    <script src="js/audio-player.js"></script>
+</body>
+</html>
