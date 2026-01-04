@@ -109,201 +109,440 @@
                 </div>
             </header>
 
-            <!-- Album Hero -->
-            <div class="album-hero">
-                <div class="album-hero-bg">
-                    <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1400&h=500&fit=crop" alt="Album Background">
+            <!-- Album Hero Section with Parallax Effect -->
+            <div class="album-hero-modern" id="albumHero">
+                <div class="album-hero-bg" id="heroBg">
+                    <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1600&h=800&fit=crop" alt="Album Background">
+                    <div class="hero-gradient"></div>
                 </div>
-                <div class="album-hero-content">
-                    <div class="album-cover-large">
+                <div class="album-hero-content-modern">
+                    <div class="album-artwork" data-aos="zoom-in">
                         <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Album Cover">
+                        <div class="artwork-glow"></div>
                     </div>
-                    <div class="album-details">
-                        <span class="album-type">Album</span>
-                        <h1 class="album-title">Midnight Dreams</h1>
-                        <div class="album-meta">
-                            <a href="artist.html" class="artist-link">Luna Eclipse</a>
-                            <span>•</span>
+                    <div class="album-info-modern" data-aos="fade-left">
+                        <span class="album-badge">ALBUM</span>
+                        <h1 class="album-title-modern">Midnight Dreams</h1>
+                        <div class="album-meta-modern">
+                            <a href="artist.html" class="artist-name-link">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=32&h=32&fit=crop&crop=faces" alt="Artist" class="artist-thumb">
+                                Luna Eclipse
+                            </a>
+                            <span class="meta-dot">•</span>
                             <span>2024</span>
-                            <span>•</span>
-                            <span>12 songs, 48 min</span>
+                            <span class="meta-dot">•</span>
+                            <span>12 tracks</span>
+                            <span class="meta-dot">•</span>
+                            <span>48 min</span>
                         </div>
-                        <div class="album-actions">
-                            <button class="play-all-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                                Play All
+                        <div class="album-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-play-circle"></i>
+                                <span>1.2M plays</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <span>234K likes</span>
+                            </div>
+                        </div>
+                        <div class="album-actions-modern">
+                            <button class="btn-play-all" id="playAllBtn">
+                                <i class="fas fa-play"></i>
+                                <span>Play All</span>
                             </button>
-                            <button class="save-btn">Save Album</button>
-                            <button class="share-btn">Share</button>
+                            <button class="btn-shuffle" id="shuffleBtn">
+                                <i class="fas fa-random"></i>
+                            </button>
+                            <button class="btn-like" id="likeAlbumBtn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-share" id="shareBtn">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn-more">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Track List -->
-            <div class="tracklist-section">
-                <div class="tracklist-header">
-                    <span class="track-number">#</span>
-                    <span class="track-title-header">Title</span>
-                    <span class="track-duration-header">Duration</span>
+            <!-- Track List with Animated Rows -->
+            <div class="album-tracklist-modern">
+                <div class="tracklist-header-modern">
+                    <h2>Tracks</h2>
+                    <div class="tracklist-controls">
+                        <button class="btn-filter active" data-filter="all">All</button>
+                        <button class="btn-filter" data-filter="popular">Popular</button>
+                        <button class="btn-filter" data-filter="recent">Recent</button>
+                    </div>
                 </div>
                 
-                <div class="tracklist">
-                    <div class="track-item">
-                        <span class="track-number">1</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=50&h=50&fit=crop" alt="Track">
-                            <div class="track-details">
-                                <h4>Midnight Dreams</h4>
-                                <p>Luna Eclipse</p>
+                <div class="tracks-grid" id="tracksList">
+                    <div class="track-row" data-track-id="1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="track-number-play">
+                            <span class="track-num">1</span>
+                            <button class="track-play-btn-modern">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="track-info-modern">
+                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=56&h=56&fit=crop" alt="Track" class="track-thumb">
+                            <div class="track-text">
+                                <h4 class="track-title-modern">Midnight Dreams</h4>
+                                <p class="track-artist-modern">Luna Eclipse</p>
                             </div>
                         </div>
-                        <span class="track-duration">4:32</span>
-                        <button class="track-play-btn" data-track-id="4">▶</button>
-                        <button class="like-btn" data-track-id="4">🤍</button>
-                    </div>
-                    
-                    <div class="track-item">
-                        <span class="track-number">2</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=50&h=50&fit=crop" alt="Track">
-                            <div class="track-details">
-                                <h4>Summer Breeze</h4>
-                                <p>The Sunshine Band</p>
+                        <div class="track-popularity">
+                            <div class="popularity-bar">
+                                <div class="popularity-fill" style="width: 85%"></div>
                             </div>
                         </div>
-                        <span class="track-duration">3:45</span>
-                        <button class="track-play-btn" data-track-id="5">▶</button>
-                        <button class="like-btn" data-track-id="5">🤍</button>
+                        <div class="track-duration-modern">4:32</div>
+                        <div class="track-actions-modern">
+                            <button class="btn-track-like" data-track="1">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-track-add" data-track="1">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
                     </div>
-                    
-                    <div class="track-item">
-                        <span class="track-number">3</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=50&h=50&fit=crop" alt="Track">
-                            <div class="track-details">
-                                <h4>Electric Pulse</h4>
+
+                    <div class="track-row" data-track-id="2" data-aos="fade-up" data-aos-delay="150">
+                        <div class="track-number-play">
+                            <span class="track-num">2</span>
+                            <button class="track-play-btn-modern">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="track-info-modern">
+                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=56&h=56&fit=crop" alt="Track" class="track-thumb">
+                            <div class="track-text">
+                                <h4 class="track-title-modern">Summer Breeze</h4>
+                                <p class="track-artist-modern">Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <div class="track-popularity">
+                            <div class="popularity-bar">
+                                <div class="popularity-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="track-duration-modern">3:45</div>
+                        <div class="track-actions-modern">
+                            <button class="btn-track-like" data-track="2">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-track-add" data-track="2">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="track-row" data-track-id="3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="track-number-play">
+                            <span class="track-num">3</span>
+                            <button class="track-play-btn-modern">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="track-info-modern">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=56&h=56&fit=crop" alt="Track" class="track-thumb">
+                            <div class="track-text">
+                                <h4 class="track-title-modern">Electric Pulse</h4>
+                                <p class="track-artist-modern">Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <div class="track-popularity">
+                            <div class="popularity-bar">
+                                <div class="popularity-fill" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="track-duration-modern">5:12</div>
+                        <div class="track-actions-modern">
+                            <button class="btn-track-like" data-track="3">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-track-add" data-track="3">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="track-row" data-track-id="4" data-aos="fade-up" data-aos-delay="250">
+                        <div class="track-number-play">
+                            <span class="track-num">4</span>
+                            <button class="track-play-btn-modern">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="track-info-modern">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=56&h=56&fit=crop" alt="Track" class="track-thumb">
+                            <div class="track-text">
+                                <h4 class="track-title-modern">Acoustic Dreams</h4>
+                                <p class="track-artist-modern">Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <div class="track-popularity">
+                            <div class="popularity-bar">
+                                <div class="popularity-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="track-duration-modern">4:18</div>
+                        <div class="track-actions-modern">
+                            <button class="btn-track-like" data-track="4">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-track-add" data-track="4">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="track-row" data-track-id="5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="track-number-play">
+                            <span class="track-num">5</span>
+                            <button class="track-play-btn-modern">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="track-info-modern">
+                            <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=56&h=56&fit=crop" alt="Track" class="track-thumb">
+                            <div class="track-text">
+                                <h4 class="track-title-modern">Urban Flow</h4>
+                                <p class="track-artist-modern">Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <div class="track-popularity">
+                            <div class="popularity-bar">
+                                <div class="popularity-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="track-duration-modern">3:56</div>
+                        <div class="track-actions-modern">
+                            <button class="btn-track-like" data-track="5">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-track-add" data-track="5">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="track-row" data-track-id="6" data-aos="fade-up" data-aos-delay="350">
+                        <div class="track-number-play">
+                            <span class="track-num">6</span>
+                            <button class="track-play-btn-modern">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="track-info-modern">
+                            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=56&h=56&fit=crop" alt="Track" class="track-thumb">
+                            <div class="track-text">
+                                <h4 class="track-title-modern">Jazz Nights</h4>
+                                <p class="track-artist-modern">Luna Eclipse</p>
+                            </div>
+                        </div>
+                        <div class="track-popularity">
+                            <div class="popularity-bar">
+                                <div class="popularity-fill" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <div class="track-duration-modern">4:42</div>
+                        <div class="track-actions-modern">
+                            <button class="btn-track-like" data-track="6">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-track-add" data-track="6">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel: More from Artist -->
+            <div class="carousel-section" data-aos="fade-up">
+                <div class="section-header-carousel">
+                    <h2>More from Luna Eclipse</h2>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev" id="moreAlbumsPrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next" id="moreAlbumsNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container" id="moreAlbumsCarousel">
+                    <div class="carousel-track">
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Summer Nights</h3>
+                                <p>2023 • 10 tracks</p>
+                            </div>
+                        </div>
+
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Electric Dreams</h3>
+                                <p>2022 • 14 tracks</p>
+                            </div>
+                        </div>
+
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Acoustic Sessions</h3>
+                                <p>2023 • 8 tracks</p>
+                            </div>
+                        </div>
+
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Urban Tales</h3>
+                                <p>2021 • 12 tracks</p>
+                            </div>
+                        </div>
+
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Rock Legends</h3>
+                                <p>2020 • 15 tracks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel: Similar Albums -->
+            <div class="carousel-section" data-aos="fade-up">
+                <div class="section-header-carousel">
+                    <h2>Similar Albums You Might Like</h2>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev" id="similarAlbumsPrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next" id="similarAlbumsNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container" id="similarAlbumsCarousel">
+                    <div class="carousel-track">
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Pop Classics</h3>
+                                <p>Various Artists</p>
+                            </div>
+                        </div>
+
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Jazz Moods</h3>
+                                <p>Miles Davis</p>
+                            </div>
+                        </div>
+
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Electronic Waves</h3>
                                 <p>DJ Nova</p>
                             </div>
                         </div>
-                        <span class="track-duration">5:12</span>
-                        <button class="track-play-btn" data-track-id="6">▶</button>
-                        <button class="like-btn" data-track-id="6">🤍</button>
-                    </div>
-                    
-                    <div class="track-item">
-                        <span class="track-number">4</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=50&h=50&fit=crop" alt="Track">
-                            <div class="track-details">
-                                <h4>Acoustic Dreams</h4>
-                                <p>James Rivers</p>
-                            </div>
-                        </div>
-                        <span class="track-duration">4:18</span>
-                        <button class="track-play-btn" data-track-id="7">▶</button>
-                        <button class="like-btn" data-track-id="7">🤍</button>
-                    </div>
-                    
-                    <div class="track-item">
-                        <span class="track-number">5</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=50&h=50&fit=crop" alt="Track">
-                            <div class="track-details">
-                                <h4>Urban Flow</h4>
-                                <p>MC Flow</p>
-                            </div>
-                        </div>
-                        <span class="track-duration">3:56</span>
-                        <button class="track-play-btn" data-track-id="8">▶</button>
-                        <button class="like-btn" data-track-id="8">🤍</button>
-                    </div>
-                    
-                    <div class="track-item">
-                        <span class="track-number">6</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=50&h=50&fit=crop" alt="Track">
-                            <div class="track-details">
-                                <h4>Jazz Nights</h4>
-                                <p>Miles Davis Jr</p>
-                            </div>
-                        </div>
-                        <span class="track-duration">4:42</span>
-                        <button class="track-play-btn" data-track-id="9">▶</button>
-                        <button class="like-btn" data-track-id="9">🤍</button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- More Albums Section -->
-            <div class="more-albums-section">
-                <h2>More Albums by Luna Eclipse</h2>
-                <div class="more-albums-grid">
-                    <div class="album-card">
-                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=250&h=250&fit=crop" alt="Album">
-                        <div class="album-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="10">▶️</button>
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Midnight Vibes</h3>
+                                <p>The Night Owls</p>
+                            </div>
                         </div>
-                        <h3>Summer Nights</h3>
-                        <p>Luna Eclipse • 2023</p>
-                    </div>
-                    <div class="album-card">
-                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=250&h=250&fit=crop" alt="Album">
-                        <div class="album-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="11">▶️</button>
-                        </div>
-                        <h3>Electric Dreams</h3>
-                        <p>DJ Nova • 2022</p>
-                    </div>
-                    <div class="album-card">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=250&h=250&fit=crop" alt="Album">
-                        <div class="album-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="12">▶️</button>
-                        </div>
-                        <h3>Acoustic Sessions</h3>
-                        <p>James Rivers • 2023</p>
-                    </div>
-                    <div class="album-card">
-                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=250&h=250&fit=crop" alt="Album">
-                        <div class="album-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="13">▶️</button>
-                        </div>
-                        <h3>Urban Tales</h3>
-                        <p>MC Flow • 2021</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Similar Albums -->
-            <div class="similar-albums-section">
-                <h2>Similar Albums You Might Like</h2>
-                <div class="similar-albums-scroll">
-                    <div class="album-card-small">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=180&h=180&fit=crop" alt="Album">
-                        <h4>Rock Legends</h4>
-                        <p>Various Artists</p>
-                    </div>
-                    <div class="album-card-small">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=180&h=180&fit=crop" alt="Album">
-                        <h4>Pop Classics</h4>
-                        <p>Various Artists</p>
-                    </div>
-                    <div class="album-card-small">
-                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=180&h=180&fit=crop" alt="Album">
-                        <h4>Jazz Moods</h4>
-                        <p>Various Artists</p>
-                    </div>
-                    <div class="album-card-small">
-                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=180&h=180&fit=crop" alt="Album">
-                        <h4>Electronic Waves</h4>
-                        <p>Various Artists</p>
-                    </div>
-                    <div class="album-card-small">
-                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=180&h=180&fit=crop" alt="Album">
-                        <h4>Electronic Waves</h4>
-                        <p>Various Artists</p>
+                        <div class="album-card-carousel">
+                            <div class="album-card-image">
+                                <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=300&h=300&fit=crop" alt="Album">
+                                <div class="album-card-overlay">
+                                    <button class="btn-play-card">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="album-card-content">
+                                <h3>Sunset Dreams</h3>
+                                <p>Luna Eclipse</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -317,5 +556,329 @@
     
     <!-- Audio Player Script -->
     <script src="../../src/scripts/audio-player.js"></script>
+
+    <!-- Album Page Interactive JavaScript -->
+    <script>
+        // Initialize AOS (Animate On Scroll) - Pure JS version
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simple scroll animation
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('[data-aos]');
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight - 100;
+                    if (isVisible) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Set initial state
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Initial check
+
+            // Parallax Effect for Hero Background
+            const heroBg = document.getElementById('heroBg');
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                if (heroBg) {
+                    heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+
+            // Play All Button
+            const playAllBtn = document.getElementById('playAllBtn');
+            if (playAllBtn) {
+                playAllBtn.addEventListener('click', function() {
+                    this.classList.add('playing');
+                    setTimeout(() => this.classList.remove('playing'), 300);
+                    console.log('Playing all tracks...');
+                });
+            }
+
+            // Shuffle Button
+            const shuffleBtn = document.getElementById('shuffleBtn');
+            if (shuffleBtn) {
+                shuffleBtn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    console.log('Shuffle toggled');
+                });
+            }
+
+            // Like Album Button
+            const likeAlbumBtn = document.getElementById('likeAlbumBtn');
+            if (likeAlbumBtn) {
+                likeAlbumBtn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.style.color = 'var(--primary-accent)';
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.style.color = '';
+                    }
+                });
+            }
+
+            // Share Button
+            const shareBtn = document.getElementById('shareBtn');
+            if (shareBtn) {
+                shareBtn.addEventListener('click', function() {
+                    alert('Share functionality: Copy link to clipboard!');
+                });
+            }
+
+            // Track Row Hover Effects
+            const trackRows = document.querySelectorAll('.track-row');
+            trackRows.forEach(row => {
+                const playBtn = row.querySelector('.track-play-btn-modern');
+                const trackNum = row.querySelector('.track-num');
+
+                row.addEventListener('mouseenter', function() {
+                    if (playBtn && trackNum) {
+                        trackNum.style.opacity = '0';
+                        playBtn.style.opacity = '1';
+                    }
+                });
+
+                row.addEventListener('mouseleave', function() {
+                    if (playBtn && trackNum && !row.classList.contains('playing')) {
+                        trackNum.style.opacity = '1';
+                        playBtn.style.opacity = '0';
+                    }
+                });
+
+                // Play button click
+                if (playBtn) {
+                    playBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        
+                        // Remove playing state from all tracks
+                        trackRows.forEach(r => r.classList.remove('playing'));
+                        
+                        // Add playing state to clicked track
+                        row.classList.add('playing');
+                        trackNum.style.opacity = '0';
+                        playBtn.style.opacity = '1';
+                        
+                        const icon = playBtn.querySelector('i');
+                        if (icon.classList.contains('fa-play')) {
+                            icon.classList.remove('fa-play');
+                            icon.classList.add('fa-pause');
+                        } else {
+                            icon.classList.remove('fa-pause');
+                            icon.classList.add('fa-play');
+                        }
+                    });
+                }
+            });
+
+            // Track Like Buttons
+            const trackLikeBtns = document.querySelectorAll('.btn-track-like');
+            trackLikeBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.style.color = '#ff4757';
+                        this.style.transform = 'scale(1.2)';
+                        setTimeout(() => this.style.transform = 'scale(1)', 200);
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.style.color = '';
+                    }
+                });
+            });
+
+            // Track Add Buttons
+            const trackAddBtns = document.querySelectorAll('.btn-track-add');
+            trackAddBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.style.transform = 'rotate(90deg) scale(1.1)';
+                    setTimeout(() => this.style.transform = '', 300);
+                    console.log('Added to playlist');
+                });
+            });
+
+            // Filter Buttons
+            const filterBtns = document.querySelectorAll('.btn-filter');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    console.log('Filter:', this.dataset.filter);
+                });
+            });
+
+            // Carousel Functionality
+            class Carousel {
+                constructor(carouselId, prevBtnId, nextBtnId) {
+                    this.carousel = document.getElementById(carouselId);
+                    this.track = this.carousel?.querySelector('.carousel-track');
+                    this.prevBtn = document.getElementById(prevBtnId);
+                    this.nextBtn = document.getElementById(nextBtnId);
+                    this.currentIndex = 0;
+                    this.cardsPerView = this.getCardsPerView();
+                    this.totalCards = this.track?.children.length || 0;
+
+                    if (this.carousel && this.track) {
+                        this.init();
+                    }
+                }
+
+                getCardsPerView() {
+                    const width = window.innerWidth;
+                    if (width >= 1400) return 4;
+                    if (width >= 1024) return 3;
+                    if (width >= 768) return 2;
+                    return 1;
+                }
+
+                init() {
+                    this.updateCarousel();
+                    
+                    if (this.prevBtn) {
+                        this.prevBtn.addEventListener('click', () => this.prev());
+                    }
+                    
+                    if (this.nextBtn) {
+                        this.nextBtn.addEventListener('click', () => this.next());
+                    }
+
+                    // Touch/Swipe support
+                    let startX = 0;
+                    let isDragging = false;
+
+                    this.track.addEventListener('mousedown', (e) => {
+                        startX = e.pageX;
+                        isDragging = true;
+                        this.track.style.cursor = 'grabbing';
+                    });
+
+                    this.track.addEventListener('mousemove', (e) => {
+                        if (!isDragging) return;
+                        e.preventDefault();
+                    });
+
+                    this.track.addEventListener('mouseup', (e) => {
+                        if (!isDragging) return;
+                        isDragging = false;
+                        this.track.style.cursor = 'grab';
+                        
+                        const endX = e.pageX;
+                        const diff = startX - endX;
+                        
+                        if (Math.abs(diff) > 50) {
+                            if (diff > 0) this.next();
+                            else this.prev();
+                        }
+                    });
+
+                    this.track.addEventListener('mouseleave', () => {
+                        isDragging = false;
+                        this.track.style.cursor = 'grab';
+                    });
+
+                    // Resize handler
+                    window.addEventListener('resize', () => {
+                        this.cardsPerView = this.getCardsPerView();
+                        this.updateCarousel();
+                    });
+                }
+
+                updateCarousel() {
+                    const cardWidth = this.track.children[0]?.offsetWidth || 0;
+                    const gap = 24; // 24px gap between cards
+                    const offset = -(this.currentIndex * (cardWidth + gap));
+                    this.track.style.transform = `translateX(${offset}px)`;
+
+                    // Update button states
+                    if (this.prevBtn) {
+                        this.prevBtn.disabled = this.currentIndex === 0;
+                        this.prevBtn.style.opacity = this.currentIndex === 0 ? '0.3' : '1';
+                    }
+
+                    if (this.nextBtn) {
+                        const maxIndex = Math.max(0, this.totalCards - this.cardsPerView);
+                        this.nextBtn.disabled = this.currentIndex >= maxIndex;
+                        this.nextBtn.style.opacity = this.currentIndex >= maxIndex ? '0.3' : '1';
+                    }
+                }
+
+                next() {
+                    const maxIndex = Math.max(0, this.totalCards - this.cardsPerView);
+                    if (this.currentIndex < maxIndex) {
+                        this.currentIndex++;
+                        this.updateCarousel();
+                    }
+                }
+
+                prev() {
+                    if (this.currentIndex > 0) {
+                        this.currentIndex--;
+                        this.updateCarousel();
+                    }
+                }
+            }
+
+            // Initialize Carousels
+            const moreAlbumsCarousel = new Carousel('moreAlbumsCarousel', 'moreAlbumsPrev', 'moreAlbumsNext');
+            const similarAlbumsCarousel = new Carousel('similarAlbumsCarousel', 'similarAlbumsPrev', 'similarAlbumsNext');
+
+            // Album Card Hover Effects
+            const albumCards = document.querySelectorAll('.album-card-carousel');
+            albumCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+
+                const playBtn = card.querySelector('.btn-play-card');
+                if (playBtn) {
+                    playBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        this.style.transform = 'scale(1.1)';
+                        setTimeout(() => this.style.transform = 'scale(1)', 200);
+                        console.log('Playing album...');
+                    });
+                }
+            });
+
+            // Smooth scroll reveal animation
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                // Add scroll direction class to body
+                if (currentScroll > lastScroll) {
+                    document.body.classList.add('scroll-down');
+                    document.body.classList.remove('scroll-up');
+                } else {
+                    document.body.classList.add('scroll-up');
+                    document.body.classList.remove('scroll-down');
+                }
+                
+                lastScroll = currentScroll;
+            });
+
+            console.log('Album page initialized with all interactive features!');
+        });
+    </script>
 </body>
 </html>
