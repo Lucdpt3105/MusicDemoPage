@@ -1,56 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="../../src/styles/main.css" rel="stylesheet" />
-    <title>Album - Groovezilla</title>
+    <title>Albums - Groovezilla</title>
 </head>
 <body>
-    <div class="album-page">
+    <div class="app-container">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="logo-section">
-                <div class="logo"></div>
-                <span class="logo-text">Groovezilla</span>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/images/logo.svg" alt="Groovezilla Logo" class="app-logo">
+                <h1 class="app-name">Groovezilla</h1>
             </div>
-            
-            <div class="nav-menu">
-                <a href="../../index.html" class="nav-item">
-                    <div class="icon"></div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">Menu</h3>
+                <a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="playlist.html" class="nav-item">
-                    <div class="icon"></div>
-                    <span>Playlist</span>
+                <a href="playlist.html" class="nav-link">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Playlists</span>
                 </a>
-                <a href="album.html" class="nav-item active">
-                    <div class="icon"></div>
-                    <span>Album</span>
+                <a href="album.html" class="nav-link active">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+
+            <!-- Discovery Section -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">Discovery</h3>
+                <a href="discovery.html" class="nav-link">
+                    <i class="fas fa-fire"></i>
+                    <span>Trending</span>
+                </a>
+                <a href="artist.html" class="nav-link">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="history.html" class="nav-link">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </a>
+                <a href="favorites.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+            </nav>
+
+            <!-- My Playlists -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">My Playlists</h3>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-heart" style="color: #ff6b6b;"></i>
+                    <span>Love</span>
+                </a>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-bolt" style="color: #4ecdc4;"></i>
+                    <span>Electro</span>
+                </a>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-music" style="color: #a29bfe;"></i>
+                    <span>Funk</span>
+                </a>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-headphones" style="color: #feca57;"></i>
+                    <span>EDM</span>
+                </a>
+            </nav>
+
+            <!-- Settings -->
+            <div class="sidebar-footer">
+                <a href="admin.html" class="nav-link">
+                    <i class="fas fa-crown"></i>
+                    <span>Admin</span>
+                </a>
+                <a href="settings.html" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
                 </a>
             </div>
-            
-            <a href="discovery.html" class="nav-item">
-                <div class="icon"></div>
-                <span>Discovery</span>
-            </a>
-        </div>
+        </aside>
 
         <!-- Main Content -->
-        <div class="main-content">
+        <main class="main-content">
             <!-- Header -->
-            <div class="header">
-                <div class="search-bar">
-                    <div class="search-icon"></div>
-                    <input type="text" placeholder="Search by artists, songs or albums">
+            <header class="top-header">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for artists, songs or albums...">
                 </div>
-                <div class="user-section">
-                    <button class="download-btn">Download Now</button>
-                    <div class="user-avatar"></div>
+                <div class="header-actions">
+                    <button class="btn-download">
+                        <i class="fas fa-download"></i>
+                        Download Now
+                    </button>
+                    <div class="user-menu">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=faces" alt="User" class="user-avatar">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
-            </div>
+            </header>
 
             <!-- Album Hero -->
             <div class="album-hero">
@@ -250,7 +307,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- HLS.js Library (Cloudflare CDN - Latest Stable) -->
