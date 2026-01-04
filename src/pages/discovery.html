@@ -89,173 +89,554 @@
             <header class="top-header">
                 <div class="search-container">
                     <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" placeholder="Search by artists, songs or albums">
+                    <input type="text" class="search-input" placeholder="Search by artists, songs or albums" id="discoverySearch">
                 </div>
-                <div class="user-section">
-                    <button class="download-btn">Download Now</button>
-                    <div class="user-avatar"></div>
+                <div class="header-actions">
+                    <button class="btn-download">Download Now</button>
+                    <div class="user-menu">
+                        <div class="user-avatar"></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Animated Hero Carousel -->
+            <div class="discovery-hero-carousel" id="heroCarousel">
+                <div class="hero-slides">
+                    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1600&h=600&fit=crop')">
+                        <div class="hero-content">
+                            <span class="hero-badge">🔥 TRENDING NOW</span>
+                            <h1 class="hero-title">Discover Weekly</h1>
+                            <p class="hero-description">Your personalized playlist of fresh tracks</p>
+                            <div class="hero-actions">
+                                <button class="btn-hero-play">
+                                    <i class="fas fa-play"></i>
+                                    Play Now
+                                </button>
+                                <button class="btn-hero-info">
+                                    <i class="fas fa-info-circle"></i>
+                                    More Info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&h=600&fit=crop')">
+                        <div class="hero-content">
+                            <span class="hero-badge">⚡ NEW RELEASE</span>
+                            <h1 class="hero-title">Rock Revival</h1>
+                            <p class="hero-description">The hottest rock tracks of 2024</p>
+                            <div class="hero-actions">
+                                <button class="btn-hero-play">
+                                    <i class="fas fa-play"></i>
+                                    Play Now
+                                </button>
+                                <button class="btn-hero-info">
+                                    <i class="fas fa-info-circle"></i>
+                                    More Info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1600&h=600&fit=crop')">
+                        <div class="hero-content">
+                            <span class="hero-badge">🎵 EDITOR'S CHOICE</span>
+                            <h1 class="hero-title">Jazz Essentials</h1>
+                            <p class="hero-description">Timeless jazz classics and modern hits</p>
+                            <div class="hero-actions">
+                                <button class="btn-hero-play">
+                                    <i class="fas fa-play"></i>
+                                    Play Now
+                                </button>
+                                <button class="btn-hero-info">
+                                    <i class="fas fa-info-circle"></i>
+                                    More Info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation -->
+                <div class="hero-nav">
+                    <button class="hero-nav-btn prev" id="heroPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="hero-nav-btn next" id="heroNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="hero-indicators" id="heroIndicators">
+                    <div class="indicator active" data-slide="0"></div>
+                    <div class="indicator" data-slide="1"></div>
+                    <div class="indicator" data-slide="2"></div>
                 </div>
             </div>
 
-            <h1 class="page-title">Discover New Music</h1>
-
-            <!-- Featured Hero Section -->
-            <div class="hero-section">
-                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&h=400&fit=crop" alt="Featured Music" class="hero-image">
-                <div class="hero-overlay">
-                    <h2>Trending This Week</h2>
-                    <p>The hottest tracks everyone is listening to</p>
-                    <button class="play-btn" data-track-id="10">Play Now</button>
+            <!-- Stats Counter Section -->
+            <div class="stats-banner">
+                <div class="stat-box" data-aos="fade-up">
+                    <i class="fas fa-music"></i>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="50000">0</h3>
+                        <p>Active Tracks</p>
+                    </div>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="2500">0</h3>
+                        <p>Artists</p>
+                    </div>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-compact-disc"></i>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="8000">0</h3>
+                        <p>Albums</p>
+                    </div>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-heart"></i>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="1000000">0</h3>
+                        <p>Monthly Plays</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Trending Genres -->
-            <section class="trending-section">
-                <h2 class="section-heading">Trending Genres</h2>
-                <div class="genre-grid">
-                    <div class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Rock">
-                        <div class="genre-overlay">
+            <!-- Interactive Genre Cards -->
+            <section class="trending-section" data-aos="fade-up">
+                <div class="section-header-discovery">
+                    <h2>Trending Genres</h2>
+                    <button class="btn-view-all">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="genre-grid-modern">
+                    <div class="genre-card-modern" data-genre="rock">
+                        <div class="genre-bg" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')"></div>
+                        <div class="genre-overlay-modern">
+                            <div class="genre-icon">🎸</div>
                             <h3>Rock</h3>
-                            <p>2,345 songs</p>
+                            <p class="genre-count">2,345 tracks</p>
+                            <button class="btn-explore">
+                                <i class="fas fa-play-circle"></i>
+                                Explore
+                            </button>
                         </div>
                     </div>
-                    <div class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&h=300&fit=crop" alt="Jazz">
-                        <div class="genre-overlay">
+
+                    <div class="genre-card-modern" data-genre="jazz">
+                        <div class="genre-bg" style="background-image: url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=400&fit=crop')"></div>
+                        <div class="genre-overlay-modern">
+                            <div class="genre-icon">🎺</div>
                             <h3>Jazz</h3>
-                            <p>1,892 songs</p>
+                            <p class="genre-count">1,892 tracks</p>
+                            <button class="btn-explore">
+                                <i class="fas fa-play-circle"></i>
+                                Explore
+                            </button>
                         </div>
                     </div>
-                    <div class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop" alt="Electronic">
-                        <div class="genre-overlay">
+
+                    <div class="genre-card-modern" data-genre="electronic">
+                        <div class="genre-bg" style="background-image: url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop')"></div>
+                        <div class="genre-overlay-modern">
+                            <div class="genre-icon">⚡</div>
                             <h3>Electronic</h3>
-                            <p>3,421 songs</p>
+                            <p class="genre-count">3,421 tracks</p>
+                            <button class="btn-explore">
+                                <i class="fas fa-play-circle"></i>
+                                Explore
+                            </button>
                         </div>
                     </div>
-                    <div class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Pop">
-                        <div class="genre-overlay">
+
+                    <div class="genre-card-modern" data-genre="pop">
+                        <div class="genre-bg" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop')"></div>
+                        <div class="genre-overlay-modern">
+                            <div class="genre-icon">🎤</div>
                             <h3>Pop</h3>
-                            <p>5,678 songs</p>
+                            <p class="genre-count">5,678 tracks</p>
+                            <button class="btn-explore">
+                                <i class="fas fa-play-circle"></i>
+                                Explore
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="genre-card-modern" data-genre="hiphop">
+                        <div class="genre-bg" style="background-image: url('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=400&h=400&fit=crop')"></div>
+                        <div class="genre-overlay-modern">
+                            <div class="genre-icon">🎧</div>
+                            <h3>Hip-Hop</h3>
+                            <p class="genre-count">4,123 tracks</p>
+                            <button class="btn-explore">
+                                <i class="fas fa-play-circle"></i>
+                                Explore
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="genre-card-modern" data-genre="classical">
+                        <div class="genre-bg" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop')"></div>
+                        <div class="genre-overlay-modern">
+                            <div class="genre-icon">🎻</div>
+                            <h3>Classical</h3>
+                            <p class="genre-count">1,567 tracks</p>
+                            <button class="btn-explore">
+                                <i class="fas fa-play-circle"></i>
+                                Explore
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- New Releases -->
-            <section class="releases-section">
-                <h2 class="section-heading">New Releases</h2>
-                <div class="releases-grid">
-                    <div class="release-card">
-                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=250&h=250&fit=crop" alt="Album 1">
-                        <div class="release-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="4">▶️</button>
-                        </div>
-                        <h4>Midnight Dreams</h4>
-                        <p>Luna Eclipse</p>
+            <!-- New Releases Carousel -->
+            <section class="releases-section-carousel" data-aos="fade-up">
+                <div class="section-header-discovery">
+                    <h2>New Releases</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn-mini prev" id="releasesPrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn-mini next" id="releasesNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                    <div class="release-card">
-                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=250&h=250&fit=crop" alt="Album 2">
-                        <div class="release-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="5">▶️</button>
+                </div>
+                <div class="releases-carousel" id="releasesCarousel">
+                    <div class="releases-track">
+                        <div class="release-card-modern">
+                            <div class="release-image">
+                                <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Album">
+                                <div class="release-play-overlay">
+                                    <button class="btn-release-play">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                                <span class="release-badge">NEW</span>
+                            </div>
+                            <div class="release-info">
+                                <h4>Midnight Dreams</h4>
+                                <p>Luna Eclipse</p>
+                                <div class="release-meta">
+                                    <span><i class="fas fa-calendar"></i> Jan 2024</span>
+                                    <span><i class="fas fa-music"></i> 12 tracks</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Summer Vibes</h4>
-                        <p>The Sunshine Band</p>
-                    </div>
-                    <div class="release-card">
-                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=250&h=250&fit=crop" alt="Album 3">
-                        <div class="release-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="6">▶️</button>
+
+                        <div class="release-card-modern">
+                            <div class="release-image">
+                                <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=300&h=300&fit=crop" alt="Album">
+                                <div class="release-play-overlay">
+                                    <button class="btn-release-play">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                                <span class="release-badge">HOT</span>
+                            </div>
+                            <div class="release-info">
+                                <h4>Summer Vibes</h4>
+                                <p>The Sunshine Band</p>
+                                <div class="release-meta">
+                                    <span><i class="fas fa-calendar"></i> Jan 2024</span>
+                                    <span><i class="fas fa-music"></i> 10 tracks</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Electric Nights</h4>
-                        <p>DJ Nova</p>
-                    </div>
-                    <div class="release-card">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=250&h=250&fit=crop" alt="Album 4">
-                        <div class="release-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="7">▶️</button>
+
+                        <div class="release-card-modern">
+                            <div class="release-image">
+                                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300&h=300&fit=crop" alt="Album">
+                                <div class="release-play-overlay">
+                                    <button class="btn-release-play">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                                <span class="release-badge">NEW</span>
+                            </div>
+                            <div class="release-info">
+                                <h4>Electric Nights</h4>
+                                <p>DJ Nova</p>
+                                <div class="release-meta">
+                                    <span><i class="fas fa-calendar"></i> Dec 2023</span>
+                                    <span><i class="fas fa-music"></i> 14 tracks</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Acoustic Sessions</h4>
-                        <p>James Rivers</p>
-                    </div>
-                    <div class="release-card">
-                        <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=250&h=250&fit=crop" alt="Album 5">
-                        <div class="release-overlay">
-                            <button class="play-overlay-btn play-btn" data-track-id="8">▶️</button>
+
+                        <div class="release-card-modern">
+                            <div class="release-image">
+                                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=300&h=300&fit=crop" alt="Album">
+                                <div class="release-play-overlay">
+                                    <button class="btn-release-play">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-info">
+                                <h4>Acoustic Sessions</h4>
+                                <p>James Rivers</p>
+                                <div class="release-meta">
+                                    <span><i class="fas fa-calendar"></i> Dec 2023</span>
+                                    <span><i class="fas fa-music"></i> 8 tracks</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Urban Beats</h4>
-                        <p>MC Flow</p>
+
+                        <div class="release-card-modern">
+                            <div class="release-image">
+                                <img src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=300&h=300&fit=crop" alt="Album">
+                                <div class="release-play-overlay">
+                                    <button class="btn-release-play">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                                <span class="release-badge">HOT</span>
+                            </div>
+                            <div class="release-info">
+                                <h4>Urban Beats</h4>
+                                <p>MC Flow</p>
+                                <div class="release-meta">
+                                    <span><i class="fas fa-calendar"></i> Dec 2023</span>
+                                    <span><i class="fas fa-music"></i> 15 tracks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="release-card-modern">
+                            <div class="release-image">
+                                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop" alt="Album">
+                                <div class="release-play-overlay">
+                                    <button class="btn-release-play">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="release-info">
+                                <h4>Pop Dreams</h4>
+                                <p>Sarah Star</p>
+                                <div class="release-meta">
+                                    <span><i class="fas fa-calendar"></i> Nov 2023</span>
+                                    <span><i class="fas fa-music"></i> 11 tracks</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Featured Artists -->
-            <section class="featured-artists">
-                <h2 class="section-heading">Featured Artists</h2>
-                <div class="artists-grid">
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=200&fit=crop&crop=faces" alt="Artist 1">
-                        <h4>Alex Thunder</h4>
-                        <p>Rock • 1.2M followers</p>
+            <!-- Featured Artists with Animation -->
+            <section class="featured-artists-modern" data-aos="fade-up">
+                <div class="section-header-discovery">
+                    <h2>Featured Artists</h2>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All</button>
+                        <button class="filter-tab" data-filter="trending">Trending</button>
+                        <button class="filter-tab" data-filter="new">New</button>
                     </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=200&h=200&fit=crop&crop=faces" alt="Artist 2">
-                        <h4>Sarah Melody</h4>
-                        <p>Pop • 892K followers</p>
+                </div>
+                <div class="artists-grid-modern" id="artistsGrid">
+                    <div class="artist-card-modern" data-category="trending">
+                        <div class="artist-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop&crop=faces" alt="Artist">
+                            <div class="artist-hover-overlay">
+                                <button class="btn-follow">
+                                    <i class="fas fa-user-plus"></i>
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="artist-info-modern">
+                            <h4>Alex Thunder</h4>
+                            <p class="artist-genre">Rock</p>
+                            <div class="artist-stats">
+                                <span><i class="fas fa-users"></i> 1.2M</span>
+                                <span class="trending-badge">📈 Trending</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=200&h=200&fit=crop&crop=faces" alt="Artist 3">
-                        <h4>DJ Cosmos</h4>
-                        <p>Electronic • 2.1M followers</p>
+
+                    <div class="artist-card-modern" data-category="trending">
+                        <div class="artist-image">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop&crop=faces" alt="Artist">
+                            <div class="artist-hover-overlay">
+                                <button class="btn-follow">
+                                    <i class="fas fa-user-plus"></i>
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="artist-info-modern">
+                            <h4>Sarah Melody</h4>
+                            <p class="artist-genre">Pop</p>
+                            <div class="artist-stats">
+                                <span><i class="fas fa-users"></i> 892K</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=200&h=200&fit=crop&crop=faces" alt="Artist 4">
-                        <h4>Miles Davis Jr</h4>
-                        <p>Jazz • 654K followers</p>
+
+                    <div class="artist-card-modern" data-category="new">
+                        <div class="artist-image">
+                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=300&fit=crop&crop=faces" alt="Artist">
+                            <div class="artist-hover-overlay">
+                                <button class="btn-follow">
+                                    <i class="fas fa-user-plus"></i>
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="artist-info-modern">
+                            <h4>DJ Cosmos</h4>
+                            <p class="artist-genre">Electronic</p>
+                            <div class="artist-stats">
+                                <span><i class="fas fa-users"></i> 2.1M</span>
+                                <span class="new-badge">✨ New</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=200&h=200&fit=crop&crop=faces" alt="Artist 5">
-                        <h4>Luna Star</h4>
-                        <p>R&B • 1.5M followers</p>
+
+                    <div class="artist-card-modern" data-category="all">
+                        <div class="artist-image">
+                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300&h=300&fit=crop&crop=faces" alt="Artist">
+                            <div class="artist-hover-overlay">
+                                <button class="btn-follow">
+                                    <i class="fas fa-user-plus"></i>
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="artist-info-modern">
+                            <h4>Miles Davis Jr</h4>
+                            <p class="artist-genre">Jazz</p>
+                            <div class="artist-stats">
+                                <span><i class="fas fa-users"></i> 654K</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop&crop=faces" alt="Artist 6">
-                        <h4>The Rockers</h4>
-                        <p>Rock • 3.2M followers</p>
+
+                    <div class="artist-card-modern" data-category="trending">
+                        <div class="artist-image">
+                            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&h=300&fit=crop&crop=faces" alt="Artist">
+                            <div class="artist-hover-overlay">
+                                <button class="btn-follow">
+                                    <i class="fas fa-user-plus"></i>
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="artist-info-modern">
+                            <h4>Luna Star</h4>
+                            <p class="artist-genre">R&B</p>
+                            <div class="artist-stats">
+                                <span><i class="fas fa-users"></i> 1.5M</span>
+                                <span class="trending-badge">📈 Trending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="artist-card-modern" data-category="all">
+                        <div class="artist-image">
+                            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop&crop=faces" alt="Artist">
+                            <div class="artist-hover-overlay">
+                                <button class="btn-follow">
+                                    <i class="fas fa-user-plus"></i>
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                        <div class="artist-info-modern">
+                            <h4>The Rockers</h4>
+                            <p class="artist-genre">Rock</p>
+                            <div class="artist-stats">
+                                <span><i class="fas fa-users"></i> 3.2M</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Curated Playlists -->
-            <section class="curated-playlists">
-                <h2 class="section-heading">Curated for You</h2>
-                <div class="playlist-scroll">
-                    <div class="playlist-item">
-                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=180&h=180&fit=crop" alt="Playlist 1">
-                        <h4>Chill Vibes</h4>
-                        <p>Perfect for relaxing</p>
-                    </div>
-                    <div class="playlist-item">
-                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=180&h=180&fit=crop" alt="Playlist 2">
-                        <h4>Workout Energy</h4>
-                        <p>Get pumped up</p>
-                    </div>
-                    <div class="playlist-item">
-                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=180&h=180&fit=crop" alt="Playlist 3">
-                        <h4>Study Focus</h4>
-                        <p>Concentration music</p>
-                    </div>
-                    <div class="playlist-item">
-                        <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=180&h=180&fit=crop" alt="Playlist 4">
-                        <h4>Party Hits</h4>
-                        <p>Dance all night</p>
-                    </div>
-                    <div class="playlist-item">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=180&h=180&fit=crop" alt="Playlist 5">
-                        <h4>Road Trip</h4>
-                        <p>Highway classics</p>
+            <!-- Curated Playlists Carousel -->
+            <section class="curated-section" data-aos="fade-up">
+                <div class="section-header-discovery">
+                    <h2>Curated for You</h2>
+                    <button class="btn-view-all">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="playlists-carousel" id="playlistsCarousel">
+                    <div class="playlists-track">
+                        <div class="playlist-card-modern">
+                            <div class="playlist-image">
+                                <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=250&h=250&fit=crop" alt="Playlist">
+                                <div class="playlist-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <h4>Chill Vibes</h4>
+                            <p>Perfect for relaxing</p>
+                        </div>
+
+                        <div class="playlist-card-modern">
+                            <div class="playlist-image">
+                                <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=250&h=250&fit=crop" alt="Playlist">
+                                <div class="playlist-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <h4>Workout Energy</h4>
+                            <p>Get pumped up</p>
+                        </div>
+
+                        <div class="playlist-card-modern">
+                            <div class="playlist-image">
+                                <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=250&h=250&fit=crop" alt="Playlist">
+                                <div class="playlist-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <h4>Study Focus</h4>
+                            <p>Concentration music</p>
+                        </div>
+
+                        <div class="playlist-card-modern">
+                            <div class="playlist-image">
+                                <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=250&h=250&fit=crop" alt="Playlist">
+                                <div class="playlist-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <h4>Party Hits</h4>
+                            <p>Dance all night</p>
+                        </div>
+
+                        <div class="playlist-card-modern">
+                            <div class="playlist-image">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=250&h=250&fit=crop" alt="Playlist">
+                                <div class="playlist-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <h4>Road Trip</h4>
+                            <p>Highway classics</p>
+                        </div>
+
+                        <div class="playlist-card-modern">
+                            <div class="playlist-image">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=250&fit=crop" alt="Playlist">
+                                <div class="playlist-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <h4>Night Owl</h4>
+                            <p>Late night moods</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -264,5 +645,466 @@
 
     <!-- Audio Player Script -->
     <script src="../../src/scripts/audio-player.js"></script>
+
+    <!-- Discovery Page Interactive Features -->
+    <script>
+        // ===== HERO CAROUSEL =====
+        class HeroCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.hero-slide');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.autoPlayInterval = null;
+                this.autoPlayDelay = 5000;
+                
+                this.init();
+            }
+
+            init() {
+                // Navigation buttons
+                document.getElementById('heroPrev').addEventListener('click', () => this.prevSlide());
+                document.getElementById('heroNext').addEventListener('click', () => this.nextSlide());
+                
+                // Indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Touch support
+                this.setupTouchEvents();
+                
+                // Auto play
+                this.startAutoPlay();
+
+                // Pause on hover
+                const heroCarousel = document.getElementById('heroCarousel');
+                heroCarousel.addEventListener('mouseenter', () => this.stopAutoPlay());
+                heroCarousel.addEventListener('mouseleave', () => this.startAutoPlay());
+            }
+
+            goToSlide(index) {
+                this.slides[this.currentSlide].classList.remove('active');
+                this.indicators[this.currentSlide].classList.remove('active');
+                
+                this.currentSlide = index;
+                
+                this.slides[this.currentSlide].classList.add('active');
+                this.indicators[this.currentSlide].classList.add('active');
+            }
+
+            nextSlide() {
+                const next = (this.currentSlide + 1) % this.slides.length;
+                this.goToSlide(next);
+            }
+
+            prevSlide() {
+                const prev = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                this.goToSlide(prev);
+            }
+
+            startAutoPlay() {
+                this.autoPlayInterval = setInterval(() => this.nextSlide(), this.autoPlayDelay);
+            }
+
+            stopAutoPlay() {
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                    this.autoPlayInterval = null;
+                }
+            }
+
+            setupTouchEvents() {
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                const carousel = document.getElementById('heroCarousel');
+                
+                carousel.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+                
+                carousel.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    this.handleSwipe(touchStartX, touchEndX);
+                });
+            }
+
+            handleSwipe(startX, endX) {
+                const threshold = 50;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > threshold) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                }
+            }
+        }
+
+        // ===== STATS COUNTER ANIMATION =====
+        class StatsCounter {
+            constructor() {
+                this.counters = document.querySelectorAll('.stat-number');
+                this.hasAnimated = false;
+                this.init();
+            }
+
+            init() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !this.hasAnimated) {
+                            this.animateCounters();
+                            this.hasAnimated = true;
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                const statsBanner = document.querySelector('.stats-banner');
+                if (statsBanner) {
+                    observer.observe(statsBanner);
+                }
+            }
+
+            animateCounters() {
+                this.counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current).toLocaleString();
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target.toLocaleString() + '+';
+                        }
+                    };
+
+                    updateCounter();
+                });
+            }
+        }
+
+        // ===== GENRE CARDS INTERACTIONS =====
+        class GenreInteractions {
+            constructor() {
+                this.genreCards = document.querySelectorAll('.genre-card-modern');
+                this.init();
+            }
+
+            init() {
+                this.genreCards.forEach(card => {
+                    card.addEventListener('mouseenter', (e) => this.handleHover(e.currentTarget));
+                    card.addEventListener('mouseleave', (e) => this.handleLeave(e.currentTarget));
+                    
+                    const exploreBtn = card.querySelector('.btn-explore');
+                    exploreBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const genre = card.getAttribute('data-genre');
+                        this.handleExplore(genre);
+                    });
+                });
+            }
+
+            handleHover(card) {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            }
+
+            handleLeave(card) {
+                card.style.transform = 'translateY(0) scale(1)';
+            }
+
+            handleExplore(genre) {
+                console.log(`Exploring genre: ${genre}`);
+                // Add navigation logic here
+            }
+        }
+
+        // ===== RELEASES CAROUSEL =====
+        class ReleasesCarousel {
+            constructor() {
+                this.track = document.querySelector('.releases-track');
+                this.cards = document.querySelectorAll('.release-card-modern');
+                this.prevBtn = document.getElementById('releasesPrev');
+                this.nextBtn = document.getElementById('releasesNext');
+                this.currentIndex = 0;
+                this.cardsPerView = this.getCardsPerView();
+                
+                this.init();
+            }
+
+            init() {
+                this.prevBtn.addEventListener('click', () => this.prev());
+                this.nextBtn.addEventListener('click', () => this.next());
+                
+                window.addEventListener('resize', () => {
+                    this.cardsPerView = this.getCardsPerView();
+                    this.updateCarousel();
+                });
+
+                this.updateButtonStates();
+            }
+
+            getCardsPerView() {
+                const width = window.innerWidth;
+                if (width >= 1400) return 5;
+                if (width >= 1024) return 4;
+                if (width >= 768) return 3;
+                if (width >= 480) return 2;
+                return 1;
+            }
+
+            prev() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.updateCarousel();
+                }
+            }
+
+            next() {
+                const maxIndex = Math.max(0, this.cards.length - this.cardsPerView);
+                if (this.currentIndex < maxIndex) {
+                    this.currentIndex++;
+                    this.updateCarousel();
+                }
+            }
+
+            updateCarousel() {
+                const cardWidth = this.cards[0].offsetWidth;
+                const gap = 24;
+                const offset = -(this.currentIndex * (cardWidth + gap));
+                this.track.style.transform = `translateX(${offset}px)`;
+                this.updateButtonStates();
+            }
+
+            updateButtonStates() {
+                const maxIndex = Math.max(0, this.cards.length - this.cardsPerView);
+                this.prevBtn.disabled = this.currentIndex === 0;
+                this.nextBtn.disabled = this.currentIndex >= maxIndex;
+            }
+        }
+
+        // ===== ARTIST FILTER =====
+        class ArtistFilter {
+            constructor() {
+                this.filterTabs = document.querySelectorAll('.filter-tab');
+                this.artistCards = document.querySelectorAll('.artist-card-modern');
+                this.currentFilter = 'all';
+                
+                this.init();
+            }
+
+            init() {
+                this.filterTabs.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        const filter = e.currentTarget.getAttribute('data-filter');
+                        this.setFilter(filter);
+                    });
+                });
+
+                // Follow button interactions
+                const followBtns = document.querySelectorAll('.btn-follow');
+                followBtns.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.toggleFollow(e.currentTarget);
+                    });
+                });
+            }
+
+            setFilter(filter) {
+                // Update active tab
+                this.filterTabs.forEach(tab => {
+                    tab.classList.toggle('active', tab.getAttribute('data-filter') === filter);
+                });
+
+                this.currentFilter = filter;
+
+                // Filter artist cards
+                this.artistCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            }
+
+            toggleFollow(btn) {
+                const icon = btn.querySelector('i');
+                if (icon.classList.contains('fa-user-plus')) {
+                    icon.classList.remove('fa-user-plus');
+                    icon.classList.add('fa-check');
+                    btn.innerHTML = '<i class="fas fa-check"></i> Following';
+                    btn.style.backgroundColor = 'var(--primary-accent)';
+                } else {
+                    icon.classList.remove('fa-check');
+                    icon.classList.add('fa-user-plus');
+                    btn.innerHTML = '<i class="fas fa-user-plus"></i> Follow';
+                    btn.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                }
+            }
+        }
+
+        // ===== PLAYLIST CAROUSEL =====
+        class PlaylistCarousel {
+            constructor() {
+                this.track = document.querySelector('.playlists-track');
+                this.cards = document.querySelectorAll('.playlist-card-modern');
+                this.isDragging = false;
+                this.startX = 0;
+                this.scrollLeft = 0;
+                
+                this.init();
+            }
+
+            init() {
+                // Mouse drag
+                this.track.addEventListener('mousedown', (e) => this.startDrag(e));
+                this.track.addEventListener('mousemove', (e) => this.drag(e));
+                this.track.addEventListener('mouseup', () => this.endDrag());
+                this.track.addEventListener('mouseleave', () => this.endDrag());
+
+                // Touch drag
+                this.track.addEventListener('touchstart', (e) => this.startDrag(e));
+                this.track.addEventListener('touchmove', (e) => this.drag(e));
+                this.track.addEventListener('touchend', () => this.endDrag());
+
+                // Play button interactions
+                const playBtns = document.querySelectorAll('.playlist-play-btn');
+                playBtns.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.playPlaylist(e.currentTarget);
+                    });
+                });
+            }
+
+            startDrag(e) {
+                this.isDragging = true;
+                this.startX = e.pageX || e.touches[0].pageX;
+                this.scrollLeft = this.track.scrollLeft;
+                this.track.style.cursor = 'grabbing';
+            }
+
+            drag(e) {
+                if (!this.isDragging) return;
+                e.preventDefault();
+                const x = e.pageX || e.touches[0].pageX;
+                const walk = (x - this.startX) * 2;
+                this.track.scrollLeft = this.scrollLeft - walk;
+            }
+
+            endDrag() {
+                this.isDragging = false;
+                this.track.style.cursor = 'grab';
+            }
+
+            playPlaylist(btn) {
+                const icon = btn.querySelector('i');
+                icon.classList.toggle('fa-play');
+                icon.classList.toggle('fa-pause');
+                btn.classList.toggle('playing');
+            }
+        }
+
+        // ===== SCROLL REVEAL ANIMATIONS =====
+        class ScrollReveal {
+            constructor() {
+                this.elements = document.querySelectorAll('[data-aos]');
+                this.init();
+            }
+
+            init() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('aos-animate');
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+                this.elements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
+        }
+
+        // ===== SEARCH FUNCTIONALITY =====
+        class SearchHandler {
+            constructor() {
+                this.searchInput = document.getElementById('discoverySearch');
+                this.init();
+            }
+
+            init() {
+                let timeout = null;
+                this.searchInput.addEventListener('input', (e) => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        this.performSearch(e.target.value);
+                    }, 500);
+                });
+            }
+
+            performSearch(query) {
+                if (query.length < 2) return;
+                console.log(`Searching for: ${query}`);
+                // Add search logic here
+            }
+        }
+
+        // ===== INITIALIZE ALL COMPONENTS =====
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize all interactive components
+            const heroCarousel = new HeroCarousel();
+            const statsCounter = new StatsCounter();
+            const genreInteractions = new GenreInteractions();
+            const releasesCarousel = new ReleasesCarousel();
+            const artistFilter = new ArtistFilter();
+            const playlistCarousel = new PlaylistCarousel();
+            const scrollReveal = new ScrollReveal();
+            const searchHandler = new SearchHandler();
+
+            // Add smooth scroll behavior
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add entrance animations
+            setTimeout(() => {
+                document.querySelector('.discovery-hero-carousel').style.opacity = '1';
+                document.querySelector('.stats-banner').style.opacity = '1';
+            }, 100);
+
+            console.log('✨ Discovery Page Interactive Features Loaded');
+        });
+    </script>
 </body>
 </html>
