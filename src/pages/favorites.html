@@ -85,76 +85,19 @@
 
         <!-- Main Content -->
         <main class="main-content">
-                    <div class="category-item">Electronic</div>
-                    <div class="category-item">Country</div>
-                    <div class="category-item">Jazz</div>
-                    <div class="category-item">Classical</div>
-                    <div class="category-item">Reggae</div>
-                    <div class="category-item">Blues</div>
-                    <div class="category-item">Metal</div>
-                    <div class="category-item">Folk</div>
-                </div>
-            </div>
-            
-            <div class="my-playlists">
-                <span class="section-title">My Playlists</span>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot red"></div>
-                    <span>Love</span>
-                </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot blue"></div>
-                    <span>Electro</span>
-                </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot purple"></div>
-                    <span>Funk</span>
-                </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot cyan"></div>
-                    <span>EDM</span>
-                </a>
-            </div>
-            
-            <div class="user-section">
-                <a href="settings.html" class="nav-item">
-                    <div class="icon icon-settings"></div>
-                    <span>Settings</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content" id="main-content">
             <!-- Header -->
-            <div class="header">
-                <div class="search-bar">
-                    <div class="search-icon icon-search"></div>
-                    <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ hoặc album..." id="search-input">
-                    <div class="search-results" id="search-results">
-                        <!-- Search results will be populated here -->
+            <header class="top-header">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search by artists, songs or albums">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-download">Download Now</button>
+                    <div class="user-menu">
+                        <div class="user-avatar"></div>
                     </div>
                 </div>
-                <div class="user-section">
-                    <button class="download-btn">
-                        <div class="icon icon-download"></div>
-                        <span>Download Now</span>
-                    </button>
-                    <div class="auth-buttons">
-                        <button class="btn btn-ghost" id="login-btn">
-                            <div class="icon icon-login"></div>
-                            <span>Login</span>
-                        </button>
-                        <button class="btn btn-primary" id="signup-btn">
-                            <div class="icon icon-user"></div>
-                            <span>Sign Up</span>
-                        </button>
-                    </div>
-                    <div class="user-avatar" id="user-avatar" style="display: none;">
-                        <div class="icon icon-user"></div>
-                    </div>
-                </div>
-            </div>
+            </header>
 
             <h1 class="section-heading">Your Favorites</h1>
             <p class="section-subtitle">Songs you've liked</p>
