@@ -3,61 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="../../src/styles/main.css" rel="stylesheet" />
     <title>Settings - Groovezilla</title>
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
-            <div class="logo-section">
-                <div class="logo"></div>
-                <span class="logo-text">Groovezilla</span>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/images/logo.svg" alt="Groovezilla Logo" class="app-logo">
+                <h1 class="app-name">Groovezilla</h1>
             </div>
             
-            <div class="nav-menu">
-                <a href="../../index.html" class="nav-item">
-                    <div class="icon icon-home"></div>
-                    <span>Home</span>
+            <nav class="main-nav">
+                <div class="nav-section">
+                    <span class="nav-section-title">MENU</span>
+                    <a href="../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="discovery.html" class="nav-link">
+                        <i class="fas fa-compass"></i>
+                        <span>Trending</span>
+                    </a>
+                    <a href="favorites.html" class="nav-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorites</span>
+                    </a>
+                    <a href="history.html" class="nav-link">
+                        <i class="fas fa-history"></i>
+                        <span>History</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">LIBRARY</span>
+                    <a href="playlist.html" class="nav-link">
+                        <i class="fas fa-list-ul"></i>
+                        <span>Playlists</span>
+                    </a>
+                    <a href="album.html" class="nav-link">
+                        <i class="fas fa-record-vinyl"></i>
+                        <span>Albums</span>
+                    </a>
+                    <a href="artist.html" class="nav-link">
+                        <i class="fas fa-user-music"></i>
+                        <span>Artists</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">PLAYLISTS</span>
+                    <a href="playlist.html" class="nav-link playlist-item">
+                        <i class="fas fa-music"></i>
+                        <span>My Favorites</span>
+                    </a>
+                    <a href="playlist.html" class="nav-link playlist-item">
+                        <i class="fas fa-fire"></i>
+                        <span>Trending Now</span>
+                    </a>
+                    <a href="playlist.html" class="nav-link playlist-item">
+                        <i class="fas fa-headphones"></i>
+                        <span>Focus Flow</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="settings.html" class="nav-link active">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
                 </a>
-                <a href="playlist.html" class="nav-item">
-                    <div class="icon icon-playlist"></div>
-                    <span>Playlist</span>
-                </a>
-                <a href="album.html" class="nav-item">
-                    <div class="icon icon-album"></div>
-                    <span>Album</span>
-                </a>
-                <a href="artist.html" class="nav-item">
-                    <div class="icon icon-artist"></div>
-                    <span>Artist</span>
-                </a>
-                <a href="discovery.html" class="nav-item">
-                    <div class="icon icon-discovery"></div>
-                    <span>Discovery</span>
-                </a>
-                <a href="history.html" class="nav-item">
-                    <div class="icon icon-history"></div>
-                    <span>History</span>
-                </a>
-                <a href="favorites.html" class="nav-item">
-                    <div class="icon icon-heart"></div>
-                    <span>Favorites</span>
+                <a href="admin.html" class="nav-link">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Admin</span>
                 </a>
             </div>
-            
-            <div class="categories-section">
-                <span class="section-title">Categories</span>
-                <div class="category-list">
-                    <div class="category-item">Pop</div>
-                    <div class="category-item">Hip Hop</div>
-                    <div class="category-item">Rock</div>
-                    <div class="category-item">R&B</div>
-                    <div class="category-item">Electronic</div>
-                    <div class="category-item">Country</div>
-                    <div class="category-item">Jazz</div>
-                    <div class="category-item">Classical</div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
                     <div class="category-item">Reggae</div>
                     <div class="category-item">Blues</div>
                     <div class="category-item">Metal</div>
@@ -434,5 +461,6 @@
             }, 1000);
         });
     </script>
+</main>
 </body>
 </html>
