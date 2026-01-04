@@ -43,20 +43,41 @@ A modern, responsive music streaming web application with dark theme and cyan/aq
 
 ### File Structure
 ```
-groozellia/
-├── index.html          # Main homepage
-├── playlist.html       # Playlist management page
-├── miniplayer.html     # Full player page
-├── history.html        # Listening history page
-├── favorites.html      # Liked songs page
-├── settings.html       # Settings page
-├── test-player.html    # Test page for functionality
-├── css/
-│   └── main.css       # Main stylesheet with dark theme & icons
-├── js/
-│   └── audio-player.js # Enhanced audio player with auth
-├── audio/             # Audio files (mp3)
-└── images/           # Image assets
+DemoPage/
+├── index.html                    # Main landing page
+├── README.md                     # Project documentation
+├── docs/                         # Documentation files
+│   ├── FONT-AWESOME-GUIDE.md
+│   ├── HLS-INTEGRATION.md
+│   ├── ICON-REFERENCE.html
+│   ├── IMPLEMENTATION-SUMMARY.md
+│   ├── PLAYER-CONTROLS-ENHANCEMENT.md
+│   └── UPDATE-SUMMARY.md
+├── src/                          # Source code
+│   ├── pages/                    # HTML pages
+│   │   ├── admin.html
+│   │   ├── album.html
+│   │   ├── artist.html
+│   │   ├── discovery.html
+│   │   ├── favorites.html
+│   │   ├── history.html
+│   │   ├── miniplayer.html
+│   │   ├── playlist.html
+│   │   └── settings.html
+│   ├── styles/                   # CSS files
+│   │   └── main.css             # Main stylesheet with dark theme
+│   └── scripts/                  # JavaScript files
+│       └── audio-player.js      # Enhanced audio player
+├── assets/                       # Static assets
+│   ├── images/                   # Image files
+│   │   ├── logo.svg
+│   │   ├── background-concert.jpg
+│   │   ├── v622_46.png
+│   │   └── v623_192.png
+│   └── audio/                    # Audio files (mp3)
+└── tests/                        # Test files
+    ├── test-hls.html
+    └── test-player.html
 ```
 
 ## 🎮 Usage
