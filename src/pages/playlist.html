@@ -11,92 +11,83 @@
 <body>
     <div class="app-container">
         <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
-            <div class="logo-section">
-                <div class="logo"></div>
-                <span class="logo-text">Groovezilla</span>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/images/logo.svg" alt="Groovezilla Logo" class="app-logo">
+                <h1 class="app-name">Groovezilla</h1>
             </div>
-            
-            <div class="nav-menu">
-                <a href="../../index.html" class="nav-item">
-                    <div class="icon icon-home"></div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">Menu</h3>
+                <a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="playlist.html" class="nav-item active">
-                    <div class="icon icon-playlist"></div>
-                    <span>Playlist</span>
+                <a href="playlist.html" class="nav-link active">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Playlists</span>
                 </a>
-                <a href="album.html" class="nav-item">
-                    <div class="icon icon-album"></div>
-                    <span>Album</span>
+                <a href="album.html" class="nav-link">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Albums</span>
                 </a>
-                <a href="artist.html" class="nav-item">
-                    <div class="icon icon-artist"></div>
-                    <span>Artist</span>
+            </nav>
+
+            <!-- Discovery Section -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">Discovery</h3>
+                <a href="discovery.html" class="nav-link">
+                    <i class="fas fa-fire"></i>
+                    <span>Trending</span>
                 </a>
-                <a href="discovery.html" class="nav-item">
-                    <div class="icon icon-discovery"></div>
-                    <span>Discovery</span>
+                <a href="artist.html" class="nav-link">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
                 </a>
-                <a href="history.html" class="nav-item">
-                    <div class="icon icon-history"></div>
+                <a href="history.html" class="nav-link">
+                    <i class="fas fa-history"></i>
                     <span>History</span>
                 </a>
-                <a href="favorites.html" class="nav-item">
-                    <div class="icon icon-heart"></div>
+                <a href="favorites.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
                     <span>Favorites</span>
                 </a>
-                <a href="settings.html" class="nav-item">
-                    <div class="icon icon-settings"></div>
-                    <span>Settings</span>
-                </a>
-            </div>
-            
-            <div class="categories-section">
-                <span class="section-title">Categories</span>
-                <div class="category-list">
-                    <div class="category-item">Pop</div>
-                    <div class="category-item">Hip Hop</div>
-                    <div class="category-item">Rock</div>
-                    <div class="category-item">R&B</div>
-                    <div class="category-item">Electronic</div>
-                    <div class="category-item">Country</div>
-                    <div class="category-item">Jazz</div>
-                    <div class="category-item">Classical</div>
-                    <div class="category-item">Reggae</div>
-                    <div class="category-item">Blues</div>
-                    <div class="category-item">Metal</div>
-                    <div class="category-item">Folk</div>
-                </div>
-            </div>
-            
-            <div class="my-playlists">
-                <span class="section-title">My Playlists</span>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot red"></div>
+            </nav>
+
+            <!-- My Playlists -->
+            <nav class="main-nav">
+                <h3 class="nav-section-title">My Playlists</h3>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-heart" style="color: #ff6b6b;"></i>
                     <span>Love</span>
                 </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot blue"></div>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-bolt" style="color: #4ecdc4;"></i>
                     <span>Electro</span>
                 </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot purple"></div>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-music" style="color: #a29bfe;"></i>
                     <span>Funk</span>
                 </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot cyan"></div>
+                <a href="#" class="nav-link playlist-item">
+                    <i class="fas fa-headphones" style="color: #feca57;"></i>
                     <span>EDM</span>
                 </a>
-            </div>
-            
-            <div class="user-section">
-                <div class="nav-item">
-                    <div class="icon"></div>
+            </nav>
+
+            <!-- Settings -->
+            <div class="sidebar-footer">
+                <a href="admin.html" class="nav-link">
+                    <i class="fas fa-crown"></i>
+                    <span>Admin</span>
+                </a>
+                <a href="settings.html" class="nav-link">
+                    <i class="fas fa-cog"></i>
                     <span>Settings</span>
-                </div>
+                </a>
             </div>
-        </div>
+        </aside>
 
         <!-- Main Content -->
         <div class="main-content" id="main-content">
