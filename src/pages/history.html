@@ -85,276 +85,819 @@
 
         <!-- Main Content -->
         <main class="main-content">
-                    <div class="category-item">Electronic</div>
-                    <div class="category-item">Country</div>
-                    <div class="category-item">Jazz</div>
-                    <div class="category-item">Classical</div>
-                    <div class="category-item">Reggae</div>
-                    <div class="category-item">Blues</div>
-                    <div class="category-item">Metal</div>
-                    <div class="category-item">Folk</div>
-                </div>
-            </div>
-            
-            <div class="my-playlists">
-                <span class="section-title">My Playlists</span>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot red"></div>
-                    <span>Love</span>
-                </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot blue"></div>
-                    <span>Electro</span>
-                </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot purple"></div>
-                    <span>Funk</span>
-                </a>
-                <a href="#" class="playlist-link">
-                    <div class="playlist-dot cyan"></div>
-                    <span>EDM</span>
-                </a>
-            </div>
-            
-            <div class="user-section">
-                <a href="settings.html" class="nav-item">
-                    <div class="icon icon-settings"></div>
-                    <span>Settings</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content" id="main-content">
             <!-- Header -->
-            <div class="header">
-                <div class="search-bar">
-                    <div class="search-icon icon-search"></div>
-                    <input type="text" class="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ hoặc album..." id="search-input">
-                    <div class="search-results" id="search-results">
-                        <!-- Search results will be populated here -->
+            <header class="top-header">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search your history..." id="historySearch">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-download">Download Now</button>
+                    <div class="user-menu">
+                        <div class="user-avatar"></div>
                     </div>
                 </div>
-                <div class="user-section">
-                    <button class="download-btn">
-                        <div class="icon icon-download"></div>
-                        <span>Download Now</span>
+            </header>
+
+            <!-- History Hero Section -->
+            <div class="history-hero" data-aos="fade-down">
+                <div class="history-hero-content">
+                    <h1 class="history-title">
+                        <i class="fas fa-history"></i>
+                        Listening History
+                    </h1>
+                    <p class="history-subtitle">Track your musical journey and discover your listening patterns</p>
+                </div>
+                <div class="history-hero-actions">
+                    <button class="btn-export" id="exportBtn">
+                        <i class="fas fa-download"></i>
+                        Export Data
                     </button>
-                    <div class="auth-buttons">
-                        <button class="btn btn-ghost" id="login-btn">
-                            <div class="icon icon-login"></div>
-                            <span>Login</span>
-                        </button>
-                        <button class="btn btn-primary" id="signup-btn">
-                            <div class="icon icon-user"></div>
-                            <span>Sign Up</span>
-                        </button>
+                    <button class="btn-clear-history" id="clearHistoryBtn">
+                        <i class="fas fa-trash-alt"></i>
+                        Clear History
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Dashboard -->
+            <div class="stats-dashboard" data-aos="fade-up">
+                <div class="stat-card-history">
+                    <div class="stat-icon">
+                        <i class="fas fa-play-circle"></i>
                     </div>
-                    <div class="user-avatar" id="user-avatar" style="display: none;">
-                        <div class="icon icon-user"></div>
+                    <div class="stat-details">
+                        <h3 class="stat-value" id="totalPlays">0</h3>
+                        <p class="stat-label">Total Plays</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 12% from last week
+                        </span>
+                    </div>
+                </div>
+
+                <div class="stat-card-history">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3 class="stat-value" id="listeningTime">0h 0m</h3>
+                        <p class="stat-label">Listening Time</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 8% from last week
+                        </span>
+                    </div>
+                </div>
+
+                <div class="stat-card-history">
+                    <div class="stat-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3 class="stat-value" id="uniqueTracks">0</h3>
+                        <p class="stat-label">Unique Tracks</p>
+                        <span class="stat-change">
+                            <i class="fas fa-minus"></i> No change
+                        </span>
+                    </div>
+                </div>
+
+                <div class="stat-card-history">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3 class="stat-value" id="topGenre">-</h3>
+                        <p class="stat-label">Top Genre</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-trophy"></i> Most played
+                        </span>
                     </div>
                 </div>
             </div>
 
-            <h1 class="section-heading">Listening History</h1>
-            <p class="section-subtitle">Your recently played tracks</p>
+            <!-- Filter and View Options -->
+            <div class="history-controls" data-aos="fade-up">
+                <div class="view-tabs">
+                    <button class="view-tab active" data-view="timeline">
+                        <i class="fas fa-stream"></i>
+                        Timeline
+                    </button>
+                    <button class="view-tab" data-view="calendar">
+                        <i class="fas fa-calendar-alt"></i>
+                        Calendar
+                    </button>
+                    <button class="view-tab" data-view="stats">
+                        <i class="fas fa-chart-bar"></i>
+                        Statistics
+                    </button>
+                </div>
 
-            <!-- History Stats -->
-            <div class="content-section">
-                <div class="grid grid-3">
-                    <div class="card">
-                        <h3 class="card-title">Total Plays</h3>
-                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">127</p>
-                        <p class="card-description">Songs played this week</p>
+                <div class="filter-controls">
+                    <select class="filter-select" id="timeFilter">
+                        <option value="today">Today</option>
+                        <option value="week" selected>This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="all">All Time</option>
+                    </select>
+                    <select class="filter-select" id="genreFilter">
+                        <option value="all">All Genres</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="hip-hop">Hip-Hop</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Timeline View -->
+            <div class="history-view active" id="timelineView" data-aos="fade-up">
+                <h2 class="section-heading-history">
+                    <i class="fas fa-clock"></i>
+                    Recent Activity
+                </h2>
+                <div class="timeline-container" id="timelineContainer">
+                    <!-- Timeline items will be populated by JS -->
+                </div>
+                <button class="btn-load-more" id="loadMoreBtn">
+                    <i class="fas fa-sync-alt"></i>
+                    Load More
+                </button>
+            </div>
+
+            <!-- Calendar View -->
+            <div class="history-view" id="calendarView" data-aos="fade-up">
+                <h2 class="section-heading-history">
+                    <i class="fas fa-calendar-alt"></i>
+                    Listening Calendar
+                </h2>
+                <div class="calendar-controls">
+                    <button class="calendar-nav-btn" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 class="calendar-month" id="calendarMonth">January 2026</h3>
+                    <button class="calendar-nav-btn" id="nextMonth">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be populated by JS -->
+                </div>
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <div class="legend-box activity-none"></div>
+                        <span>No activity</span>
                     </div>
-                    <div class="card">
-                        <h3 class="card-title">Listening Time</h3>
-                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">8h 42m</p>
-                        <p class="card-description">Total listening time</p>
+                    <div class="legend-item">
+                        <div class="legend-box activity-low"></div>
+                        <span>1-5 plays</span>
                     </div>
-                    <div class="card">
-                        <h3 class="card-title">Top Genre</h3>
-                        <p style="font-size: 32px; font-weight: 700; color: var(--primary-accent); margin: var(--spacing-md) 0;">Pop</p>
-                        <p class="card-description">Most played genre</p>
+                    <div class="legend-item">
+                        <div class="legend-box activity-medium"></div>
+                        <span>6-10 plays</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-box activity-high"></div>
+                        <span>11+ plays</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Recent History -->
-            <div class="content-section">
-                <h2 class="section-heading">Recently Played</h2>
-                <div class="track-list" id="history-list">
-                    <!-- History items will be populated by JavaScript -->
-                </div>
-            </div>
+            <!-- Statistics View -->
+            <div class="history-view" id="statsView" data-aos="fade-up">
+                <div class="stats-grid">
+                    <div class="chart-container">
+                        <h3 class="chart-title">
+                            <i class="fas fa-chart-line"></i>
+                            Listening Activity
+                        </h3>
+                        <div class="chart-wrapper">
+                            <canvas id="activityChart"></canvas>
+                        </div>
+                    </div>
 
-            <!-- Top Artists This Week -->
-            <div class="content-section">
-                <h2 class="section-heading">Top Artists This Week</h2>
-                <div class="grid grid-4">
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
-                        <h4 class="artist-name">Luna Eclipse</h4>
-                        <p class="artist-followers">15 plays</p>
-                        <button class="follow-btn">Follow</button>
+                    <div class="chart-container">
+                        <h3 class="chart-title">
+                            <i class="fas fa-chart-pie"></i>
+                            Top Genres
+                        </h3>
+                        <div class="genre-stats" id="genreStats">
+                            <!-- Genre bars will be populated by JS -->
+                        </div>
                     </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
-                        <h4 class="artist-name">The Sunshine Band</h4>
-                        <p class="artist-followers">12 plays</p>
-                        <button class="follow-btn">Follow</button>
-                    </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
-                        <h4 class="artist-name">DJ Nova</h4>
-                        <p class="artist-followers">10 plays</p>
-                        <button class="follow-btn">Follow</button>
-                    </div>
-                    <div class="artist-card">
-                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=120&h=120&fit=crop&crop=faces" alt="Artist" class="artist-image">
-                        <h4 class="artist-name">James Rivers</h4>
-                        <p class="artist-followers">8 plays</p>
-                        <button class="follow-btn">Follow</button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Top Tracks This Week -->
-            <div class="content-section">
-                <h2 class="section-heading">Top Tracks This Week</h2>
-                <div class="track-list">
-                    <div class="track-item">
-                        <span class="track-number">1</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=50&h=50&fit=crop" alt="Track" class="track-cover">
-                            <div class="track-details">
-                                <h4>Midnight Dreams</h4>
-                                <p>Luna Eclipse</p>
-                            </div>
-                        </div>
-                        <span class="track-duration">15 plays</span>
-                        <div class="track-actions">
-                            <button class="play-btn track-play-btn" data-track-id="4">
-                                <div class="icon icon-play"></div>
-                            </button>
-                            <button class="like-btn" data-track-id="4">
-                                <div class="icon icon-heart"></div>
-                            </button>
+                    <div class="chart-container full-width">
+                        <h3 class="chart-title">
+                            <i class="fas fa-trophy"></i>
+                            Top Artists This Week
+                        </h3>
+                        <div class="top-artists-grid" id="topArtistsGrid">
+                            <!-- Top artists will be populated by JS -->
                         </div>
                     </div>
-                    
-                    <div class="track-item">
-                        <span class="track-number">2</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=50&h=50&fit=crop" alt="Track" class="track-cover">
-                            <div class="track-details">
-                                <h4>Summer Breeze</h4>
-                                <p>The Sunshine Band</p>
-                            </div>
-                        </div>
-                        <span class="track-duration">12 plays</span>
-                        <div class="track-actions">
-                            <button class="play-btn track-play-btn" data-track-id="5">
-                                <div class="icon icon-play"></div>
-                            </button>
-                            <button class="like-btn" data-track-id="5">
-                                <div class="icon icon-heart"></div>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="track-item">
-                        <span class="track-number">3</span>
-                        <div class="track-info">
-                            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=50&h=50&fit=crop" alt="Track" class="track-cover">
-                            <div class="track-details">
-                                <h4>Electric Pulse</h4>
-                                <p>DJ Nova</p>
-                            </div>
-                        </div>
-                        <span class="track-duration">10 plays</span>
-                        <div class="track-actions">
-                            <button class="play-btn track-play-btn" data-track-id="6">
-                                <div class="icon icon-play"></div>
-                            </button>
-                            <button class="like-btn" data-track-id="6">
-                                <div class="icon icon-heart"></div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Clear History -->
-            <div class="content-section">
-                <div class="card" style="text-align: center;">
-                    <h3 class="card-title">Clear Listening History</h3>
-                    <p class="card-description">Remove all tracks from your listening history</p>
-                    <button class="btn btn-secondary" onclick="clearHistory()">Clear History</button>
+                    <div class="chart-container full-width">
+                        <h3 class="chart-title">
+                            <i class="fas fa-star"></i>
+                            Most Played Tracks
+                        </h3>
+                        <div class="top-tracks-list" id="topTracksList">
+                            <!-- Top tracks will be populated by JS -->
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- Audio Player Script -->
     <script src="../../src/scripts/audio-player.js"></script>
     
-    <!-- History Page Script -->
+    <!-- History Page Interactive Features -->
     <script>
-        function populateHistory() {
-            const historyList = document.getElementById('history-list');
-            if (!historyList || !window.groovePlayer) return;
-            
-            const history = window.groovePlayer.getListeningHistory();
-            
-            if (history.length === 0) {
-                historyList.innerHTML = `
-                    <div class="card" style="text-align: center; padding: var(--spacing-xxl);">
-                        <h3 class="card-title">No listening history</h3>
-                        <p class="card-description">Start playing some music to see your history here</p>
-                        <a href="../../index.html" class="btn btn-primary">Browse Music</a>
-                    </div>
-                `;
-                return;
+        // ===== HISTORY DATA MANAGER =====
+        class HistoryDataManager {
+            constructor() {
+                this.historyData = this.generateMockData();
+                this.currentView = 'timeline';
+                this.currentPage = 1;
+                this.itemsPerPage = 20;
             }
-            
-            historyList.innerHTML = history.slice(0, 20).map((entry, index) => `
-                <div class="track-item">
-                    <span class="track-number">${index + 1}</span>
-                    <div class="track-info">
-                        <img src="${entry.track.cover}" alt="Track" class="track-cover">
-                        <div class="track-details">
-                            <h4>${entry.track.title}</h4>
-                            <p>${entry.track.artist}</p>
+
+            generateMockData() {
+                const tracks = [
+                    { id: 1, title: 'Midnight Dreams', artist: 'Luna Eclipse', cover: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=80&h=80&fit=crop', duration: '3:45', genre: 'pop' },
+                    { id: 2, title: 'Summer Breeze', artist: 'The Sunshine Band', cover: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=80&h=80&fit=crop', duration: '4:12', genre: 'rock' },
+                    { id: 3, title: 'Electric Pulse', artist: 'DJ Nova', cover: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=80&h=80&fit=crop', duration: '3:28', genre: 'electronic' },
+                    { id: 4, title: 'Acoustic Sunset', artist: 'James Rivers', cover: 'https://images.unsplash.com/photo-1499415479124-43c32433a620?w=80&h=80&fit=crop', duration: '5:03', genre: 'jazz' },
+                    { id: 5, title: 'Urban Flow', artist: 'MC Rhythm', cover: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=80&h=80&fit=crop', duration: '3:15', genre: 'hip-hop' },
+                    { id: 6, title: 'Neon Lights', artist: 'Synthwave Dreams', cover: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=80&h=80&fit=crop', duration: '4:33', genre: 'electronic' },
+                    { id: 7, title: 'Jazz Cafe', artist: 'Miles Harmony', cover: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=80&h=80&fit=crop', duration: '6:21', genre: 'jazz' },
+                    { id: 8, title: 'Rock Anthem', artist: 'Thunder Strike', cover: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=80&h=80&fit=crop', duration: '3:58', genre: 'rock' },
+                ];
+
+                const history = [];
+                const now = new Date();
+
+                // Generate 100 random history entries
+                for (let i = 0; i < 100; i++) {
+                    const track = tracks[Math.floor(Math.random() * tracks.length)];
+                    const daysAgo = Math.floor(Math.random() * 30);
+                    const timestamp = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+                    
+                    history.push({
+                        ...track,
+                        timestamp: timestamp.toISOString(),
+                        playCount: Math.floor(Math.random() * 10) + 1
+                    });
+                }
+
+                return history.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+            }
+
+            getStats() {
+                const totalPlays = this.historyData.length;
+                const uniqueTracks = new Set(this.historyData.map(h => h.id)).size;
+                const totalMinutes = this.historyData.reduce((acc, h) => {
+                    const [min, sec] = h.duration.split(':').map(Number);
+                    return acc + min + (sec / 60);
+                }, 0);
+                
+                const genreCounts = {};
+                this.historyData.forEach(h => {
+                    genreCounts[h.genre] = (genreCounts[h.genre] || 0) + 1;
+                });
+                const topGenre = Object.entries(genreCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || '-';
+
+                return {
+                    totalPlays,
+                    uniqueTracks,
+                    listeningTime: `${Math.floor(totalMinutes / 60)}h ${Math.floor(totalMinutes % 60)}m`,
+                    topGenre: topGenre.charAt(0).toUpperCase() + topGenre.slice(1)
+                };
+            }
+
+            filterData(timeFilter, genreFilter) {
+                let filtered = [...this.historyData];
+
+                // Time filter
+                const now = new Date();
+                if (timeFilter === 'today') {
+                    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                    filtered = filtered.filter(h => new Date(h.timestamp) >= today);
+                } else if (timeFilter === 'week') {
+                    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+                    filtered = filtered.filter(h => new Date(h.timestamp) >= weekAgo);
+                } else if (timeFilter === 'month') {
+                    const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+                    filtered = filtered.filter(h => new Date(h.timestamp) >= monthAgo);
+                }
+
+                // Genre filter
+                if (genreFilter !== 'all') {
+                    filtered = filtered.filter(h => h.genre === genreFilter);
+                }
+
+                return filtered;
+            }
+
+            getTopArtists(limit = 4) {
+                const artistCounts = {};
+                this.historyData.forEach(h => {
+                    artistCounts[h.artist] = (artistCounts[h.artist] || 0) + 1;
+                });
+                return Object.entries(artistCounts)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, limit)
+                    .map(([artist, plays]) => ({ artist, plays }));
+            }
+
+            getTopTracks(limit = 5) {
+                const trackCounts = {};
+                this.historyData.forEach(h => {
+                    const key = `${h.title}|${h.artist}`;
+                    trackCounts[key] = trackCounts[key] || { ...h, plays: 0 };
+                    trackCounts[key].plays++;
+                });
+                return Object.values(trackCounts)
+                    .sort((a, b) => b.plays - a.plays)
+                    .slice(0, limit);
+            }
+
+            getGenreDistribution() {
+                const genreCounts = {};
+                this.historyData.forEach(h => {
+                    genreCounts[h.genre] = (genreCounts[h.genre] || 0) + 1;
+                });
+                return Object.entries(genreCounts)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([genre, count]) => ({
+                        genre: genre.charAt(0).toUpperCase() + genre.slice(1),
+                        count,
+                        percentage: (count / this.historyData.length * 100).toFixed(1)
+                    }));
+            }
+
+            getCalendarData(year, month) {
+                const data = {};
+                this.historyData.forEach(h => {
+                    const date = new Date(h.timestamp);
+                    if (date.getFullYear() === year && date.getMonth() === month) {
+                        const day = date.getDate();
+                        data[day] = (data[day] || 0) + 1;
+                    }
+                });
+                return data;
+            }
+        }
+
+        // ===== TIMELINE VIEW =====
+        class TimelineView {
+            constructor(dataManager) {
+                this.dataManager = dataManager;
+                this.container = document.getElementById('timelineContainer');
+            }
+
+            render(data) {
+                if (data.length === 0) {
+                    this.container.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-music"></i>
+                            <h3>No history found</h3>
+                            <p>Start listening to music to see your history here</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const groupedByDate = this.groupByDate(data);
+                let html = '';
+
+                Object.entries(groupedByDate).forEach(([date, tracks]) => {
+                    html += `
+                        <div class="timeline-date-group" data-aos="fade-up">
+                            <div class="timeline-date">
+                                <i class="fas fa-calendar-day"></i>
+                                ${this.formatDate(date)}
+                            </div>
+                            <div class="timeline-tracks">
+                                ${tracks.map(track => this.renderTrack(track)).join('')}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                this.container.innerHTML = html;
+                this.attachEventListeners();
+            }
+
+            groupByDate(data) {
+                const grouped = {};
+                data.forEach(track => {
+                    const date = new Date(track.timestamp).toDateString();
+                    if (!grouped[date]) grouped[date] = [];
+                    grouped[date].push(track);
+                });
+                return grouped;
+            }
+
+            formatDate(dateString) {
+                const date = new Date(dateString);
+                const today = new Date();
+                const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000);
+
+                if (date.toDateString() === today.toDateString()) return 'Today';
+                if (date.toDateString() === yesterday.toDateString()) return 'Yesterday';
+                
+                return date.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+            }
+
+            renderTrack(track) {
+                const time = new Date(track.timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+                return `
+                    <div class="timeline-track">
+                        <div class="track-time">${time}</div>
+                        <div class="track-artwork">
+                            <img src="${track.cover}" alt="${track.title}">
+                            <div class="track-play-overlay">
+                                <button class="btn-play-timeline">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="track-info-timeline">
+                            <h4>${track.title}</h4>
+                            <p>${track.artist}</p>
+                            <span class="track-genre-badge">${track.genre}</span>
+                        </div>
+                        <div class="track-actions-timeline">
+                            <button class="btn-icon-timeline btn-like">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn-icon-timeline btn-add">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="btn-icon-timeline btn-more">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
                         </div>
                     </div>
-                    <span class="track-duration">${new Date(entry.timestamp).toLocaleDateString()}</span>
-                    <div class="track-actions">
-                        <button class="play-btn track-play-btn" data-track-id="${entry.track.id}">
-                            <div class="icon icon-play"></div>
-                        </button>
-                        <button class="like-btn" data-track-id="${entry.track.id}">
-                            <div class="icon icon-heart"></div>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-        }
-        
-        function clearHistory() {
-            if (window.groovePlayer) {
-                window.groovePlayer.listeningHistory = [];
-                localStorage.setItem('groovezilla_history', JSON.stringify([]));
-                populateHistory();
-                window.groovePlayer.showNotification('Listening history cleared');
+                `;
+            }
+
+            attachEventListeners() {
+                // Play button interactions
+                document.querySelectorAll('.btn-play-timeline').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        btn.innerHTML = '<i class="fas fa-pause"></i>';
+                        setTimeout(() => {
+                            btn.innerHTML = '<i class="fas fa-play"></i>';
+                        }, 2000);
+                    });
+                });
+
+                // Like button interactions
+                document.querySelectorAll('.btn-like').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const icon = btn.querySelector('i');
+                        icon.classList.toggle('far');
+                        icon.classList.toggle('fas');
+                        btn.classList.toggle('liked');
+                    });
+                });
             }
         }
-        
-        // Populate history when page loads
+
+        // ===== CALENDAR VIEW =====
+        class CalendarView {
+            constructor(dataManager) {
+                this.dataManager = dataManager;
+                this.currentMonth = new Date().getMonth();
+                this.currentYear = new Date().getFullYear();
+                this.init();
+            }
+
+            init() {
+                document.getElementById('prevMonth').addEventListener('click', () => {
+                    this.currentMonth--;
+                    if (this.currentMonth < 0) {
+                        this.currentMonth = 11;
+                        this.currentYear--;
+                    }
+                    this.render();
+                });
+
+                document.getElementById('nextMonth').addEventListener('click', () => {
+                    this.currentMonth++;
+                    if (this.currentMonth > 11) {
+                        this.currentMonth = 0;
+                        this.currentYear++;
+                    }
+                    this.render();
+                });
+            }
+
+            render() {
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+                                   'July', 'August', 'September', 'October', 'November', 'December'];
+                document.getElementById('calendarMonth').textContent = `${monthNames[this.currentMonth]} ${this.currentYear}`;
+
+                const calendarData = this.dataManager.getCalendarData(this.currentYear, this.currentMonth);
+                const daysInMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
+                const firstDay = new Date(this.currentYear, this.currentMonth, 1).getDay();
+
+                let html = '<div class="calendar-weekdays">';
+                ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].forEach(day => {
+                    html += `<div class="calendar-weekday">${day}</div>`;
+                });
+                html += '</div><div class="calendar-days">';
+
+                // Empty cells for days before month starts
+                for (let i = 0; i < firstDay; i++) {
+                    html += '<div class="calendar-day empty"></div>';
+                }
+
+                // Days of month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const plays = calendarData[day] || 0;
+                    let activityClass = 'activity-none';
+                    if (plays > 0 && plays <= 5) activityClass = 'activity-low';
+                    else if (plays > 5 && plays <= 10) activityClass = 'activity-medium';
+                    else if (plays > 10) activityClass = 'activity-high';
+
+                    html += `
+                        <div class="calendar-day ${activityClass}" data-plays="${plays}" title="${plays} plays">
+                            <span class="day-number">${day}</span>
+                            ${plays > 0 ? `<span class="play-count">${plays}</span>` : ''}
+                        </div>
+                    `;
+                }
+
+                html += '</div>';
+                document.getElementById('calendarGrid').innerHTML = html;
+            }
+        }
+
+        // ===== STATISTICS VIEW =====
+        class StatisticsView {
+            constructor(dataManager) {
+                this.dataManager = dataManager;
+            }
+
+            render() {
+                this.renderGenreStats();
+                this.renderTopArtists();
+                this.renderTopTracks();
+                this.renderActivityChart();
+            }
+
+            renderGenreStats() {
+                const genres = this.dataManager.getGenreDistribution();
+                const html = genres.map(g => `
+                    <div class="genre-stat-bar">
+                        <div class="genre-stat-info">
+                            <span class="genre-name">${g.genre}</span>
+                            <span class="genre-percentage">${g.percentage}%</span>
+                        </div>
+                        <div class="genre-bar">
+                            <div class="genre-bar-fill" style="width: ${g.percentage}%"></div>
+                        </div>
+                        <span class="genre-count">${g.count} plays</span>
+                    </div>
+                `).join('');
+                document.getElementById('genreStats').innerHTML = html;
+            }
+
+            renderTopArtists() {
+                const artists = this.dataManager.getTopArtists(8);
+                const images = [
+                    'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=150&h=150&fit=crop&crop=faces',
+                    'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=150&h=150&fit=crop&crop=faces',
+                    'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=150&h=150&fit=crop&crop=faces',
+                    'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=150&h=150&fit=crop&crop=faces',
+                    'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=150&h=150&fit=crop&crop=faces',
+                    'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=150&h=150&fit=crop&crop=faces',
+                    'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=150&h=150&fit=crop&crop=faces',
+                    'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=150&h=150&fit=crop&crop=faces'
+                ];
+                
+                const html = artists.map((a, i) => `
+                    <div class="top-artist-card">
+                        <div class="artist-rank">${i + 1}</div>
+                        <img src="${images[i % images.length]}" alt="${a.artist}">
+                        <div class="artist-details">
+                            <h4>${a.artist}</h4>
+                            <p>${a.plays} plays this week</p>
+                        </div>
+                        <button class="btn-follow-artist">
+                            <i class="fas fa-user-plus"></i>
+                            Follow
+                        </button>
+                    </div>
+                `).join('');
+                document.getElementById('topArtistsGrid').innerHTML = html;
+            }
+
+            renderTopTracks() {
+                const tracks = this.dataManager.getTopTracks(10);
+                const html = tracks.map((t, i) => `
+                    <div class="top-track-item">
+                        <span class="track-rank">${i + 1}</span>
+                        <img src="${t.cover}" alt="${t.title}">
+                        <div class="track-details-stats">
+                            <h4>${t.title}</h4>
+                            <p>${t.artist}</p>
+                        </div>
+                        <span class="track-plays">${t.plays} plays</span>
+                        <div class="track-actions-stats">
+                            <button class="btn-icon-stats">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="btn-icon-stats">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('topTracksList').innerHTML = html;
+            }
+
+            renderActivityChart() {
+                const canvas = document.getElementById('activityChart');
+                const ctx = canvas.getContext('2d');
+                
+                // Simple bar chart without external library
+                canvas.width = canvas.offsetWidth;
+                canvas.height = 300;
+
+                const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+                const data = [45, 62, 38, 71, 54, 89, 67]; // Mock data
+
+                const barWidth = canvas.width / days.length;
+                const maxValue = Math.max(...data);
+
+                ctx.fillStyle = 'rgba(139, 92, 246, 0.2)';
+                ctx.strokeStyle = 'rgba(139, 92, 246, 1)';
+                ctx.lineWidth = 2;
+
+                data.forEach((value, index) => {
+                    const barHeight = (value / maxValue) * (canvas.height - 50);
+                    const x = index * barWidth + 20;
+                    const y = canvas.height - barHeight - 30;
+
+                    // Draw bar
+                    ctx.fillRect(x, y, barWidth - 40, barHeight);
+                    ctx.strokeRect(x, y, barWidth - 40, barHeight);
+
+                    // Draw label
+                    ctx.fillStyle = '#fff';
+                    ctx.font = '12px Inter';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(days[index], x + (barWidth - 40) / 2, canvas.height - 10);
+                    ctx.fillText(value, x + (barWidth - 40) / 2, y - 10);
+                    ctx.fillStyle = 'rgba(139, 92, 246, 0.2)';
+                });
+            }
+        }
+
+        // ===== MAIN CONTROLLER =====
+        class HistoryController {
+            constructor() {
+                this.dataManager = new HistoryDataManager();
+                this.timelineView = new TimelineView(this.dataManager);
+                this.calendarView = new CalendarView(this.dataManager);
+                this.statsView = new StatisticsView(this.dataManager);
+                
+                this.currentView = 'timeline';
+                this.currentFilters = { time: 'week', genre: 'all' };
+                
+                this.init();
+            }
+
+            init() {
+                this.updateStats();
+                this.setupViewTabs();
+                this.setupFilters();
+                this.setupSearch();
+                this.setupActions();
+                this.renderCurrentView();
+                this.initScrollAnimations();
+            }
+
+            updateStats() {
+                const stats = this.dataManager.getStats();
+                document.getElementById('totalPlays').textContent = stats.totalPlays;
+                document.getElementById('listeningTime').textContent = stats.listeningTime;
+                document.getElementById('uniqueTracks').textContent = stats.uniqueTracks;
+                document.getElementById('topGenre').textContent = stats.topGenre;
+            }
+
+            setupViewTabs() {
+                document.querySelectorAll('.view-tab').forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+                        
+                        this.currentView = tab.getAttribute('data-view');
+                        
+                        document.querySelectorAll('.history-view').forEach(v => v.classList.remove('active'));
+                        document.getElementById(`${this.currentView}View`).classList.add('active');
+                        
+                        this.renderCurrentView();
+                    });
+                });
+            }
+
+            setupFilters() {
+                document.getElementById('timeFilter').addEventListener('change', (e) => {
+                    this.currentFilters.time = e.target.value;
+                    this.renderCurrentView();
+                });
+
+                document.getElementById('genreFilter').addEventListener('change', (e) => {
+                    this.currentFilters.genre = e.target.value;
+                    this.renderCurrentView();
+                });
+            }
+
+            setupSearch() {
+                const searchInput = document.getElementById('historySearch');
+                let timeout;
+                searchInput.addEventListener('input', (e) => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        // Implement search logic
+                        console.log('Searching:', e.target.value);
+                    }, 500);
+                });
+            }
+
+            setupActions() {
+                document.getElementById('clearHistoryBtn').addEventListener('click', () => {
+                    if (confirm('Are you sure you want to clear your listening history?')) {
+                        this.dataManager.historyData = [];
+                        this.updateStats();
+                        this.renderCurrentView();
+                    }
+                });
+
+                document.getElementById('exportBtn').addEventListener('click', () => {
+                    this.exportData();
+                });
+
+                document.getElementById('loadMoreBtn')?.addEventListener('click', () => {
+                    // Load more logic
+                    console.log('Loading more...');
+                });
+            }
+
+            renderCurrentView() {
+                const filteredData = this.dataManager.filterData(
+                    this.currentFilters.time,
+                    this.currentFilters.genre
+                );
+
+                if (this.currentView === 'timeline') {
+                    this.timelineView.render(filteredData);
+                } else if (this.currentView === 'calendar') {
+                    this.calendarView.render();
+                } else if (this.currentView === 'stats') {
+                    this.statsView.render();
+                }
+            }
+
+            exportData() {
+                const data = JSON.stringify(this.dataManager.historyData, null, 2);
+                const blob = new Blob([data], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `groovezilla-history-${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+
+            initScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('aos-animate');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('[data-aos]').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+        }
+
+        // ===== INITIALIZE =====
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(populateHistory, 1000); // Wait for player to initialize
+            const historyController = new HistoryController();
+            console.log('✨ History Page Loaded with Interactive Features');
         });
     </script>
-</main>
 </body>
 </html>
